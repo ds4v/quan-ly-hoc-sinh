@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{099EA824-3DC4-416C-9740-A31B6A8C50B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyHocSinh</RootNamespace>
+    <AssemblyName>QuanLyHocSinh</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\BUS\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nghenghiep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phancong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phuchoidulieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pupils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qddotuoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qdsiso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qdthangdiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlynguoidung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saoluudulieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tracuugiaovien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tracuuhocsinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tttruonghoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xemdiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeploai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoachuyenlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cachnhapdiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuyenlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closephanlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhapcontext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangxuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangxuatcontext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dantoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doimatkhau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doimatkhaucontext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsgiaovien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dshocsinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dslophoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaovien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanhkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hocky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hocluc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ketqua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khoilop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kqcnamtheolop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kqcnamtheomon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kqhockytheolop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kqhockytheomon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loainguoidung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lophoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luuchuyenlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\namhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{d6b3cda8-5475-4761-a513-99d910cbabf3}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
