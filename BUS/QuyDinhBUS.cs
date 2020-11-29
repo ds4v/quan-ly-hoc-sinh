@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public static class QuyDinhBUS
+    public class QuyDinhBUS
     {
         public static bool KiemTraSiSo(int siSo)
         {

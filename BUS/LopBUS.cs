@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BUS
 {
-    public static class LopBUS
+    public class LopBUS
     {
         public static void HienThi
         (

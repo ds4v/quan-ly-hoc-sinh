@@ -7,7 +7,6 @@ C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.Core
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.dll
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.pdb
-C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.dll
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.pdb
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.dll

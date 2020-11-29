@@ -142,7 +142,6 @@ namespace QuanLyHocSinh
                     maGiaoVien
                 );
                 bindingNavigatorRefreshItem_Click(sender, e);
-                bindingNavigatorLop.BindingSource.MoveLast();
             }
         }
 
