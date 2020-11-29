@@ -11,18 +11,18 @@ namespace DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = "Data Source = (local); Initial Catalog = QuanLyHocSinh; Integrated Security = True";
-        // private string connectionString = @"
-        //        Server=tcp:mysqlserver18520339.database.windows.net,1433;
-        //        Initial Catalog=QuanLyHocSinh;
-        //        Persist Security Info=False;
-        //        User ID=azureuser;
-        //        Password=P@ssword;
-        //        MultipleActiveResultSets=False;
-        //        Encrypt=True;
-        //        TrustServerCertificate=False;
-        //        Connection Timeout=30;
-        // ";
+        // private string connectionString = "Data Source=(local);Initial Catalog=QuanLyHocSinh;Integrated Security=True";
+        private string connectionString = @"
+                Server=tcp:mysqlserver18520339.database.windows.net,1433;
+                Initial Catalog=QuanLyHocSinh;
+                Persist Security Info=False;
+                User ID=azureuser;
+                Password=P@ssword;
+                MultipleActiveResultSets=False;
+                Encrypt=True;
+                TrustServerCertificate=False;
+                Connection Timeout=30;
+         ";
 
         private DataProvider() { }
 
@@ -37,15 +37,30 @@ namespace DAO
             SqlCommand command = new SqlCommand(query, connection);
             if (parameters != null)
             {
-                string[] listParams = query.Split(' ');
-
-                for (int i = 0; i < listParams.Length; ++i)
+                int i = 0;
+                foreach (string item in query.Split(' '))
                 {
-                    if (listParams[i].Contains('@'))
-                        command.Parameters.AddWithValue(listParams[i], parameters[i]);
+                    if (item.Contains('@'))
+                        command.Parameters.AddWithValue(item, parameters[i++]);
                 }
             }
             return command;
+        }
+
+        public void UpdateTable(DataTable dataTable)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string temp = "SELECT * FROM LOP";
+
+                SqlCommand command = new SqlCommand(temp, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                
+                adapter.Update(dataTable);
+                connection.Close();
+            }
         }
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)

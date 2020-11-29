@@ -15,3 +15,20 @@ C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\QuanLyHoc
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.Properties.Resources.resources
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.exe.config
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.exe
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.pdb
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\BUS.dll
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DAO.dll
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\BUS.pdb
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DAO.pdb
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csprojAssemblyReference.cache
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmLop.resources
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmMain.resources
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.Properties.Resources.resources
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.GenerateResource.cache
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CoreCompileInputs.cache
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
+C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb

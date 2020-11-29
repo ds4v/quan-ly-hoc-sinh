@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 namespace BUS
 {
-    public class GiaoVienBUS
+    public static class GiaoVienBUS
     {
-        public void HienThiComboBox(ComboBoxEx comboBox)
+        public static void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = GiaoVienDAO.Instance.LayDanhSachGiaoVien();
             comboBox.DisplayMember = "TenGiaoVien";
             comboBox.ValueMember = "MaGiaoVien";
         }
 
-        public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
+        public static void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = GiaoVienDAO.Instance.LayDanhSachGiaoVien();
             cmbColumn.DisplayMember = "TenGiaoVien";
