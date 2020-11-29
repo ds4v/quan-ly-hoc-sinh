@@ -1,13 +1,5 @@
 ﻿using DevComponents.DotNetBar;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
@@ -27,14 +19,7 @@ namespace QuanLyHocSinh
 
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<frmLop>().Any()) 
-                Application.OpenForms.OfType<frmLop>().First().Activate();
-            else
-            {
-                frmLop frm = new frmLop();
-                frm.MdiParent = ActiveForm;
-                frm.Show();
-            }
+            Helper.ShowForm("frmLop");
         }
 
         private void btnKhoiLop_Click(object sender, EventArgs e)

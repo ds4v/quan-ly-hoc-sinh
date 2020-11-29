@@ -19,14 +19,10 @@ namespace DAO
             private set => instance = value;
         }
 
-        public DataTable LayDanhSachKhoiLop()
+        public DataTable LaySiSoQuyDinh()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT * FROM KHOILOP"); ;
+            string query = "SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
-
-        //public void InsertStudent(int idBill, int idFood, int count)
-        //{
-        //    DataProvider.Instance.ExecuteNonQuery("InsertStudent @idBill , @idFood , @count", new object[] { idBill, idFood, count });
-        //}
     }
 }
