@@ -32,3 +32,20 @@ C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.exe.config
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.exe
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\QuanLyHocSinh.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\BUS.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DAO.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\BUS.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DAO.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csprojAssemblyReference.cache
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmLop.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmMain.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.Properties.Resources.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.GenerateResource.cache
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CoreCompileInputs.cache
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb

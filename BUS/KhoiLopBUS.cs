@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace BUS
 {
-    public static class KhoiLopBUS
+    public class KhoiLopBUS
     {
         public static void HienThiComboBox(ComboBoxEx comboBox)
         {
