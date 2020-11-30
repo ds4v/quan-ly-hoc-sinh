@@ -24,7 +24,7 @@ namespace QuanLyHocSinh
 
         private void btnKhoiLop_Click(object sender, EventArgs e)
         {
-
+            Helper.ShowForm("frmKhoiLop");
         }
 
         private void btnHocKy_Click(object sender, EventArgs e)

@@ -32,5 +32,17 @@ namespace DAO
             object[] parameters = new object[] { maLop, tenLop, maKhoiLop, maNamHoc, siSo, maGiaoVien };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
+
+        public DataTable TimTheoMa(string maLop)
+        {
+            string query = $"SELECT * FROM LOP WHERE MaLop LIKE '%{maLop}%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable TimTheoTen(string tenLop)
+        {
+            string query = $"SELECT * FROM LOP WHERE TenLop LIKE '%{tenLop}%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

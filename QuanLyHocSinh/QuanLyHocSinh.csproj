@@ -61,6 +61,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhoiLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoiLop.Designer.cs">
+      <DependentUpon>KhoiLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper.cs" />
@@ -69,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhoiLop.resx">
+      <DependentUpon>KhoiLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -262,8 +271,11 @@
     <None Include="Resources\namhoc.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\timkiem_small.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{d6b3cda8-5475-4761-a513-99d910cbabf3}</Project>
+      <Project>{D6B3CDA8-5475-4761-A513-99D910CBABF3}</Project>
       <Name>BUS</Name>
     </ProjectReference>
   </ItemGroup>
