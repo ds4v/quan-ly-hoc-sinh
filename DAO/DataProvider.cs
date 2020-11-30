@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAO
 {
     public class DataProvider
     {
         private static DataProvider instance;
-        // private string connectionString = "Data Source=(local);Initial Catalog=QuanLyHocSinh;Integrated Security=True";
         private string connectionString = @"
                 Server=tcp:mysqlserver18520339.database.windows.net,1433;
                 Initial Catalog=QuanLyHocSinh;
@@ -28,8 +23,12 @@ namespace DAO
 
         public static DataProvider Instance
         {
-            get => instance == null ? new DataProvider() : instance;
-            private set => instance = value;
+            get 
+            { 
+                if (instance == null) instance = new DataProvider(); 
+                return instance; 
+            }
+            private set => instance = value; 
         }
 
         private SqlCommand GetSqlCommand(SqlConnection connection, string query, object[] parameters)
@@ -52,7 +51,7 @@ namespace DAO
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string temp = "SELECT * FROM LOP";
+                string temp = "SELECT * FROM KHOILOP";
 
                 SqlCommand command = new SqlCommand(temp, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);

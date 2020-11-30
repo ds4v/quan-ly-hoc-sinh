@@ -25,5 +25,10 @@ namespace DAO
             string query = "SELECT * FROM KHOILOP";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void LuuLop(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable);
+        }
     }
 }

@@ -9,21 +9,32 @@ namespace BUS
 {
     public class LopBUS
     {
-        public static void HienThi
-        (
-            DataGridViewX dataGridViewX,
+        private static LopBUS instance;
+        private BindingSource bindingSource = new BindingSource();
+
+        private LopBUS() { }
+
+        public static LopBUS Instance
+        {
+            get
+            {
+                if (instance == null) instance = new LopBUS();
+                return instance;
+            }
+            private set => instance = value;
+        }
+
+        public void HienThi(
             BindingNavigator bindingNavigator,
+            DataGridViewX dataGridViewX,
             TextBoxX txtMaLop,
             TextBoxX txtTenLop,
             ComboBoxEx cmbKhoiLop,
             ComboBoxEx cmbNamHoc,
             IntegerInput iniSiSo,
-            ComboBoxEx cmbGiaoVien
-        )
+            ComboBoxEx cmbGiaoVien)
         {
-            BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = LopDAO.Instance.LayDanhSachLop();
-
             bindingNavigator.BindingSource = bindingSource;
             dataGridViewX.DataSource = bindingSource;
 
@@ -46,14 +57,24 @@ namespace BUS
             cmbGiaoVien.DataBindings.Add("SelectedValue", bindingSource, "MaGiaoVien");
         }
 
-        public static void LuuLop(DataTable dataTable)
+        public void LuuLop(DataTable dataTable)
         {
             LopDAO.Instance.LuuLop(dataTable);
         }
 
-        public static void ThemLop(string maLop, string tenLop, string maKhoiLop, string maNamHoc, int siSo, string maGiaoVien)
+        public void ThemLop(string maLop, string tenLop, string maKhoiLop, string maNamHoc, int siSo, string maGiaoVien)
         {
             LopDAO.Instance.ThemLop(maLop, tenLop, maKhoiLop, maNamHoc, siSo, maGiaoVien);
+        }
+
+        public void TimTheoMa(string maLop)
+        {
+            bindingSource.DataSource = LopDAO.Instance.TimTheoMa(maLop);
+        }
+
+        public void TimTheoTen(string tenLop)
+        {
+            bindingSource.DataSource = LopDAO.Instance.TimTheoTen(tenLop);
         }
     }
 }

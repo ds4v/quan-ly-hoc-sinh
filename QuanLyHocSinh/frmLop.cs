@@ -8,6 +8,7 @@ namespace QuanLyHocSinh
 {
     public partial class frmLop : Office2007Form
     {
+
         public frmLop()
         {
             InitializeComponent();
@@ -15,11 +16,11 @@ namespace QuanLyHocSinh
 
         private void frmLop_Load(object sender, EventArgs e)
         {
-            KhoiLopBUS.HienThiComboBox(cmbKhoiLop);
+            KhoiLopBUS.Instance.HienThiComboBox(cmbKhoiLop);
             NamHocBUS.HienThiComboBox(cmbNamHoc);
             GiaoVienBUS.HienThiComboBox(cmbGiaoVien);
 
-            KhoiLopBUS.HienThiDgvCmbCol(colMaKhoiLop);
+            KhoiLopBUS.Instance.HienThiDgvCmbCol(colMaKhoiLop);
             NamHocBUS.HienThiDgvCmbCol(colMaNamHoc);
             GiaoVienBUS.HienThiDgvCmbCol(colMaGiaoVien);
 
@@ -28,7 +29,7 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            if (dgvLop.RowCount == 0) bindingNavigatorDeleteItem.Enabled = false;
+            if (dgvLop.RowCount == 0) bindingNavigatorDeleteItem.Enabled = true;
             BindingSource bindingSource = bindingNavigatorLop.BindingSource;
             DataTable dataTable = (DataTable)bindingSource.DataSource;
             DataRow dataRow = dataTable.NewRow();
@@ -39,16 +40,15 @@ namespace QuanLyHocSinh
             dataRow["MaNamHoc"] = "";
             dataRow["SiSo"] = 0;
             dataRow["MaGiaoVien"] = "";
-
             dataTable.Rows.Add(dataRow);
             bindingSource.MoveLast();
         }
 
         private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
         {
-            LopBUS.HienThi(
-                dgvLop,
+            LopBUS.Instance.HienThi(
                 bindingNavigatorLop,
+                dgvLop,
                 txtMaLop,
                 txtTenLop,
                 cmbKhoiLop,
@@ -82,7 +82,7 @@ namespace QuanLyHocSinh
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorLop.BindingSource;
-                LopBUS.LuuLop((DataTable)bindingSource.DataSource);
+                LopBUS.Instance.LuuLop((DataTable) bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CSDL",
@@ -133,7 +133,7 @@ namespace QuanLyHocSinh
                 );
             else
             {
-                LopBUS.ThemLop(
+                LopBUS.Instance.ThemLop(
                     txtMaLop.Text,
                     txtTenLop.Text,
                     maKhoiLop,
@@ -147,7 +147,9 @@ namespace QuanLyHocSinh
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-
+            if (chkTimTheoMa.Checked) LopBUS.Instance.TimTheoMa(txtTimKiem.Text);
+            else LopBUS.Instance.TimTheoTen(txtTimKiem.Text);
         }
+
     }
 }
