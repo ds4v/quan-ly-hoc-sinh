@@ -50,3 +50,4 @@ C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanL
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmKhoiLop.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmKhoiLop.resources

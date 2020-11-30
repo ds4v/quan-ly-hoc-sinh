@@ -46,8 +46,8 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (Helper.KiemTraTruocKhiLuu(dgvKhoiLop, "colMaKhoiLop") &&
-                Helper.KiemTraTruocKhiLuu(dgvKhoiLop, "colTenkhoiLop"))
+            if (Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, "colMaKhoiLop") &&
+                Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, "colTenkhoiLop"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorKhoiLop.BindingSource;

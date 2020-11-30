@@ -19,12 +19,12 @@ namespace QuanLyHocSinh
 
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
-            Helper.ShowForm("frmLop");
+            Utilities.ShowForm("frmLop");
         }
 
         private void btnKhoiLop_Click(object sender, EventArgs e)
         {
-            Helper.ShowForm("frmKhoiLop");
+            Utilities.ShowForm("frmKhoiLop");
         }
 
         private void btnHocKy_Click(object sender, EventArgs e)

@@ -17,12 +17,12 @@ namespace QuanLyHocSinh
         private void frmLop_Load(object sender, EventArgs e)
         {
             KhoiLopBUS.Instance.HienThiComboBox(cmbKhoiLop);
-            NamHocBUS.HienThiComboBox(cmbNamHoc);
-            GiaoVienBUS.HienThiComboBox(cmbGiaoVien);
+            NamHocBUS.Instance.HienThiComboBox(cmbNamHoc);
+            GiaoVienBUS.Instance.HienThiComboBox(cmbGiaoVien);
 
             KhoiLopBUS.Instance.HienThiDgvCmbCol(colMaKhoiLop);
-            NamHocBUS.HienThiDgvCmbCol(colMaNamHoc);
-            GiaoVienBUS.HienThiDgvCmbCol(colMaGiaoVien);
+            NamHocBUS.Instance.HienThiDgvCmbCol(colMaNamHoc);
+            GiaoVienBUS.Instance.HienThiDgvCmbCol(colMaGiaoVien);
 
             bindingNavigatorRefreshItem_Click(sender, e);
         }
@@ -73,12 +73,12 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (Helper.KiemTraTruocKhiLuu(dgvLop, "colmalop") &&
-                Helper.KiemTraTruocKhiLuu(dgvLop, "coltenlop") &&
-                Helper.KiemTraTruocKhiLuu(dgvLop, "colmakhoilop") &&
-                Helper.KiemTraTruocKhiLuu(dgvLop, "colmanamhoc") &&
-                Helper.KiemTraTruocKhiLuu(dgvLop, "colmagiaovien") &&
-                Helper.KiemTraSiSoTruocKhiLuu(dgvLop, "colsiso"))
+            if (Utilities.KiemTraTruocKhiLuu(dgvLop, "colmalop") &&
+                Utilities.KiemTraTruocKhiLuu(dgvLop, "coltenlop") &&
+                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmakhoilop") &&
+                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmanamhoc") &&
+                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmagiaovien") &&
+                Utilities.KiemTraSiSoTruocKhiLuu(dgvLop, "colsiso"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorLop.BindingSource;
@@ -100,17 +100,17 @@ namespace QuanLyHocSinh
 
         private void btnThemKhoiLop_Click(object sender, EventArgs e)
         {
-            Helper.ShowForm("KhoiLop");
+            Utilities.ShowForm("KhoiLop");
         }
 
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
-            Helper.ShowForm("NamHoc");
+            Utilities.ShowForm("NamHoc");
         }
 
         private void btnThemGiaoVien_Click(object sender, EventArgs e)
         {
-            Helper.ShowForm("GiaoVien");
+            Utilities.ShowForm("GiaoVien");
         }
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace QuanLyHocSinh
                 string.IsNullOrWhiteSpace(maKhoiLop) ||
                 string.IsNullOrWhiteSpace(maNamHoc) ||
                 string.IsNullOrWhiteSpace(maGiaoVien) ||
-                !QuyDinhBUS.KiemTraSiSo(iniSiSo.Value))
+                !QuyDinhBUS.Instance.KiemTraSiSo(iniSiSo.Value))
                 MessageBox.Show(
                     "Giá trị của các ô không được rỗng và sỉ số phải theo quy định!", 
                     "ERROR", 

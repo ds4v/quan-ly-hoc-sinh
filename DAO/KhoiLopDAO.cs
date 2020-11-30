@@ -16,7 +16,11 @@ namespace DAO
 
         public static KhoiLopDAO Instance
         {
-            get => instance == null ? new KhoiLopDAO() : instance;
+            get
+            {
+                if (instance == null) instance = new KhoiLopDAO();
+                return instance;
+            }
             private set => instance = value;
         }
 

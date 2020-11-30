@@ -11,7 +11,11 @@ namespace DAO
 
         public static LopDAO Instance
         {
-            get => instance == null ? new LopDAO() : instance;
+            get
+            {
+                if (instance == null) instance = new LopDAO();
+                return instance;
+            }
             private set => instance = value;
         }
 
