@@ -15,7 +15,11 @@ namespace DAO
 
         public static QuyDinhDAO Instance
         {
-            get => instance == null ? new QuyDinhDAO() : instance;
+            get
+            {
+                if (instance == null) instance = new QuyDinhDAO();
+                return instance;
+            }
             private set => instance = value;
         }
 

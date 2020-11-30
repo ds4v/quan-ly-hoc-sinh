@@ -6,14 +6,28 @@ namespace BUS
 {
     public class GiaoVienBUS
     {
-        public static void HienThiComboBox(ComboBoxEx comboBox)
+        private static GiaoVienBUS instance;
+
+        private GiaoVienBUS() { }
+
+        public static GiaoVienBUS Instance
+        {
+            get
+            {
+                if (instance == null) instance = new GiaoVienBUS();
+                return instance;
+            }
+            private set => instance = value;
+        }
+
+        public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = GiaoVienDAO.Instance.LayDanhSachGiaoVien();
             comboBox.DisplayMember = "TenGiaoVien";
             comboBox.ValueMember = "MaGiaoVien";
         }
 
-        public static void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
+        public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = GiaoVienDAO.Instance.LayDanhSachGiaoVien();
             cmbColumn.DisplayMember = "TenGiaoVien";

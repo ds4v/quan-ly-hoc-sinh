@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
-    public static class Helper 
+    public static class Utilities 
     {
         public static void ShowForm(string formName) 
         {
@@ -19,9 +19,9 @@ namespace QuanLyHocSinh
             }
         }
 
-        public static bool KiemTraTruocKhiLuu(DataGridView dgv, string colName)
+        public static bool KiemTraTruocKhiLuu(DataGridView dataGridView, string colName)
         {
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if (row.Cells[colName].Value != null)
                 {
@@ -41,16 +41,16 @@ namespace QuanLyHocSinh
             return true;
         }
 
-        public static bool KiemTraSiSoTruocKhiLuu(DataGridView dgv, string colSiSo)
+        public static bool KiemTraSiSoTruocKhiLuu(DataGridView dataGridView, string colSiSo)
         {
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if (row.Cells[colSiSo].Value != null)
                 {
                     try
                     {
                         int siSo = Convert.ToInt32(row.Cells[colSiSo].Value.ToString());
-                        if (!QuyDinhBUS.KiemTraSiSo(siSo))
+                        if (!QuyDinhBUS.Instance.KiemTraSiSo(siSo))
                         {
                             MessageBox.Show(
                                 "Sỉ số không đúng quy định!",

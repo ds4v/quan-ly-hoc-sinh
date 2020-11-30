@@ -10,7 +10,21 @@ namespace BUS
 {
     public class QuyDinhBUS
     {
-        public static bool KiemTraSiSo(int siSo)
+        private static QuyDinhBUS instance;
+
+        private QuyDinhBUS() { }
+
+        public static QuyDinhBUS Instance
+        {
+            get
+            {
+                if (instance == null) instance = new QuyDinhBUS();
+                return instance;
+            }
+            private set => instance = value;
+        }
+
+        public bool KiemTraSiSo(int siSo)
         {
             DataTable dataTable = QuyDinhDAO.Instance.LaySiSoQuyDinh();
 

@@ -6,14 +6,28 @@ namespace BUS
 {
     public class NamHocBUS
     {
-        public static void HienThiComboBox(ComboBoxEx comboBox)
+        private static NamHocBUS instance;
+
+        private NamHocBUS() { }
+
+        public static NamHocBUS Instance
+        {
+            get
+            {
+                if (instance == null) instance = new NamHocBUS();
+                return instance;
+            }
+            private set => instance = value;
+        }
+
+        public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = NamHocDAO.Instance.LayDanhSachNamHoc();
             comboBox.DisplayMember = "TenNamHoc";
             comboBox.ValueMember = "MaNamHoc";
         }
 
-        public static void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
+        public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = NamHocDAO.Instance.LayDanhSachNamHoc();
             cmbColumn.DisplayMember = "TenNamHoc";

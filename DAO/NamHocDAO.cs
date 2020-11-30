@@ -15,7 +15,11 @@ namespace DAO
 
         public static NamHocDAO Instance
         {
-            get => instance == null ? new NamHocDAO() : instance;
+            get
+            {
+                if (instance == null) instance = new NamHocDAO();
+                return instance;
+            }
             private set => instance = value;
         }
 

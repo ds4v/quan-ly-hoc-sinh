@@ -15,7 +15,11 @@ namespace DAO
 
         public static GiaoVienDAO Instance
         {
-            get => instance == null ? new GiaoVienDAO() : instance;
+            get
+            {
+                if (instance == null) instance = new GiaoVienDAO();
+                return instance;
+            }
             private set => instance = value;
         }
 
