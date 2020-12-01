@@ -21,12 +21,14 @@ namespace QuanLyHocSinh
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             if (dgvKhoiLop.RowCount == 0) bindingNavigatorDeleteItem.Enabled = true;
+            
             BindingSource bindingSource = bindingNavigatorKhoiLop.BindingSource;
             DataTable dataTable = (DataTable)bindingSource.DataSource;
             DataRow dataRow = dataTable.NewRow();
 
             dataRow["MaKhoiLop"] = "";
             dataRow["TenKhoiLop"] = "";
+
             dataTable.Rows.Add(dataRow);
             bindingSource.MoveLast();
         }

@@ -28,5 +28,10 @@ namespace DAO
             string query = "SELECT * FROM NAMHOC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void LuuNamHoc(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable);
+        }
     }
 }
