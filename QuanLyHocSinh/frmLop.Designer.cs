@@ -32,6 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
+            this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
+            this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
+            this.btnRefesh = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSave = new DevComponents.DotNetBar.ButtonItem();
+            this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.dgvLop = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +88,7 @@
             this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
             this.groupBoxDanhSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorLop)).BeginInit();
             this.bindingNavigatorLop.SuspendLayout();
@@ -92,6 +100,7 @@
             // 
             // groupBoxDanhSach
             // 
+            this.groupBoxDanhSach.Controls.Add(this.ctxMenu);
             this.groupBoxDanhSach.Controls.Add(this.dgvLop);
             this.groupBoxDanhSach.Controls.Add(this.bindingNavigatorLop);
             this.groupBoxDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,6 +112,80 @@
             this.groupBoxDanhSach.TabIndex = 3;
             this.groupBoxDanhSach.TabStop = false;
             this.groupBoxDanhSach.Text = "Danh sách lớp";
+            // 
+            // ctxMenu
+            // 
+            this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnMenu});
+            this.ctxMenu.Location = new System.Drawing.Point(418, 312);
+            this.ctxMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctxMenu.Name = "ctxMenu";
+            this.ctxMenu.Size = new System.Drawing.Size(112, 33);
+            this.ctxMenu.Stretch = true;
+            this.ctxMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenu.TabIndex = 4;
+            this.ctxMenu.TabStop = false;
+            this.ctxMenu.Text = "ctxMenu";
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.AutoExpandOnClick = true;
+            this.btnMenu.ImagePaddingHorizontal = 8;
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.btnMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnAdd,
+            this.btnRefesh,
+            this.btnDelete,
+            this.btnSave,
+            this.btnClose});
+            this.btnMenu.Text = "Menu";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnAdd.ImagePaddingHorizontal = 8;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Image = global::QuanLyHocSinh.Properties.Resources.refresh;
+            this.btnRefesh.ImagePaddingHorizontal = 8;
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
+            this.btnRefesh.Text = "Làm tươi danh dách";
+            this.btnRefesh.Click += new System.EventHandler(this.bindingNavigatorRefreshItem_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnDelete.ImagePaddingHorizontal = 8;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
+            this.btnDelete.Text = "Xóa dòng được chọn";
+            this.btnDelete.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnSave.ImagePaddingHorizontal = 8;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
+            this.btnSave.Text = "Lưu danh sách";
+            this.btnSave.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.ImagePaddingHorizontal = 8;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
+            this.btnClose.Text = "Đóng cửa sổ này";
+            this.btnClose.Click += new System.EventHandler(this.bindingNavigatorExitItem_Click);
             // 
             // dgvLop
             // 
@@ -119,6 +202,7 @@
             this.colSiSo,
             this.colMaNamHoc,
             this.colMaGiaoVien});
+            this.ctxMenu.SetContextMenuEx(this.dgvLop, this.btnMenu);
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -628,7 +712,7 @@
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(398, 680);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(398, 644);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -709,6 +793,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 682);
+            this.ctxMenu.SetContextMenuEx(this, this.btnMenu);
             this.Controls.Add(this.groupBoxDanhSach);
             this.Controls.Add(this.navPaneRight);
             this.DoubleBuffered = true;
@@ -721,6 +806,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLop_Load);
             this.groupBoxDanhSach.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorLop)).EndInit();
             this.bindingNavigatorLop.ResumeLayout(false);
@@ -740,6 +826,8 @@
         #region Components
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.Editors.IntegerInput iniSiSo;
+        private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
+        private DevComponents.DotNetBar.ButtonItem btnMenu;
         private DevComponents.DotNetBar.NavigationPane navPaneRight;
         private DevComponents.DotNetBar.NavigationPanePanel navPanelNhapDuLieu;
         private DevComponents.DotNetBar.ButtonItem buttonItemNhapDuLieu;
@@ -789,5 +877,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSiSo;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaNamHoc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaGiaoVien;
+        private DevComponents.DotNetBar.ButtonItem btnAdd;
+        private DevComponents.DotNetBar.ButtonItem btnRefesh;
+        private DevComponents.DotNetBar.ButtonItem btnDelete;
+        private DevComponents.DotNetBar.ButtonItem btnSave;
+        private DevComponents.DotNetBar.ButtonItem btnClose;
     }
 }

@@ -29,9 +29,31 @@ namespace QuanLyHocSinh
                     if (string.IsNullOrWhiteSpace(str))
                     {
                         MessageBox.Show(
-                            "Giá trị của ô không được rỗng!",
+                            "Giá trị của ô không được rỗng !",
                             "ERROR",
                             MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public static bool KiemTraHeSoTruocKhiLuu(DataGridView dataGridView, string colHeSo)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells[colHeSo].Value != null)
+                {
+                    string str = row.Cells[colHeSo].Value.ToString();
+                    if (string.IsNullOrWhiteSpace(str) || str == "0")
+                    {
+                        MessageBox.Show(
+                            "Giá trị của ô không được rỗng và hệ số phải lớn hơn 0 !", 
+                            "ERROR", 
+                            MessageBoxButtons.OK, 
                             MessageBoxIcon.Error
                         );
                         return false;

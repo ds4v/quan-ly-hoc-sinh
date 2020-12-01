@@ -30,6 +30,7 @@ namespace QuanLyHocSinh
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             if (dgvLop.RowCount == 0) bindingNavigatorDeleteItem.Enabled = true;
+            
             BindingSource bindingSource = bindingNavigatorLop.BindingSource;
             DataTable dataTable = (DataTable)bindingSource.DataSource;
             DataRow dataRow = dataTable.NewRow();
@@ -40,6 +41,7 @@ namespace QuanLyHocSinh
             dataRow["MaNamHoc"] = "";
             dataRow["SiSo"] = 0;
             dataRow["MaGiaoVien"] = "";
+
             dataTable.Rows.Add(dataRow);
             bindingSource.MoveLast();
         }
