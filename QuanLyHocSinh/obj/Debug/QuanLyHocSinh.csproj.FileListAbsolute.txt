@@ -53,3 +53,10 @@ C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmKhoiLop.resources
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmHocKy.resources
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmNamHoc.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmHocKy.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmNamHoc.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmMonHoc.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmDiem.resources
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DTO.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\bin\Debug\DTO.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmXemDiem.resources

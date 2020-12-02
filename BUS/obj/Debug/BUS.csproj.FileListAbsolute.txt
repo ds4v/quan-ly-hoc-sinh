@@ -25,3 +25,5 @@ C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CoreCompileI
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.dll
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.pdb

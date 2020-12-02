@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BUS
 {
@@ -33,6 +30,39 @@ namespace BUS
 
             if (siSo >= siSoMin && siSo <= siSoMax) return true;
             else return false;
+        }
+
+        public bool KiemTraDiem(string diem)
+        {
+            IList<string> gioiHanDiem = new List<string>();
+            DataTable dataTable = QuyDinhDAO.Instance.LayThangDiemQuyDinh();
+
+            int thangDiem = Convert.ToInt32(dataTable.Rows[0]["ThangDiem"]);
+            float nacDiemTrongGioiHan = 0;
+
+            if (thangDiem == 10)
+            {
+                for (int i = 0; i <= 1010; i++)
+                {
+                    gioiHanDiem.Add(nacDiemTrongGioiHan.ToString());
+                    nacDiemTrongGioiHan += 0.01F;
+                    nacDiemTrongGioiHan = (float)Math.Round(nacDiemTrongGioiHan, 2);
+                }
+
+                if (gioiHanDiem.Contains(diem)) return true;
+                else return false;
+            }
+            else
+            {
+                for (int i = 0; i <= 100; i++)
+                {
+                    gioiHanDiem.Add(nacDiemTrongGioiHan.ToString());
+                    nacDiemTrongGioiHan += 1;
+                }
+
+                if (gioiHanDiem.Contains(diem)) return true;
+                else return false;
+            }
         }
     }
 }

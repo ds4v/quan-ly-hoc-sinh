@@ -45,18 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiemBUS.cs" />
     <Compile Include="GiaoVienBUS.cs" />
     <Compile Include="HocKyBUS.cs" />
+    <Compile Include="HocSinhBUS.cs" />
     <Compile Include="KhoiLopBUS.cs" />
     <Compile Include="LopBUS.cs" />
+    <Compile Include="MonHocBUS.cs" />
     <Compile Include="NamHocBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuyDinhBUS.cs" />
+    <Compile Include="UtilitiesBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{1d7be687-7131-436d-ae2c-28c018a13b33}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{22e873f4-ae88-4f30-9882-d8723e69f573}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

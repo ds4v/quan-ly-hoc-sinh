@@ -28,5 +28,11 @@ namespace DAO
             string query = "SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable LayThangDiemQuyDinh()
+        {
+            string query = "SELECT ThangDiem FROM QUYDINH";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

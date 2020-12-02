@@ -10,3 +10,6 @@ C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DAO\obj\Debug\DAO.csprojAssemblyRefer
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DAO\obj\Debug\DAO.dll
 C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DAO\obj\Debug\DAO.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DAO\bin\Debug\DTO.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DAO\bin\Debug\DTO.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DAO\obj\Debug\DAO.csproj.CopyComplete

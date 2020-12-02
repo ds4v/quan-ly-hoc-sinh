@@ -19,44 +19,34 @@ namespace QuanLyHocSinh
             }
         }
 
-        public static bool KiemTraTruocKhiLuu(DataGridView dataGridView, string colName)
+        public static string LaySTT(int autoNum)
         {
-            foreach (DataGridViewRow row in dataGridView.Rows)
-            {
-                if (row.Cells[colName].Value != null)
-                {
-                    string str = row.Cells[colName].Value.ToString();
-                    if (string.IsNullOrWhiteSpace(str))
-                    {
-                        MessageBox.Show(
-                            "Giá trị của ô không được rỗng !",
-                            "ERROR",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        return false;
-                    }
-                }
-            }
-            return true;
+            if (autoNum < 10) return "000" + autoNum;
+            else if (autoNum >= 10 && autoNum < 100) return "00" + autoNum;
+            else if (autoNum >= 100 && autoNum < 1000) return "0" + autoNum;
+            else if (autoNum >= 1000 && autoNum < 10000) return "" + autoNum;
+            return "";
         }
 
-        public static bool KiemTraHeSoTruocKhiLuu(DataGridView dataGridView, string colHeSo)
+        public static bool KiemTraTruocKhiLuu(DataGridView dataGridView, string[] colNames)
         {
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                if (row.Cells[colHeSo].Value != null)
+                foreach (string col in colNames)
                 {
-                    string str = row.Cells[colHeSo].Value.ToString();
-                    if (string.IsNullOrWhiteSpace(str) || str == "0")
+                    if (row.Cells[col].Value != null)
                     {
-                        MessageBox.Show(
-                            "Giá trị của ô không được rỗng và hệ số phải lớn hơn 0 !", 
-                            "ERROR", 
-                            MessageBoxButtons.OK, 
-                            MessageBoxIcon.Error
-                        );
-                        return false;
+                        string str = row.Cells[col].Value.ToString();
+                        if (string.IsNullOrWhiteSpace(str))
+                        {
+                            MessageBox.Show(
+                                "Giá trị của ô không được rỗng !",
+                                "ERROR",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
+                            return false;
+                        }
                     }
                 }
             }
@@ -92,6 +82,70 @@ namespace QuanLyHocSinh
                             MessageBoxIcon.Error
                         );
                         return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public static bool KiemTraHeSoTruocKhiLuu(DataGridView dataGridView, string colHeSo)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells[colHeSo].Value != null)
+                {
+                    string str = row.Cells[colHeSo].Value.ToString();
+                    if (string.IsNullOrWhiteSpace(str) || str == "0")
+                    {
+                        MessageBox.Show(
+                            "Giá trị của ô không được rỗng và hệ số phải lớn hơn 0 !",
+                            "ERROR",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public static bool KiemTraDiemTruocKhiLuu(DataGridView dataGridView, string[] colNames)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                foreach (string col in colNames)
+                {
+                    if (row.Cells[col].Value != null)
+                    {
+                        string chuoiDiem = row.Cells[col].Value.ToString();
+                        int count = 0;
+
+                        for (int i = 0; i < chuoiDiem.Length; i++)
+                        {
+                            if (chuoiDiem[i] != ';' && i != chuoiDiem.Length - 1) count++;
+                            else
+                            {
+                                if (i == chuoiDiem.Length - 1)
+                                {
+                                    i++;
+                                    count++;
+                                }
+
+                                string diemDaXuLy = chuoiDiem.Substring(i - count, count);
+                                if (count != 0 && !QuyDinhBUS.Instance.KiemTraDiem(diemDaXuLy))
+                                {
+                                    MessageBox.Show(
+                                        $"Điểm của học sinh {row.Cells["colHoTen"].Value} không hợp lệ!",
+                                        "ERROR",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error
+                                    );
+                                    return false;
+                                }
+                                count = 0;
+                            }
+                        }
                     }
                 }
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Data;
 
 namespace DAO
@@ -25,15 +26,23 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public DataTable LayDanhSachLop(string namHoc)
+        {
+            string query = $"SELECT * FROM LOP WHERE MaNamHoc = '{namHoc}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
         public void LuuLop(DataTable dataTable)
         {
             DataProvider.Instance.UpdateTable(dataTable);
         }
 
-        public void ThemLop(string maLop, string tenLop, string maKhoiLop, string maNamHoc, int siSo, string maGiaoVien)
+        public void ThemLop(LopDTO lop)
         {
             string query = "EXEC ThemLop @maLop , @tenLop , @maKhoiLop , @maNamHoc , @siSo , @maGiaoVien";
-            object[] parameters = new object[] { maLop, tenLop, maKhoiLop, maNamHoc, siSo, maGiaoVien };
+            object[] parameters = new object[] { 
+                lop.MaLop, lop.TenLop, lop.MaKhoiLop, lop.MaNamHoc, lop.SiSo, lop.MaGiaoVien 
+            };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
 

@@ -1,6 +1,7 @@
 ﻿using DAO;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
+using DTO;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -57,14 +58,21 @@ namespace BUS
             cmbGiaoVien.DataBindings.Add("SelectedValue", bindingSource, "MaGiaoVien");
         }
 
+        public void HienThiComboBox(string namHoc, ComboBoxEx comboBox)
+        {
+            comboBox.DataSource = LopDAO.Instance.LayDanhSachLop(namHoc);
+            comboBox.DisplayMember = "TenLop";
+            comboBox.ValueMember = "MaLop";
+        }
+
         public void LuuLop(DataTable dataTable)
         {
             LopDAO.Instance.LuuLop(dataTable);
         }
 
-        public void ThemLop(string maLop, string tenLop, string maKhoiLop, string maNamHoc, int siSo, string maGiaoVien)
+        public void ThemLop(LopDTO lop)
         {
-            LopDAO.Instance.ThemLop(maLop, tenLop, maKhoiLop, maNamHoc, siSo, maGiaoVien);
+            LopDAO.Instance.ThemLop(lop);
         }
 
         public void TimTheoMa(string maLop)

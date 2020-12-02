@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace QuanLyHocSinh
 {
@@ -65,7 +66,7 @@ namespace QuanLyHocSinh
             if (dgvLop.RowCount == 0) bindingNavigatorDeleteItem.Enabled = false;
             else if (
                 MessageBox.Show(
-                    "Bạn có chắc chắn xóa dòng này không?", 
+                    "Bạn có chắc chắn xóa dòng này không ?", 
                     "Xóa lớp học", 
                     MessageBoxButtons.OKCancel, 
                     MessageBoxIcon.Question
@@ -75,12 +76,9 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (Utilities.KiemTraTruocKhiLuu(dgvLop, "colmalop") &&
-                Utilities.KiemTraTruocKhiLuu(dgvLop, "coltenlop") &&
-                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmakhoilop") &&
-                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmanamhoc") &&
-                Utilities.KiemTraTruocKhiLuu(dgvLop, "colmagiaovien") &&
-                Utilities.KiemTraSiSoTruocKhiLuu(dgvLop, "colsiso"))
+            string[] colNames = { "colMaLop", "colTenLop", "colMaKhoiLop", "colMaNamHoc", "colMaGiaoVien" };
+            if (Utilities.KiemTraTruocKhiLuu(dgvLop, colNames) && 
+                Utilities.KiemTraSiSoTruocKhiLuu(dgvLop, "colSiSo"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorLop.BindingSource;
@@ -102,17 +100,17 @@ namespace QuanLyHocSinh
 
         private void btnThemKhoiLop_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("KhoiLop");
+            Utilities.ShowForm("frmKhoiLop");
         }
 
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("NamHoc");
+            Utilities.ShowForm("frmNamHoc");
         }
 
         private void btnThemGiaoVien_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("GiaoVien");
+            Utilities.ShowForm("frmGiaoVien");
         }
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
@@ -128,21 +126,15 @@ namespace QuanLyHocSinh
                 string.IsNullOrWhiteSpace(maGiaoVien) ||
                 !QuyDinhBUS.Instance.KiemTraSiSo(iniSiSo.Value))
                 MessageBox.Show(
-                    "Giá trị của các ô không được rỗng và sỉ số phải theo quy định!", 
+                    "Giá trị của các ô không được rỗng và sỉ số phải theo quy định !", 
                     "ERROR", 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error
                 );
             else
             {
-                LopBUS.Instance.ThemLop(
-                    txtMaLop.Text,
-                    txtTenLop.Text,
-                    maKhoiLop,
-                    maNamHoc,
-                    iniSiSo.Value,
-                    maGiaoVien
-                );
+                LopDTO lop = new LopDTO(txtMaLop.Text, txtTenLop.Text, maKhoiLop, maNamHoc, iniSiSo.Value, maGiaoVien);
+                LopBUS.Instance.ThemLop(lop);
                 bindingNavigatorRefreshItem_Click(sender, e);
             }
         }

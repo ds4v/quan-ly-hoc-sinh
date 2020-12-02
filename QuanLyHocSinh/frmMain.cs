@@ -1,5 +1,6 @@
 ﻿using DevComponents.DotNetBar;
 using System;
+using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
@@ -67,11 +68,6 @@ namespace QuanLyHocSinh
             Utilities.ShowForm("frmHocSinh");
         }
 
-        private void btnPhanLop_Click(object sender, EventArgs e)
-        {
-            Utilities.ShowForm("frmPhanLop");
-        }
-
         private void btnDanToc_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmDanToc");
@@ -132,6 +128,16 @@ namespace QuanLyHocSinh
             Utilities.ShowForm("frmDanhSachLopHoc");
         }
 
+        private void btnTimKiemHS_Click(object sender, EventArgs e)
+        {
+            Utilities.ShowForm("frmTimKiemHocSinh");
+        }
+
+        private void btnTimKiemGV_Click(object sender, EventArgs e)
+        {
+            Utilities.ShowForm("frmTimKiemGiaoVien");
+        }
+
         private void btnDoTuoi_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmDoTuoi");
@@ -145,6 +151,41 @@ namespace QuanLyHocSinh
         private void btnThangDiem_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmThangDiem");
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLNguoiDung_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaoLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPhucHoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

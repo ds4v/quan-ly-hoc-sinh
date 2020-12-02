@@ -48,15 +48,15 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, "colMaKhoiLop") &&
-                Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, "colTenkhoiLop"))
+            string[] colNames = { "colMaKhoiLop", "colTenkhoiLop" };
+            if (Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, colNames))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorKhoiLop.BindingSource;
                 KhoiLopBUS.Instance.LuuKhoiLop((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
-                    "Dữ liệu đã được lưu vào CSDL",
+                    "Dữ liệu đã được lưu vào CL",
                     "Cập nhật thành công",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information

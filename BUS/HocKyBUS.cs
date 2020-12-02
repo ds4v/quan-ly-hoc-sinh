@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Data;
 using DAO;
+using System;
 
 namespace BUS
 {
@@ -27,6 +28,13 @@ namespace BUS
             bindingSource.DataSource = HocKyDAO.Instance.LayDanhSachHocKy();
             bindingNavigator.BindingSource = bindingSource;
             dataGridViewX.DataSource = bindingSource;
+        }
+
+        public void HienThiComboBox(ComboBoxEx comboBox)
+        {
+            comboBox.DataSource = HocKyDAO.Instance.LayDanhSachHocKy();
+            comboBox.DisplayMember = "TenHocKy";
+            comboBox.ValueMember = "MaHocKy";
         }
 
         public void LuuHocKy(DataTable dataTable)
