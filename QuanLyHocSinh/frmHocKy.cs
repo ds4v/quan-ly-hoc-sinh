@@ -49,8 +49,8 @@ namespace QuanLyHocSinh
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (Utilities.KiemTraTruocKhiLuu(dgvHocKy, "colMaHocKy") &&
-                Utilities.KiemTraTruocKhiLuu(dgvHocKy, "colTenHocKy") &&
+            string[] colNames = { "colMaHocKy", "colTenHocKy" };
+            if (Utilities.KiemTraTruocKhiLuu(dgvHocKy, colNames) && 
                 Utilities.KiemTraHeSoTruocKhiLuu(dgvHocKy, "colHeSo"))
             {
                 bindingNavigatorPositionItem.Focus();
@@ -58,7 +58,7 @@ namespace QuanLyHocSinh
                 HocKyBUS.Instance.LuuHocKy((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
-                    "Dữ liệu đã được lưu vào CSDL",
+                    "Dữ liệu đã được lưu vào CL",
                     "Cập nhật thành công",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
