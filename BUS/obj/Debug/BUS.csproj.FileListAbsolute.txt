@@ -1,29 +1,11 @@
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.dll
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.pdb
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.dll
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.dll
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.pdb
+C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.pdb
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.dll
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.pdb
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.dll
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.pdb
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.dll
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.pdb
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.dll
-C:\Users\QuanKun\Dropbox\My PC (QuanKun-PC)\Downloads\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.pdb
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.dll
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\BUS.pdb
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.dll
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DAO.pdb
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.dll
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\BUS\obj\Debug\BUS.pdb
-C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.dll
-C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\BUS\bin\Debug\DTO.pdb

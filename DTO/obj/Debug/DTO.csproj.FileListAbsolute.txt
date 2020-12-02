@@ -4,9 +4,3 @@ C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.csprojAssem
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.dll
 C:\Users\QuanKun\OneDrive\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.pdb
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\bin\Debug\DTO.dll
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\bin\Debug\DTO.pdb
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.dll
-C:\Users\Quan Kun\Desktop\quan-ly-hoc-sinh\DTO\obj\Debug\DTO.pdb
