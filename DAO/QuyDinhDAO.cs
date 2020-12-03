@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace DAO
 {
@@ -26,6 +21,12 @@ namespace DAO
         public DataTable LaySiSoQuyDinh()
         {
             string query = "SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable LayDoTuoiQuyDinh()
+        {
+            string query = "SELECT TuoiCanDuoi, TuoiCanTren FROM QUYDINH";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

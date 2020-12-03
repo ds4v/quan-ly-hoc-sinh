@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
 namespace DAO
 {
@@ -27,16 +26,14 @@ namespace DAO
 
         public object LayDanhSachMonHoc(string namHoc, string lop)
         {
-            string query = $@"
-                SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC 
-                WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = '{namHoc}' AND PC.MaLop = '{lop}'
-            ";
-            return DataProvider.Instance.ExecuteQuery(query);
+            string query = "EXEC LayDanhSachMonHoc @maNamHoc , @maLop";
+            object[] parameters = new object[] { namHoc, lop };
+            return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
-        public void LuuMonHoc(DataTable dataTable)
+        public void CapNhatMonHoc(DataTable dataTable)
         {
-            DataProvider.Instance.UpdateTable(dataTable);
+            DataProvider.Instance.UpdateTable(dataTable, "MONHOC");
         }
     }
 }

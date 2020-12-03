@@ -32,6 +32,18 @@ namespace BUS
             else return false;
         }
 
+        public bool KiemTraDoTuoi(DateTime ngaySinh)
+        {
+            DataTable dataTable = QuyDinhDAO.Instance.LayDoTuoiQuyDinh();
+
+            int doTuoiMin = Convert.ToInt32(dataTable.Rows[0]["TuoiCanDuoi"]);
+            int doTuoiMax = Convert.ToInt32(dataTable.Rows[0]["TuoiCanTren"]);
+
+            int doTuoi = DateTime.Today.Year - ngaySinh.Year;
+            if (doTuoi >= doTuoiMin && doTuoi <= doTuoiMax)  return true;
+            else return false;
+        }
+
         public bool KiemTraDiem(string diem)
         {
             IList<string> gioiHanDiem = new List<string>();

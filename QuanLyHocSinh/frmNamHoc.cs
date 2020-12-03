@@ -49,11 +49,11 @@ namespace QuanLyHocSinh
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colMaNamHoc", "colTenNamHoc" };
-            if (Utilities.KiemTraTruocKhiLuu(dgvNamHoc, colNames))
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvNamHoc, colNames))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorNamHoc.BindingSource;
-                NamHocBUS.Instance.LuuNamHoc((DataTable)bindingSource.DataSource);
+                NamHocBUS.Instance.CapNhatNamHoc((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CL",

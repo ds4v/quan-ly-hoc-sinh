@@ -35,7 +35,7 @@ namespace QuanLyHocSinh
         private void btnLuuDiem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colDiemMieng", "colDiem15Phut", "colDiem45Phut", "colDiemThi" };
-            if (!Utilities.KiemTraDiemTruocKhiLuu(dgvDiem, colNames) || STT == null) return;
+            if (!KiemTraTruocKhiLuu.KiemTraDiem(dgvDiem, colNames) || STT == null) return;
             int rowCount = 0;
 
             foreach (DataGridViewRow row in dgvDiem.Rows)
@@ -131,21 +131,29 @@ namespace QuanLyHocSinh
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmNamHoc");
+            NamHocBUS.Instance.HienThiComboBox(cmbNamHoc);
         }
 
         private void btnThemLop_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("frmThemLop");
+            Utilities.ShowForm("frmLop");
+            LopBUS.Instance.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
         }
 
         private void btnThemHocKy_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmHocKy");
+            HocKyBUS.Instance.HienThiComboBox(cmbHocKy);
         }
 
         private void btnThemMonHoc_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmMonHoc");
+            MonHocBUS.Instance.HienThiComboBox(
+                cmbNamHoc.SelectedValue.ToString(), 
+                cmbLop.SelectedValue.ToString(), 
+                cmbMonHoc
+            );
         }
 
         // Lấy thông tin lớp theo từng năm học

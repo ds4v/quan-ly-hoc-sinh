@@ -37,9 +37,9 @@ namespace BUS
             comboBox.ValueMember = "MaHocKy";
         }
 
-        public void LuuHocKy(DataTable dataTable)
+        public void CapNhatHocKy(DataTable dataTable)
         {
-            HocKyDAO.Instance.LuuHocKy(dataTable);
+            HocKyDAO.Instance.CapNhatHocKy(dataTable);
         }
     }
 }

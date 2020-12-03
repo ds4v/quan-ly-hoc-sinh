@@ -49,11 +49,11 @@ namespace QuanLyHocSinh
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colMaKhoiLop", "colTenkhoiLop" };
-            if (Utilities.KiemTraTruocKhiLuu(dgvKhoiLop, colNames))
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvKhoiLop, colNames))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorKhoiLop.BindingSource;
-                KhoiLopBUS.Instance.LuuKhoiLop((DataTable)bindingSource.DataSource);
+                KhoiLopBUS.Instance.CapNhatKhoiLop((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CL",

@@ -77,12 +77,12 @@ namespace QuanLyHocSinh
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colMaLop", "colTenLop", "colMaKhoiLop", "colMaNamHoc", "colMaGiaoVien" };
-            if (Utilities.KiemTraTruocKhiLuu(dgvLop, colNames) && 
-                Utilities.KiemTraSiSoTruocKhiLuu(dgvLop, "colSiSo"))
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvLop, colNames) &&
+                KiemTraTruocKhiLuu.KiemTraSiSo(dgvLop, "colSiSo"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorLop.BindingSource;
-                LopBUS.Instance.LuuLop((DataTable) bindingSource.DataSource);
+                LopBUS.Instance.CapNhatLop((DataTable) bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CSDL",
@@ -101,16 +101,20 @@ namespace QuanLyHocSinh
         private void btnThemKhoiLop_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmKhoiLop");
+            KhoiLopBUS.Instance.HienThiDgvCmbCol(colMaKhoiLop);
         }
 
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmNamHoc");
+            NamHocBUS.Instance.HienThiDgvCmbCol(colMaNamHoc);
+
         }
 
         private void btnThemGiaoVien_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmGiaoVien");
+            GiaoVienBUS.Instance.HienThiDgvCmbCol(colMaGiaoVien);
         }
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)

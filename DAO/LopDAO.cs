@@ -1,5 +1,4 @@
 ﻿using DTO;
-using System;
 using System.Data;
 
 namespace DAO
@@ -32,9 +31,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void LuuLop(DataTable dataTable)
+        public void CapNhatLop(DataTable dataTable)
         {
-            DataProvider.Instance.UpdateTable(dataTable);
+            DataProvider.Instance.UpdateTable(dataTable, "LOP");
         }
 
         public void ThemLop(LopDTO lop)

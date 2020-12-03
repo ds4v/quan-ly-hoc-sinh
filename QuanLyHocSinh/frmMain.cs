@@ -93,24 +93,24 @@ namespace QuanLyHocSinh
             Utilities.ShowForm("frmPhanCong");
         }
 
-        private void btnKQHKTheoLop_Click(object sender, EventArgs e)
+        private void btnKQHSMonHoc_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("frmKQHKTheoLop");
+            Utilities.ShowForm("Reports.frmKQHSMonHoc");
         }
 
-        private void btnKQHKTheoMon_Click(object sender, EventArgs e)
+        private void btnKQHSHocKy_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("frmKQHKTheoMon");
+            Utilities.ShowForm("Reports.frmKQHSCaNam");
         }
 
-        private void btnKQCNTheoLop_Click(object sender, EventArgs e)
+        private void btnKQLHMonHoc_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("frmKQCNTheoLop");
+            Utilities.ShowForm("Reports.frmKQLHMonHoc");
         }
 
-        private void btnKQCNTheoMon_Click(object sender, EventArgs e)
+        private void btnKQLHHocKy_Click(object sender, EventArgs e)
         {
-            Utilities.ShowForm("frmKQCNTheoMon");
+            Utilities.ShowForm("Reports.frmKQLHHocKy");
         }
 
         private void btnDanhSachHocSinh_Click(object sender, EventArgs e)
@@ -126,16 +126,6 @@ namespace QuanLyHocSinh
         private void btnDanhSachLopHoc_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmDanhSachLopHoc");
-        }
-
-        private void btnTimKiemHS_Click(object sender, EventArgs e)
-        {
-            Utilities.ShowForm("frmTimKiemHocSinh");
-        }
-
-        private void btnTimKiemGV_Click(object sender, EventArgs e)
-        {
-            Utilities.ShowForm("frmTimKiemGiaoVien");
         }
 
         private void btnDoTuoi_Click(object sender, EventArgs e)

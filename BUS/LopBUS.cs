@@ -2,7 +2,6 @@
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using DTO;
-using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -65,9 +64,9 @@ namespace BUS
             comboBox.ValueMember = "MaLop";
         }
 
-        public void LuuLop(DataTable dataTable)
+        public void CapNhatLop(DataTable dataTable)
         {
-            LopDAO.Instance.LuuLop(dataTable);
+            LopDAO.Instance.CapNhatLop(dataTable);
         }
 
         public void ThemLop(LopDTO lop)

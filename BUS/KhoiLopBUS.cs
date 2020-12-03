@@ -46,9 +46,9 @@ namespace BUS
             cmbColumn.HeaderText = "Khối lớp";
         }
 
-        public void LuuKhoiLop(DataTable dataTable)
+        public void CapNhatKhoiLop(DataTable dataTable)
         {
-            KhoiLopDAO.Instance.LuuLop(dataTable);
+            KhoiLopDAO.Instance.CapNhatKhoiLop(dataTable);
         }
     }
 }

@@ -52,12 +52,12 @@ namespace QuanLyHocSinh
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colMaMonHoc", "colTenMonHoc", "colSoTiet" };
-            if (Utilities.KiemTraTruocKhiLuu(dgvMonHoc, colNames) &&
-                Utilities.KiemTraHeSoTruocKhiLuu(dgvMonHoc, "colHeSo"))
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvMonHoc, colNames) &&
+                KiemTraTruocKhiLuu.KiemTraHeSo(dgvMonHoc, "colHeSo"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorMonHoc.BindingSource;
-                MonHocBUS.Instance.LuuMonHoc((DataTable)bindingSource.DataSource);
+                MonHocBUS.Instance.CapNhatMonHoc((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CL",

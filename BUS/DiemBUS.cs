@@ -9,7 +9,6 @@ namespace BUS
     public class DiemBUS
     {
         private static DiemBUS instance;
-        private BindingSource bindingSource = new BindingSource();
 
         private DiemBUS() { }
 
