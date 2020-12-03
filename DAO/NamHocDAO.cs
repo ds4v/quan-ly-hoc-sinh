@@ -24,9 +24,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void LuuNamHoc(DataTable dataTable)
+        public void CapNhatNamHoc(DataTable dataTable)
         {
-            DataProvider.Instance.UpdateTable(dataTable);
+            DataProvider.Instance.UpdateTable(dataTable, "NAMHOC");
         }
     }
 }

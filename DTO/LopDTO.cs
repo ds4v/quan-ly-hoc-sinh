@@ -9,6 +9,7 @@
         private int siSo;
         private string maGiaoVien;
 
+        public LopDTO() { }
         public LopDTO(string maLop, string tenLop, string maKhoiLop, string maNamHoc, int siSo, string maGiaoVien)
         {
             this.maLop = maLop;

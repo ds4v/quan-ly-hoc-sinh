@@ -46,9 +46,9 @@ namespace BUS
             cmbColumn.HeaderText = "Năm học";
         }
 
-        public void LuuNamHoc(DataTable dataTable)
+        public void CapNhatNamHoc(DataTable dataTable)
         {
-            NamHocDAO.Instance.LuuNamHoc(dataTable);
+            NamHocDAO.Instance.CapNhatNamHoc(dataTable);
         }
     }
 }

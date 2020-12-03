@@ -46,14 +46,14 @@ namespace DAO
             return command;
         }
 
-        public void UpdateTable(DataTable dataTable)
+        public void UpdateTable(DataTable dataTable, string table)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string temp = "SELECT * FROM KHOILOP";
+                string query = $"SELECT * FROM {table}";
 
-                SqlCommand command = new SqlCommand(temp, connection);
+                SqlCommand command = new SqlCommand(query, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
                 

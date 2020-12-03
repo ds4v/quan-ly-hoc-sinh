@@ -226,53 +226,53 @@ CREATE TABLE HOCSINH
 	CONSTRAINT FK_HOCSINH_NGHENGHIEPME FOREIGN KEY(MaNNghiepMe) REFERENCES NGHENGHIEP(MaNghe)
 )
 
-INSERT INTO HOCSINH VALUES('HS0001', N'Nguyễn Văn Tú', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs001@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0002', N'Nguyễn Ngọc An', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs002@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0003', N'Lê Hoàng Anh', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs003@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0004', N'Huỳnh Thiên Chí', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs004@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0005', N'Lý Ngọc Duy', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs005@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0006', N'Huỳnh Ngọc Điệp', '1', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs006@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0007', N'Trần Thị Huệ', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs007@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0008', N'Nguyễn Thanh Huy', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs008@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0009', N'Trần Phước Lập', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs009@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0010', N'Trương Thị Nga', '1', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs010@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0011', N'Nguyễn Thị Nga', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs011@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0012', N'Trần Thị Hồng Nghi', '1', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs012@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0013', N'Huỳnh Thị Mỹ Ngọc', '1', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs013@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0014', N'Trần Thị My Nhân', '1', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs014@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0015', N'Trương Thị Ngoc Nhung', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs015@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0016', N'Huỳnh Quốc Phuong', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs016@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0017', N'Lý Ngọc Phương', '1', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs017@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0018', N'Nguyễn Thị Phương', '1', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs018@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0019', N'Nguyễn Phú Quốc', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs019@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0020', N'Võ Thiên Quốc', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs020@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0021', N'Trần Văn Rang', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs021@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0022', N'Võ Hưu Tanh', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs022@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0023', N'Lê Minh Tâm', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs023@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0024', N'Nguyễn Đức Tâm', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs024@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0025', N'Nguyễn Thanh Tâm', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs025@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0026', N'Trần Ngọc Minh Tân', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs026@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0027', N'Dương Kim Thanh', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs027@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0028', N'Vang Si Thanh', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs028@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0029', N'Đỗ Thị Bích Thảo', '1', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs029@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0030', N'Hồ Minh Thiên', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs030@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0031', N'Nguyễn Thị Anh Thư', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs031@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0032', N'Phạm Nguyễn B.Trinh', '1', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs032@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0033', N'Võ Ngọc Trinh', '1', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs033@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0034', N'Nguyễn Huỳnh Minh Trí', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs034@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0035', N'Đỗ Xuân Trinh', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs035@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0036', N'Nguyễn Hiếu Trung', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs036@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0037', N'Nguyễn Thanh Trung', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs037@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0038', N'Trần Thanh Trúc', '1', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs038@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0039', N'Cao Minh Tuấn', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs039@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0040', N'Nguyễn Hoang Tuấn', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs040@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0041', N'Trương Minh Tuyên', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs041@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0042', N'Lê Thanh Tung', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs042@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0043', N'Phạm Thị Bích Vi', '1', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs043@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0044', N'Đặng Quang Vinh', '0', '01/02/1991', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs044@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0045', N'Âu Ngọc Vũ', '0', '01/02/1992', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs045@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0046', N'Hồ Thanh Vũ', '0', '01/02/1992', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs046@gmail.com')
-INSERT INTO HOCSINH VALUES('HS0047', N'Phan Quốc Vương', '0', '04/15/1992', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs047@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0001', N'Nguyễn Văn Tú', '0', '01/02/2005', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs001@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0002', N'Nguyễn Ngọc An', '0', '01/02/2005', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs002@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0003', N'Lê Hoàng Anh', '0', '04/15/2005', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs003@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0004', N'Huỳnh Thiên Chí', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs004@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0005', N'Lý Ngọc Duy', '0', '01/02/2005', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs005@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0006', N'Huỳnh Ngọc Điệp', '1', '01/02/2005', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs006@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0007', N'Trần Thị Huệ', '1', '04/15/2005', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs007@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0008', N'Nguyễn Thanh Huy', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs008@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0009', N'Trần Phước Lập', '0', '01/02/2005', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs009@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0010', N'Trương Thị Nga', '1', '01/02/2005', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs010@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0011', N'Nguyễn Thị Nga', '1', '04/15/2005', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs011@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0012', N'Trần Thị Hồng Nghi', '1', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs012@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0013', N'Huỳnh Thị Mỹ Ngọc', '1', '01/02/2005', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs013@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0014', N'Trần Thị My Nhân', '1', '01/02/2005', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs014@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0015', N'Trương Thị Ngoc Nhung', '1', '04/15/2005', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs015@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0016', N'Huỳnh Quốc Phuong', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs016@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0017', N'Lý Ngọc Phương', '1', '01/02/2005', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs017@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0018', N'Nguyễn Thị Phương', '1', '01/02/2005', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs018@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0019', N'Nguyễn Phú Quốc', '0', '04/15/2005', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs019@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0020', N'Võ Thiên Quốc', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs020@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0021', N'Trần Văn Rang', '0', '01/02/2004', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs021@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0022', N'Võ Hưu Tanh', '0', '01/02/2004', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs022@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0023', N'Lê Minh Tâm', '0', '04/15/2004', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs023@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0024', N'Nguyễn Đức Tâm', '0', '01/02/2003', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs024@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0025', N'Nguyễn Thanh Tâm', '0', '01/02/2004', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs025@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0026', N'Trần Ngọc Minh Tân', '0', '01/02/2004', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs026@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0027', N'Dương Kim Thanh', '1', '04/15/2004', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs027@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0028', N'Vang Si Thanh', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs028@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0029', N'Đỗ Thị Bích Thảo', '1', '01/02/2004', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs029@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0030', N'Hồ Minh Thiên', '0', '01/02/2004', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs030@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0031', N'Nguyễn Thị Anh Thư', '1', '04/15/2004', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs031@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0032', N'Phạm Nguyễn B.Trinh', '1', '01/02/2003', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs032@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0033', N'Võ Ngọc Trinh', '1', '01/02/2004', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs033@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0034', N'Nguyễn Huỳnh Minh Trí', '0', '01/02/2004', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs034@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0035', N'Đỗ Xuân Trinh', '0', '04/15/2004', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs035@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0036', N'Nguyễn Hiếu Trung', '0', '01/02/2003', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs036@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0037', N'Nguyễn Thanh Trung', '0', '01/02/2004', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs037@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0038', N'Trần Thanh Trúc', '1', '01/02/2004', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs038@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0039', N'Cao Minh Tuấn', '0', '04/15/2004', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs039@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0040', N'Nguyễn Hoang Tuấn', '0', '01/02/2004', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs040@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0041', N'Trương Minh Tuyên', '0', '01/02/2003', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs041@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0042', N'Lê Thanh Tung', '0', '01/02/2003', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs042@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0043', N'Phạm Thị Bích Vi', '1', '04/15/2003', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs043@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0044', N'Đặng Quang Vinh', '0', '01/02/2003', N'Đồng Tháp', 'DT0001', 'TG0003', N'Biết chết liền', 'NN0002', N'Biết chết liền', 'NN0004', 'hs044@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0045', N'Âu Ngọc Vũ', '0', '01/02/2003', N'Long Xuyên', 'DT0001', 'TG0005', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0002', 'hs045@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0046', N'Hồ Thanh Vũ', '0', '01/02/2002', N'Bến Tre', 'DT0001', 'TG0002', N'Biết chết liền', 'NN0003', N'Biết chết liền', 'NN0001', 'hs046@gmail.com')
+INSERT INTO HOCSINH VALUES('HS0047', N'Phan Quốc Vương', '0', '04/15/2003', N'Chợ Mới', 'DT0001', 'TG0004', N'Biết chết liền', 'NN0005', N'Biết chết liền', 'NN0005', 'hs047@gmail.com')
 
 --===================================================================================================================================================
 
@@ -319,6 +319,7 @@ CREATE TABLE PHANLOP
 	CONSTRAINT FK_PHANLOP_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
 	CONSTRAINT FK_PHANLOP_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh)
 )
+
 INSERT INTO PHANLOP VALUES('NH1920', 'KHOI10', 'LOP1011920', 'HS0001')
 INSERT INTO PHANLOP VALUES('NH1920', 'KHOI10', 'LOP1011920', 'HS0002')
 INSERT INTO PHANLOP VALUES('NH1920', 'KHOI10', 'LOP1011920', 'HS0003')
@@ -439,82 +440,47 @@ CREATE TABLE DIEM
 
 --===================================================================================================================================================
 
-CREATE TABLE KQ_HOC_KY_MON_HOC
+CREATE TABLE KQ_HOCSINH_MONHOC
 (
 	MaHocSinh NVARCHAR(6) NOT NULL,
 	MaLop NVARCHAR(10) NOT NULL,
 	MaMonHoc NVARCHAR(6) NOT NULL,
 	MaHocKy NVARCHAR(3) NOT NULL,
 	MaNamHoc NVARCHAR(6) NOT NULL,
-	DTBKiemTra FLOAT NOT NULL,
-	DTBMonHocKy FLOAT NOT NULL,
+	Diem15Phut FLOAT NOT NULL,
+	Diem45Phut FLOAT NOT NULL,
+	DiemThi FLOAT NOT NULL,
+	DiemTB FLOAT NOT NULL,
 	PRIMARY KEY(MaHocSinh, MaLop, MaMonHoc, MaHocKy, MaNamHoc),
- 
-	CONSTRAINT FK_KQHKMH_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
-	CONSTRAINT FK_KQHKMH_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
-	CONSTRAINT FK_KQHKMH_MAMHOC FOREIGN KEY(MaMonHoc) REFERENCES MONHOC(MaMonHoc),
-	CONSTRAINT FK_KQHKMH_HOCKY FOREIGN KEY(MaHocKy) REFERENCES HOCKY(MaHocKy),
-	CONSTRAINT FK_KQHKMH_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc)
+
+	CONSTRAINT FK_KQHSMH_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
+	CONSTRAINT FK_KQHSMH_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
+	CONSTRAINT FK_KQHSMH_MAMHOC FOREIGN KEY(MaMonHoc) REFERENCES MONHOC(MaMonHoc),
+	CONSTRAINT FK_KQHSMH_HOCKY FOREIGN KEY(MaHocKy) REFERENCES HOCKY(MaHocKy),
+	CONSTRAINT FK_KQHSMH_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc)
 )
 
 --===================================================================================================================================================
 
-CREATE TABLE KQ_CA_NAM_MON_HOC
-(
-	MaHocSinh NVARCHAR(6) NOT NULL,
-	MaLop NVARCHAR(10) NOT NULL,
-	MaMonHoc NVARCHAR(6) NOT NULL,
-	MaNamHoc NVARCHAR(6) NOT NULL,
-	DiemThiLai FLOAT,
-	DTBCaNam FLOAT NOT NULL,
-	PRIMARY KEY(MaHocSinh, MaLop, MaMonHoc, MaNamHoc),
- 
-	CONSTRAINT FK_KQCNMH_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
-	CONSTRAINT FK_KQCNMH_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
-	CONSTRAINT FK_KQCNMH_MONHOC FOREIGN KEY(MaMonHoc) REFERENCES MONHOC(MaMonHoc),
-	CONSTRAINT FK_KQCNMH_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc)
-)
-
---===================================================================================================================================================
-
-CREATE TABLE KQ_HOC_KY_TONG_HOP
-(
-	MaHocSinh NVARCHAR(6) NOT NULL,
-	MaLop NVARCHAR(10) NOT NULL,
-	MaHocKy NVARCHAR(3) NOT NULL,
-	MaNamHoc NVARCHAR(6) NOT NULL,
-	MaHocLuc NVARCHAR(6) NOT NULL,
-	MaHanhKiem NVARCHAR(6) NOT NULL,
-	DTBMonHocKy FLOAT,
-	PRIMARY KEY(MaHocSinh, MaHocKy, MaLop, MaNamHoc),
- 
-	CONSTRAINT FK_KQHK_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
-	CONSTRAINT FK_KQHK_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
-	CONSTRAINT FK_KQHK_HOCKY FOREIGN KEY(MaHocKy) REFERENCES HOCKY(MaHocKy),
-	CONSTRAINT FK_KQHK_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc),
-	CONSTRAINT FK_KQHK_HOCLUC FOREIGN KEY(MaHocLuc) REFERENCES HOCLUC(MaHocLuc),
-	CONSTRAINT FK_KQHK_HANHKIEM FOREIGN KEY(MaHanhKiem) REFERENCES HANHKIEM(MaHanhKiem)
-)
-
---===================================================================================================================================================
-
-CREATE TABLE KQ_CA_NAM_TONG_HOP
+CREATE TABLE KQ_HOCSINH_CANAM
 (
 	MaHocSinh NVARCHAR(6) NOT NULL,
 	MaLop NVARCHAR(10) NOT NULL,
 	MaNamHoc NVARCHAR(6) NOT NULL,
 	MaHocLuc NVARCHAR(6) NOT NULL,
 	MaHanhKiem NVARCHAR(6) NOT NULL,
-	DTBCaNam FLOAT NOT NULL, 
 	MaKetQua NVARCHAR(6) NOT NULL,
+	DiemTBHK1 FLOAT NOT NULL,
+	DiemTBHK2 FLOAT NOT NULL,
+	DiemTBCN FLOAT NOT NULL, 
 	PRIMARY KEY(MaHocSinh, MaLop, MaNamHoc),
  
-	CONSTRAINT FK_KQCN_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
-	CONSTRAINT FK_KQCN_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
-	CONSTRAINT FK_KQCN_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc),
-	CONSTRAINT FK_KQCN_HOCLUC FOREIGN KEY(MaHocLuc) REFERENCES HOCLUC(MaHocLuc),
-	CONSTRAINT FK_KQCN_HANHKIEM FOREIGN KEY(MaHanhKiem) REFERENCES HANHKIEM(MaHanhKiem),
-	CONSTRAINT FK_KQCN_KETQUA FOREIGN KEY(MaKetQua) REFERENCES KETQUA(MaKetQua)
+	CONSTRAINT FK_KQHSCN_HOCSINH FOREIGN KEY(MaHocSinh) REFERENCES HOCSINH(MaHocSinh),
+	CONSTRAINT FK_KQHSCN_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
+	CONSTRAINT FK_KQHSCN_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc),
+	CONSTRAINT FK_KQHSCN_HOCLUC FOREIGN KEY(MaHocLuc) REFERENCES HOCLUC(MaHocLuc),
+	CONSTRAINT FK_KQHSCN_HANHKIEM FOREIGN KEY(MaHanhKiem) REFERENCES HANHKIEM(MaHanhKiem),
+	CONSTRAINT FK_KQHSCN_KETQUA FOREIGN KEY(MaKetQua) REFERENCES KETQUA(MaKetQua)
 )
 
 --===================================================================================================================================================

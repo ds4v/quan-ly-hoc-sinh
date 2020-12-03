@@ -50,12 +50,12 @@ namespace QuanLyHocSinh
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             string[] colNames = { "colMaHocKy", "colTenHocKy" };
-            if (Utilities.KiemTraTruocKhiLuu(dgvHocKy, colNames) && 
-                Utilities.KiemTraHeSoTruocKhiLuu(dgvHocKy, "colHeSo"))
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvHocKy, colNames) &&
+                KiemTraTruocKhiLuu.KiemTraHeSo(dgvHocKy, "colHeSo"))
             {
                 bindingNavigatorPositionItem.Focus();
                 BindingSource bindingSource = bindingNavigatorHocKy.BindingSource;
-                HocKyBUS.Instance.LuuHocKy((DataTable)bindingSource.DataSource);
+                HocKyBUS.Instance.CapNhatHocKy((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
                     "Dữ liệu đã được lưu vào CL",

@@ -38,9 +38,9 @@ namespace BUS
             comboBox.ValueMember = "MaMonHoc";
         }
 
-        public void LuuMonHoc(DataTable dataTable)
+        public void CapNhatMonHoc(DataTable dataTable)
         {
-            MonHocDAO.Instance.LuuMonHoc(dataTable);
+            MonHocDAO.Instance.CapNhatMonHoc(dataTable);
         }
 
         public void HienThiComboBox(string v1, string v2, object cmbMonHocSD)

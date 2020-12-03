@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiemDTO.cs" />
+    <Compile Include="HocKyDTO.cs" />
+    <Compile Include="HocSinhDTO.cs" />
+    <Compile Include="KQHSMonHocDTO.cs" />
     <Compile Include="LopDTO.cs" />
+    <Compile Include="MonHocDTO.cs" />
+    <Compile Include="NamHocDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

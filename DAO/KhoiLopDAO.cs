@@ -24,9 +24,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void LuuLop(DataTable dataTable)
+        public void CapNhatKhoiLop(DataTable dataTable)
         {
-            DataProvider.Instance.UpdateTable(dataTable);
+            DataProvider.Instance.UpdateTable(dataTable, "KHOILOP");
         }
     }
 }

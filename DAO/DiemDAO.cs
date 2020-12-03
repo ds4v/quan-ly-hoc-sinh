@@ -1,5 +1,4 @@
 ﻿using DTO;
-using System;
 using System.Data;
 
 namespace DAO
@@ -22,19 +21,9 @@ namespace DAO
 
         public DataTable LayDanhSachDiem(string maHocSinh, string maMonHoc, string maHocKy, string maNamHoc, string maLop)
         {
-            string query = $@"
-                SELECT * FROM DIEM D, HOCSINH S, MONHOC H, LOAIDIEM O, LOP L 
-                WHERE D.MaHocSinh = S.MaHocSinh 
-                  AND D.MaMonHoc = H.MaMonHoc 
-                  AND D.MaLoai = O.MaLoai 
-                  AND D.MaLop = L.MaLop 
-                  AND S.MaHocSinh = '{ maHocSinh }'
-                  AND H.MaMonHoc = '{ maMonHoc }'
-                  AND D.MaHocKy = '{ maHocKy }'
-                  AND D.MaNamHoc = '{ maNamHoc }'
-                  AND L.MaLop = '{ maLop }'
-            ";
-            return DataProvider.Instance.ExecuteQuery(query);
+            string query = "EXEC LayDanhSachDiem @maHocSinh , @maMonHoc , @maHocKy , @maNamHoc , @maLop";
+            object[] parameters = new object[] { maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop };
+            return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
         public void ThemDiem(DiemDTO diem)

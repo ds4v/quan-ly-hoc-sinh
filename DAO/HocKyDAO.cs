@@ -24,9 +24,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void LuuHocKy(DataTable dataTable)
+        public void CapNhatHocKy(DataTable dataTable)
         {
-            DataProvider.Instance.UpdateTable(dataTable);
+            DataProvider.Instance.UpdateTable(dataTable, "HOCKY");
         }
     }
 }
