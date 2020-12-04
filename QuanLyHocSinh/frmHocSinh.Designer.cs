@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -41,18 +41,6 @@
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.dgvHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colNgaySinh = new QuanLyHocSinh.Components.CalendarColumn();
-            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -100,7 +88,7 @@
             this.label07 = new System.Windows.Forms.Label();
             this.txtHoTenCha = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label05 = new System.Windows.Forms.Label();
-            this.txtNoiSinh = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtTenHocSinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtGioiTinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
@@ -118,6 +106,18 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNgaySinh = new QuanLyHocSinh.Components.CalendarColumn();
+            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
@@ -227,7 +227,7 @@
             this.colHoTen,
             this.colGioiTinh,
             this.colNgaySinh,
-            this.colNoiSinh,
+            this.colDiaChi,
             this.colMaDanToc,
             this.colMaTonGiao,
             this.colHoTenCha,
@@ -250,93 +250,6 @@
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(990, 482);
             this.dgvHocSinh.TabIndex = 5;
-            // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.MaxInputLength = 6;
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.MaxInputLength = 30;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Width = 150;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới tính nữ";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Width = 70;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.Width = 85;
-            // 
-            // colNoiSinh
-            // 
-            this.colNoiSinh.DataPropertyName = "NoiSinh";
-            this.colNoiSinh.HeaderText = "Nơi sinh";
-            this.colNoiSinh.MaxInputLength = 50;
-            this.colNoiSinh.Name = "colNoiSinh";
-            this.colNoiSinh.Width = 150;
-            // 
-            // colMaDanToc
-            // 
-            this.colMaDanToc.DataPropertyName = "MaDanToc";
-            this.colMaDanToc.HeaderText = "Dân tộc";
-            this.colMaDanToc.Name = "colMaDanToc";
-            // 
-            // colMaTonGiao
-            // 
-            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
-            this.colMaTonGiao.HeaderText = "Tôn giáo";
-            this.colMaTonGiao.Name = "colMaTonGiao";
-            // 
-            // colHoTenCha
-            // 
-            this.colHoTenCha.DataPropertyName = "HoTenCha";
-            this.colHoTenCha.HeaderText = "Họ tên cha";
-            this.colHoTenCha.MaxInputLength = 30;
-            this.colHoTenCha.Name = "colHoTenCha";
-            this.colHoTenCha.Width = 150;
-            // 
-            // colMaNNghiepCha
-            // 
-            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
-            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
-            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
-            // 
-            // colHoTenMe
-            // 
-            this.colHoTenMe.DataPropertyName = "HoTenMe";
-            this.colHoTenMe.HeaderText = "Họ tên mẹ";
-            this.colHoTenMe.MaxInputLength = 30;
-            this.colHoTenMe.Name = "colHoTenMe";
-            this.colHoTenMe.Width = 150;
-            // 
-            // colMaNNghiepMe
-            // 
-            this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
-            this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
-            this.colMaNNghiepMe.Name = "colMaNNghiepMe";
-            // 
-            // colEmail
-            // 
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Width = 150;
             // 
             // bindingNavigatorHocSinh
             // 
@@ -405,6 +318,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -558,7 +472,7 @@
             this.navPanelNhapDuLieu.Controls.Add(this.label07);
             this.navPanelNhapDuLieu.Controls.Add(this.txtHoTenCha);
             this.navPanelNhapDuLieu.Controls.Add(this.label05);
-            this.navPanelNhapDuLieu.Controls.Add(this.txtNoiSinh);
+            this.navPanelNhapDuLieu.Controls.Add(this.txtDiaChi);
             this.navPanelNhapDuLieu.Controls.Add(this.txtTenHocSinh);
             this.navPanelNhapDuLieu.Controls.Add(this.txtGioiTinh);
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -866,9 +780,9 @@
             this.label06.AutoSize = true;
             this.label06.Location = new System.Drawing.Point(13, 192);
             this.label06.Name = "label06";
-            this.label06.Size = new System.Drawing.Size(48, 13);
+            this.label06.Size = new System.Drawing.Size(43, 13);
             this.label06.TabIndex = 0;
-            this.label06.Text = "Nơi sinh:";
+            this.label06.Text = "Địa chỉ:";
             // 
             // label11
             // 
@@ -930,17 +844,17 @@
             this.label05.TabIndex = 0;
             this.label05.Text = "Ngày sinh:";
             // 
-            // txtNoiSinh
+            // txtDiaChi
             // 
             // 
             // 
             // 
-            this.txtNoiSinh.Border.Class = "TextBoxBorder";
-            this.txtNoiSinh.Location = new System.Drawing.Point(16, 207);
-            this.txtNoiSinh.MaxLength = 50;
-            this.txtNoiSinh.Name = "txtNoiSinh";
-            this.txtNoiSinh.Size = new System.Drawing.Size(196, 20);
-            this.txtNoiSinh.TabIndex = 6;
+            this.txtDiaChi.Border.Class = "TextBoxBorder";
+            this.txtDiaChi.Location = new System.Drawing.Point(16, 207);
+            this.txtDiaChi.MaxLength = 50;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(196, 20);
+            this.txtDiaChi.TabIndex = 6;
             // 
             // txtTenHocSinh
             // 
@@ -1115,6 +1029,93 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Email";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MaxInputLength = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.MaxInputLength = 30;
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Width = 150;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới tính nữ";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Width = 70;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Width = 85;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DiaChi";
+            this.colDiaChi.HeaderText = "Địa chỉ";
+            this.colDiaChi.MaxInputLength = 50;
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.Width = 150;
+            // 
+            // colMaDanToc
+            // 
+            this.colMaDanToc.DataPropertyName = "MaDanToc";
+            this.colMaDanToc.HeaderText = "Dân tộc";
+            this.colMaDanToc.Name = "colMaDanToc";
+            // 
+            // colMaTonGiao
+            // 
+            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
+            this.colMaTonGiao.HeaderText = "Tôn giáo";
+            this.colMaTonGiao.Name = "colMaTonGiao";
+            // 
+            // colHoTenCha
+            // 
+            this.colHoTenCha.DataPropertyName = "HoTenCha";
+            this.colHoTenCha.HeaderText = "Họ tên cha";
+            this.colHoTenCha.MaxInputLength = 30;
+            this.colHoTenCha.Name = "colHoTenCha";
+            this.colHoTenCha.Width = 150;
+            // 
+            // colMaNNghiepCha
+            // 
+            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
+            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
+            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
+            // 
+            // colHoTenMe
+            // 
+            this.colHoTenMe.DataPropertyName = "HoTenMe";
+            this.colHoTenMe.HeaderText = "Họ tên mẹ";
+            this.colHoTenMe.MaxInputLength = 30;
+            this.colHoTenMe.Name = "colHoTenMe";
+            this.colHoTenMe.Width = 150;
+            // 
+            // colMaNNghiepMe
+            // 
+            this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
+            this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
+            this.colMaNNghiepMe.Name = "colMaNNghiepMe";
+            // 
+            // colEmail
+            // 
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Width = 150;
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1178,7 +1179,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenCha;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNgheNghiepMe;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenMe;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtNoiSinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNu;
         private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNam;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanelGioiTinh;
@@ -1230,7 +1231,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colGioiTinh;
         private Components.CalendarColumn colNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNoiSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaDanToc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaTonGiao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTenCha;

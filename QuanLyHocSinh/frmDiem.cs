@@ -79,31 +79,33 @@ namespace QuanLyHocSinh
                 }
 
                 #region Lưu vào bảng kết quả
-                //if (rowcount <= dgvDiem.Rows.Count)
-                //{
-                //    m_KQHocKyMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                //                                    cmbLop.SelectedValue.ToString(),
-                //                                    cmbMonHoc.SelectedValue.ToString(),
-                //                                    cmbHocKy.SelectedValue.ToString(),
-                //                                    cmbNamHoc.SelectedValue.ToString());
+                if (rowCount <= dgvDiem.Rows.Count)
+                {
+                    //KQHSMonHocBUS.Instance.LuuKetQua(
+                    //    row.Cells["colMaHocSinh"].Value.ToString(),
+                    //    cmbLop.SelectedValue.ToString(),
+                    //    cmbMonHoc.SelectedValue.ToString(),
+                    //    cmbHocKy.SelectedValue.ToString(),
+                    //    cmbNamHoc.SelectedValue.ToString()
+                    //);
 
-                //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                //                                    cmbLop.SelectedValue.ToString(),
-                //                                    cmbMonHoc.SelectedValue.ToString(),
-                //                                    cmbNamHoc.SelectedValue.ToString());
+                    //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
+                    //                                    cmbLop.SelectedValue.ToString(),
+                    //                                    cmbMonHoc.SelectedValue.ToString(),
+                    //                                    cmbNamHoc.SelectedValue.ToString());
 
-                //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                //                                    cmbLop.SelectedValue.ToString(),
-                //                                    cmbHocKy.SelectedValue.ToString(),
-                //                                    cmbNamHoc.SelectedValue.ToString());
+                    //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
+                    //                                    cmbLop.SelectedValue.ToString(),
+                    //                                    cmbHocKy.SelectedValue.ToString(),
+                    //                                    cmbNamHoc.SelectedValue.ToString());
 
-                //    m_KQCaNamTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                //                                    cmbLop.SelectedValue.ToString(),
-                //                                    cmbNamHoc.SelectedValue.ToString());
-                //}
+                    //    m_KQCaNamTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
+                    //                                    cmbLop.SelectedValue.ToString(),
+                    //                                    cmbNamHoc.SelectedValue.ToString());
+                }
                 #endregion
 
-                // Xóa các kết quả cũ
+                #region Xóa các kết quả cũ
                 for (int i = 1; i < 60; i++)
                 {
                     for (int j = 1; j < 20; j++)
@@ -113,6 +115,7 @@ namespace QuanLyHocSinh
                         else break;
                     }
                 }
+                #endregion
             }
             MessageBox.Show("Cập nhật thành công!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnHienThiDanhSach_Click(sender, e);

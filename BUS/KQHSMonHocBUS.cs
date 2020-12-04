@@ -22,9 +22,27 @@ namespace BUS
             private set => instance = value;
         }
 
+        public void LuuKetQua(string maHocSinh, string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        {
+            KQHSMonHocDTO ketQua = new KQHSMonHocDTO(
+                maHocSinh,
+                maLop,
+                maMonHoc,
+                maHocKy,
+                maNamHoc,
+                DiemBUS.Instance.LayDiemMiengTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
+                DiemBUS.Instance.LayDiem15PhutTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
+                DiemBUS.Instance.LayDiem45PhutTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
+                DiemBUS.Instance.LayDiemThi(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
+                DiemBUS.Instance.LayDiemTBHK(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc)
+            );
+            KQHSMonHocDAO.Instance.XoaKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc);
+            KQHSMonHocDAO.Instance.LuuKetQua(ketQua);
+        }
+
         public IList<KQHSMonHocDTO> ReportKQHSMonHoc(string maLop, string maMonHoc, string maHocKy, string maNamHoc)
         {
-            DataTable dataTable = KQHSMonHocDAO.Instance.ReportKQHSMonHoc(maLop, maMonHoc, maHocKy, maNamHoc);
+            DataTable dataTable = KQHSMonHocDAO.Instance.Report(maLop, maMonHoc, maHocKy, maNamHoc);
             IList<KQHSMonHocDTO> ilist = new List<KQHSMonHocDTO>();
 
             foreach (DataRow Row in dataTable.Rows)
@@ -56,10 +74,11 @@ namespace BUS
                 ketQua.MonHoc = monHoc;
                 ketQua.HocKy = hocKy;
                 ketQua.NamHoc = namHoc;
-                ketQua.Diem15Phut = Convert.ToSingle(Row["Diem15Phut"]);
-                ketQua.Diem45Phut = Convert.ToSingle(Row["Diem45Phut"]);
+                ketQua.DiemMiengTB = Convert.ToSingle(Row["DiemMiengTB"]);
+                ketQua.Diem15PhutTB = Convert.ToSingle(Row["Diem15PhutTB"]);
+                ketQua.Diem45PhutTB = Convert.ToSingle(Row["Diem45PhutTB"]);
                 ketQua.DiemThi = Convert.ToSingle(Row["DiemThi"]);
-                ketQua.DiemTB = Convert.ToSingle(Row["DiemTB"]);
+                ketQua.DiemTBHK = Convert.ToSingle(Row["DiemTBHK"]);
 
                 ilist.Add(ketQua);
             }

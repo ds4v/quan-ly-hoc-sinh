@@ -8,7 +8,7 @@ namespace DTO
         private string hoTen;
         bool gioiTinh;
         private DateTime ngaySinh; 
-        private string noiSinh; 
+        private string diaChi; 
         private string maDanToc; 
         private string maTonGiao; 
         private string hoTenCha; 
@@ -23,7 +23,7 @@ namespace DTO
             string hoTen, 
             bool gioiTinh, 
             DateTime ngaySinh, 
-            string noiSinh, 
+            string diaChi, 
             string maDanToc, 
             string maTonGiao, 
             string hoTenCha, 
@@ -36,7 +36,7 @@ namespace DTO
             this.hoTen = hoTen;
             this.gioiTinh = gioiTinh;
             this.ngaySinh = ngaySinh;
-            this.noiSinh = noiSinh;
+            this.diaChi = diaChi;
             this.maDanToc = maDanToc;
             this.maTonGiao = maTonGiao;
             this.hoTenCha = hoTenCha;
@@ -50,7 +50,7 @@ namespace DTO
         public string HoTen { get => hoTen; set => hoTen = value; }
         public bool GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public string NoiSinh { get => noiSinh; set => noiSinh = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
         public string MaDanToc { get => maDanToc; set => maDanToc = value; }
         public string MaTonGiao { get => maTonGiao; set => maTonGiao = value; }
         public string HoTenCha { get => hoTenCha; set => hoTenCha = value; }

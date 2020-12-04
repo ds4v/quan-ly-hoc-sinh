@@ -39,13 +39,13 @@ namespace DAO
 
         public void ThemHocSinh(HocSinhDTO hocSinh)
         {
-            string query = "EXEC ThemHocSinh @maHocSinh , @hoTen , @gioiTinh , @ngaySinh , @noiSinh , @maDanToc , @maTonGiao , @hoTenCha , @maNgheCha , @hoTenMe , @maNgheMe , @email";
+            string query = "EXEC ThemHocSinh @maHocSinh , @hoTen , @gioiTinh , @ngaySinh , @diaChi , @maDanToc , @maTonGiao , @hoTenCha , @maNgheCha , @hoTenMe , @maNgheMe , @email";
             object[] parameters = new object[] {
                 hocSinh.MaHocSinh,
                 hocSinh.HoTen,
                 hocSinh.GioiTinh,
                 hocSinh.NgaySinh,
-                hocSinh.NoiSinh,
+                hocSinh.DiaChi,
                 hocSinh.MaDanToc,
                 hocSinh.MaTonGiao,
                 hocSinh.HoTenCha,

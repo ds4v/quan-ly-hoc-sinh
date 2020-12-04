@@ -34,7 +34,7 @@ namespace BUS
             CheckBoxX ckbGTinhNam, 
             CheckBoxX ckbGTinhNu, 
             DateTimeInput dtpNgaySinh, 
-            TextBoxX txtNoiSinh, 
+            TextBoxX txtDiaChi, 
             ComboBoxEx cmbDanToc, 
             ComboBoxEx cmbTonGiao, 
             TextBoxX txtHoTenCha, 
@@ -62,8 +62,8 @@ namespace BUS
             dtpNgaySinh.DataBindings.Clear();
             dtpNgaySinh.DataBindings.Add("Value", bindingSource, "NgaySinh");
 
-            txtNoiSinh.DataBindings.Clear();
-            txtNoiSinh.DataBindings.Add("Text", bindingSource, "NoiSinh");
+            txtDiaChi.DataBindings.Clear();
+            txtDiaChi.DataBindings.Add("Text", bindingSource, "DiaChi");
 
             cmbDanToc.DataBindings.Clear();
             cmbDanToc.DataBindings.Add("SelectedValue", bindingSource, "MaDanToc");

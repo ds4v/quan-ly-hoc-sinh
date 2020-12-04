@@ -42,7 +42,7 @@ namespace QuanLyHocSinh
             dataRow["HoTen"] = "";
             dataRow["GioiTinh"] = false;
             dataRow["NgaySinh"] = DateTime.Today;
-            dataRow["NoiSinh"] = "";
+            dataRow["DiaChi"] = "";
             dataRow["MaDanToc"] = "";
             dataRow["MaTonGiao"] = "";
             dataRow["HoTenCha"] = "";
@@ -66,7 +66,7 @@ namespace QuanLyHocSinh
                 ckbGTinhNam,
                 ckbGTinhNu,
                 dtpNgaySinh,
-                txtNoiSinh,
+                txtDiaChi,
                 cmbDanToc,
                 cmbTonGiao,
                 txtHoTenCha,
@@ -95,7 +95,7 @@ namespace QuanLyHocSinh
             string[] colNames = { 
                 "colMaHocSinh", 
                 "colHoTen",
-                "colNoiSinh",
+                "colDiaChi",
                 "colMaDanToc",
                 "colMaTonGiao",
                 "colHoTenCha",
@@ -156,7 +156,7 @@ namespace QuanLyHocSinh
 
             if (string.IsNullOrWhiteSpace(txtMaHocSinh.Text) ||
                 string.IsNullOrWhiteSpace(txtTenHocSinh.Text) ||
-                string.IsNullOrWhiteSpace(txtNoiSinh.Text) ||
+                string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
                 string.IsNullOrWhiteSpace(txtHoTenCha.Text) ||
                 string.IsNullOrWhiteSpace(txtHoTenMe.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
@@ -180,7 +180,7 @@ namespace QuanLyHocSinh
                         txtTenHocSinh.Text,
                         gioiTinh,
                         dtpNgaySinh.Value,
-                        txtNoiSinh.Text,
+                        txtDiaChi.Text,
                         cmbDanToc.SelectedValue.ToString(),
                         cmbTonGiao.SelectedValue.ToString(),
                         txtHoTenCha.Text,
