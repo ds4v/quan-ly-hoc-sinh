@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bsKQHSMH = new System.Windows.Forms.BindingSource(this.components);
             this.groupPanelDS = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnXem = new DevComponents.DotNetBar.ButtonX();
@@ -41,7 +41,7 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cmbNamHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX0 = new DevComponents.DotNetBar.LabelX();
-            this.reportViewerKQHKMH = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rpvKQHSMH = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.bsKQHSMH)).BeginInit();
             this.groupPanelDS.SuspendLayout();
             this.SuspendLayout();
@@ -181,24 +181,25 @@
             this.labelX0.TabIndex = 0;
             this.labelX0.Text = "Năm học:";
             // 
-            // reportViewerKQHKMH
+            // rpvKQHSMH
             // 
-            this.reportViewerKQHKMH.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "QuanLyHocSinh_Bussiness_KQHocKyMonHocInfo";
-            reportDataSource1.Value = this.bsKQHSMH;
-            this.reportViewerKQHKMH.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewerKQHKMH.LocalReport.ReportEmbeddedResource = "QuanLyHocSinh.Reports.rptKetQuaHocKy_MonHoc.rdlc";
-            this.reportViewerKQHKMH.Location = new System.Drawing.Point(0, 58);
-            this.reportViewerKQHKMH.Name = "reportViewerKQHKMH";
-            this.reportViewerKQHKMH.Size = new System.Drawing.Size(792, 408);
-            this.reportViewerKQHKMH.TabIndex = 2;
+            this.rpvKQHSMH.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource.Name = "KQHSMonHocDTO";
+            reportDataSource.Value = this.bsKQHSMH;
+            this.rpvKQHSMH.LocalReport.DataSources.Add(reportDataSource);
+            this.rpvKQHSMH.LocalReport.ReportEmbeddedResource = "QuanLyHocSinh.Reports.rptKQHSMonHoc.rdlc";
+            this.rpvKQHSMH.Location = new System.Drawing.Point(0, 58);
+            this.rpvKQHSMH.Name = "rpvKQHSMH";
+            this.rpvKQHSMH.ServerReport.BearerToken = null;
+            this.rpvKQHSMH.Size = new System.Drawing.Size(792, 408);
+            this.rpvKQHSMH.TabIndex = 2;
             // 
             // frmKQHSMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 466);
-            this.Controls.Add(this.reportViewerKQHKMH);
+            this.Controls.Add(this.rpvKQHSMH);
             this.Controls.Add(this.groupPanelDS);
             this.DoubleBuffered = true;
             this.Name = "frmKQHSMonHoc";
@@ -226,6 +227,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMonHoc;
         private DevComponents.DotNetBar.LabelX labelX3;
         private System.Windows.Forms.BindingSource bsKQHSMH;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewerKQHKMH;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvKQHSMH;
     }
 }

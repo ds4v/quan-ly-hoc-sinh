@@ -1,3 +1,6 @@
+USE QuanLyHocSinh
+GO
+
 CREATE PROCEDURE LayDanhSachHocSinh
 	@maNamHoc NVARCHAR(6),
 	@maLop NVARCHAR(10)
@@ -6,7 +9,7 @@ BEGIN
 	SELECT PL.MaHocSinh, HS.HoTen FROM HOCSINH HS 
 	INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
 	INNER JOIN LOP L ON L.MaLop = PL.MaLop 
-	WHERE PL.MaNamHoc = @namHoc AND PL.MaLop = @lop
+	WHERE PL.MaNamHoc = @maNamHoc AND PL.MaLop = @maLop
 END
 GO
 
@@ -15,7 +18,7 @@ CREATE PROCEDURE ThemHocSinh
     @hoTen NVARCHAR(30), 
     @gioiTinh BIT, 
     @ngaySinh DATETIME, 
-    @noiSinh NVARCHAR(50), 
+    @diaChi NVARCHAR(50), 
     @maDanToc NVARCHAR(6), 
     @maTonGiao NVARCHAR(6), 
     @hoTenCha NVARCHAR(30), 
@@ -25,7 +28,8 @@ CREATE PROCEDURE ThemHocSinh
     @email NVARCHAR(50)
 AS
 BEGIN
-	INSERT INTO HOCSINH VALUES(@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @noiSinh, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe, @email)
+	INSERT INTO HOCSINH (MaHocSinh, HoTen, GioiTinh, NgaySinh, DiaChi, MaDanToc, MaTonGiao, HoTenCha, MaNNghiepCha, HoTenMe, MaNNghiepMe, Email) 
+	VALUES (@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @diaChi, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe, @email)
 END
 GO
 
@@ -62,7 +66,8 @@ CREATE PROCEDURE ThemDiem
 	@diemSo FLOAT
 AS
 BEGIN
-	INSERT INTO DIEM VALUES(@maHocSinh, @maMonHoc, @maHocKy, @maNamHoc, @maLop, @maLoaiDiem, @diemSo)
+	INSERT INTO DIEM (MaHocSinh, MaMonHoc, MaHocKy, MaNamHoc, MaLop, MaLoai, Diem)
+	VALUES (@maHocSinh, @maMonHoc, @maHocKy, @maNamHoc, @maLop, @maLoaiDiem, @diemSo)
 END
 GO
 
@@ -84,7 +89,8 @@ CREATE PROCEDURE ThemLop
 	@maGiaoVien NVARCHAR(6)
 AS
 BEGIN
-	INSERT INTO LOP VALUES (@maLop, @tenLop, @maKhoiLop, @maNamHoc, @siSo, @maGiaoVien)
+	INSERT INTO LOP (MaLop, TenLop, MaKhoiLop, MaNamHoc, SiSo, MaGiaoVien)
+	VALUES (@maLop, @tenLop, @maKhoiLop, @maNamHoc, @siSo, @maGiaoVien)
 END
 GO
 
@@ -102,7 +108,7 @@ GO
 
 --===================================================================================================================================================
 
-ALTER PROCEDURE ReportKQHSMonHoc
+CREATE PROCEDURE ReportKQHSMonHoc
 	@maLop NVARCHAR(10), 
 	@maMonHoc NVARCHAR(6), 
 	@maHocKy NVARCHAR(3), 
@@ -120,4 +126,66 @@ BEGIN
 	  AND KQ.MaHocKy = @maHocKy
 	  AND KQ.MaNamHoc = @maNamHoc
 END 
+GO
+
+CREATE PROCEDURE ThemKQHSMonHoc
+	@maHocSinh NVARCHAR(6),
+	@maLop NVARCHAR(10), 
+	@maMonHoc NVARCHAR(6), 
+	@maHocKy NVARCHAR(3), 
+	@maNamHoc NVARCHAR(6),
+	@diemMiengTB FLOAT,
+	@diem15PhutTB FLOAT,
+	@diem45PhutTB FLOAT,
+	@diemThi FLOAT,
+	@diemTBHK FLOAT
+AS
+BEGIN
+	INSERT INTO KQ_HOCSINH_MONHOC (MaHocSinh, MaLop, MaMonHoc, MaHocKy, MaNamHoc, DiemMiengTB, Diem15PhutTB, Diem45PhutTB, DiemThi, DiemTBHK)
+	VALUES (@maHocSinh, @maLop, @maMonHoc, @maHocKy, @maNamHoc, @diemMiengTB, @diem15PhutTB, @diem45PhutTB, @diemThi, @diemTBHK)
+END
+GO
+
+CREATE PROCEDURE XoaKQHSMonHoc
+	@maHocSinh NVARCHAR(6),
+	@maLop NVARCHAR(10), 
+	@maMonHoc NVARCHAR(6), 
+	@maHocKy NVARCHAR(3), 
+	@maNamHoc NVARCHAR(6)
+AS
+BEGIN
+	DELETE FROM KQ_HOCSINH_MONHOC 
+	WHERE MaHocSinh = @maHocSinh 
+	  AND MaLop = @maLop 
+	  AND MaMonHoc = @maMonHoc 
+	  AND MaHocKy = @maHocKy 
+	  AND MaNamHoc = @maNamHoc
+END 
+GO
+
+--===================================================================================================================================================
+
+CREATE PROCEDURE CapNhatSiSoQuyDinh
+	@siSoCanDuoi INT,
+	@siSoCanTren INT 
+AS
+BEGIN
+	UPDATE QUYDINH SET SiSoCanDuoi = @siSoCanDuoi, SiSoCanTren = @siSoCanTren
+END
+GO
+
+CREATE PROCEDURE CapNhatDoTuoiQuyDinh
+	@tuoiCanDuoi INT,
+	@tuoiCanTren INT 
+AS
+BEGIN
+	UPDATE QUYDINH SET TuoiCanDuoi = @tuoiCanDuoi, TuoiCanTren = @tuoiCanTren
+END
+GO
+
+CREATE PROCEDURE CapNhatThangDiemQuyDinh @thangDiem INT 
+AS
+BEGIN
+	UPDATE QUYDINH SET ThangDiem = @thangDiem
+END
 GO

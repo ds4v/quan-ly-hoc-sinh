@@ -60,7 +60,7 @@ namespace QuanLyHocSinh
                 MonHocBUS.Instance.CapNhatMonHoc((DataTable)bindingSource.DataSource);
 
                 MessageBox.Show(
-                    "Dữ liệu đã được lưu vào CL",
+                    "Dữ liệu đã được lưu vào CSDL",
                     "Cập nhật thành công",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
