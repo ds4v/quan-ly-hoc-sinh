@@ -1,6 +1,21 @@
 USE QuanLyHocSinh
 GO
 
+CREATE PROCEDURE ThemGiaoVien
+	@maGiaoVien NVARCHAR(6), 
+    @tenGiaoVien NVARCHAR(30), 
+    @diaChi NVARCHAR(50), 
+    @dienThoai NVARCHAR(15), 
+    @chuyenMon NVARCHAR(6)
+AS
+BEGIN
+	INSERT INTO GiaoVien (MaGiaoVien, TenGiaoVien, DiaChi, DienThoai, MaMonHoc) 
+	VALUES (@maGiaoVien, @tenGiaoVien, @diaChi, @dienThoai, @chuyenMon)
+END
+GO
+
+--===================================================================================================================================================
+
 CREATE PROCEDURE LayDanhSachHocSinh
 	@maNamHoc NVARCHAR(6),
 	@maLop NVARCHAR(10)
