@@ -23,5 +23,10 @@ namespace DAO
             string query = "SELECT * FROM NGHENGHIEP";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void CapNhatNgheNghiep(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable, "NGHENGHIEP");
+        }
     }
 }

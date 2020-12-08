@@ -23,5 +23,10 @@ namespace DAO
             string query = "SELECT * FROM DANTOC";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void CapNhatDanToc(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable, "DANTOC");
+        }
     }
 }

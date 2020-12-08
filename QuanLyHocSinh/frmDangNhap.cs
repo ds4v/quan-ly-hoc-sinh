@@ -25,10 +25,5 @@ namespace QuanLyHocSinh
         {
             if (e.KeyCode == Keys.Enter) DialogResult = DialogResult.OK;
         }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

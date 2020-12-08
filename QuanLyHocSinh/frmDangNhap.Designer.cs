@@ -234,7 +234,6 @@
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";
-            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.gPanelDangNhap.ResumeLayout(false);
             this.gPanelDangNhap.PerformLayout();
             this.panelTop.ResumeLayout(false);

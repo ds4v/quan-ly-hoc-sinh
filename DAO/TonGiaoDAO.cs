@@ -23,5 +23,10 @@ namespace DAO
             string query = "SELECT * FROM TONGIAO";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public void CapNhatTonGiao(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable, "TONGIAO");
+        }
     }
 }
