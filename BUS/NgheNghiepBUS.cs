@@ -1,5 +1,6 @@
 ﻿using DAO;
 using DevComponents.DotNetBar.Controls;
+using System.Data;
 using System.Windows.Forms;
 
 namespace BUS
@@ -7,6 +8,7 @@ namespace BUS
     public class NgheNghiepBUS
     {
         private static NgheNghiepBUS instance;
+        private BindingSource bindingSource = new BindingSource();
 
         private NgheNghiepBUS() { }
 
@@ -18,6 +20,14 @@ namespace BUS
                 return instance;
             }
             private set => instance = value;
+        }
+
+        public void HienThi(DataGridViewX dataGridViewX, BindingNavigator bindingNavigator)
+        {
+
+            bindingSource.DataSource = NgheNghiepDAO.Instance.LayDanhSachNgheNghiep();
+            bindingNavigator.BindingSource = bindingSource;
+            dataGridViewX.DataSource = bindingSource;
         }
 
         public void HienThiComboBox(ComboBoxEx comboBox)
@@ -43,6 +53,11 @@ namespace BUS
             cmbColumn.ValueMember = "MaNghe";
             cmbColumn.DataPropertyName = "MaNNghiepMe";
             cmbColumn.HeaderText = "Nghề nghiệp mẹ";
+        }
+
+        public void CapNhatNgheNghiep(DataTable dataTable)
+        {
+            NgheNghiepDAO.Instance.CapNhatNgheNghiep(dataTable);
         }
     }
 }

@@ -93,6 +93,11 @@ namespace QuanLyHocSinh
 
                         string tenNguoiDung = NguoiDungBUS.Instance.NguoiDung.TenNguoiDung;
                         lblTenNguoiDung.Text = tenNguoiDung;
+
+                        frmLogin.txtUsername.Text = "";
+                        frmLogin.txtPassword.Text = "";
+                        frmLogin.lblUserError.Text = "";
+                        frmLogin.lblPassError.Text = "";
                         return;
                 }
             }

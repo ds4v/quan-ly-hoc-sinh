@@ -1,6 +1,5 @@
 ﻿using DAO;
 using DevComponents.DotNetBar.Controls;
-using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -31,6 +30,13 @@ namespace BUS
             dataGridViewX.DataSource = bindingSource;
         }
 
+        public void HienThiComboBox(ComboBoxEx comboBox)
+        {
+            comboBox.DataSource = MonHocDAO.Instance.LayDanhSachMonHoc();
+            comboBox.DisplayMember = "TenMonHoc";
+            comboBox.ValueMember = "MaMonHoc";
+        }
+
         public void HienThiComboBox(string namHoc, string lop, ComboBoxEx comboBox)
         {
             comboBox.DataSource = MonHocDAO.Instance.LayDanhSachMonHoc(namHoc, lop);
@@ -38,14 +44,19 @@ namespace BUS
             comboBox.ValueMember = "MaMonHoc";
         }
 
+        public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
+        {
+            cmbColumn.DataSource = MonHocDAO.Instance.LayDanhSachMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+            cmbColumn.ValueMember = "MaMonHoc";
+            cmbColumn.DataPropertyName = "MaMonHoc";
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+
         public void CapNhatMonHoc(DataTable dataTable)
         {
             MonHocDAO.Instance.CapNhatMonHoc(dataTable);
-        }
-
-        public void HienThiComboBox(string v1, string v2, object cmbMonHocSD)
-        {
-            throw new NotImplementedException();
         }
     }
 }

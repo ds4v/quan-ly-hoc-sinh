@@ -48,7 +48,9 @@
     <Compile Include="DanTocBUS.cs" />
     <Compile Include="DiemBUS.cs" />
     <Compile Include="GiaoVienBUS.cs" />
+    <Compile Include="HanhKiemBUS.cs" />
     <Compile Include="HocKyBUS.cs" />
+    <Compile Include="HocLucBUS.cs" />
     <Compile Include="HocSinhBUS.cs" />
     <Compile Include="KhoiLopBUS.cs" />
     <Compile Include="KQHSMonHocBUS.cs" />

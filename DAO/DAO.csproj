@@ -45,7 +45,9 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="DiemDAO.cs" />
     <Compile Include="GiaoVienDAO.cs" />
+    <Compile Include="HanhKiemDAO.cs" />
     <Compile Include="HocKyDAO.cs" />
+    <Compile Include="HocLucDAO.cs" />
     <Compile Include="HocSinhDAO.cs" />
     <Compile Include="KhoiLopDAO.cs" />
     <Compile Include="KQHSMonHocDAO.cs" />
