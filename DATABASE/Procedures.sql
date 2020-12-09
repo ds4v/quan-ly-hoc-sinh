@@ -204,3 +204,14 @@ BEGIN
 	UPDATE QUYDINH SET ThangDiem = @thangDiem
 END
 GO
+
+--===================================================================================================================================================
+
+CREATE PROCEDURE DoiMatKhau
+	@tenDangNhap NVARCHAR(30),
+	@matKhau NVARCHAR(30) 
+AS
+BEGIN
+	UPDATE NGUOIDUNG SET MatKhau = @matkhau WHERE TenDangNhap = @tendangnhap
+END
+GO
