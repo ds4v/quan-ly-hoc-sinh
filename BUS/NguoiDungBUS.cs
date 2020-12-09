@@ -7,12 +7,10 @@ namespace BUS
     public class NguoiDungBUS
     {
         private static NguoiDungBUS instance;
-        private NguoiDungDTO nguoiDung = new NguoiDungDTO();
-        private LoaiNguoiDungDTO loaiNguoiDung = new LoaiNguoiDungDTO();
+        private NguoiDungDTO nguoiDung;
 
         private NguoiDungBUS() { }
         public NguoiDungDTO NguoiDung { get => nguoiDung; set => nguoiDung = value; }
-        public LoaiNguoiDungDTO LoaiNguoiDung { get => loaiNguoiDung; set => loaiNguoiDung = value; }
 
         public static NguoiDungBUS Instance
         {
@@ -26,14 +24,38 @@ namespace BUS
 
         public int DangNhap(string username, string password)
         {
-            DataTable dataTable = NguoiDungDAO.Instance.LayDanhSachNguoiDung(username);
+            DataTable dataTable = NguoiDungDAO.Instance.LayNguoiDung(username);
             if (dataTable.Rows.Count == 0) return 0;
             if (password != dataTable.Rows[0]["MatKhau"].ToString()) return 1;
 
-            NguoiDung.TenNguoiDung = dataTable.Rows[0]["TenNguoiDung"].ToString();
-            LoaiNguoiDung.MaLoai = dataTable.Rows[0]["MaLoai"].ToString();
-            NguoiDung.LoaiNguoiDung = LoaiNguoiDung;
+            LoaiNguoiDungDTO loaiNguoiDung = new LoaiNguoiDungDTO();
+            loaiNguoiDung.MaLoai = dataTable.Rows[0]["MaLoai"].ToString();
+
+            nguoiDung = new NguoiDungDTO(
+                dataTable.Rows[0]["MaNguoiDung"].ToString(),
+                loaiNguoiDung,
+                dataTable.Rows[0]["TenNguoiDung"].ToString(),
+                dataTable.Rows[0]["TenDangNhap"].ToString(),
+                dataTable.Rows[0]["MatKhau"].ToString()
+            );
             return 2;
+        }
+
+        public void DoiMatKhau(string username, string newPassword)
+        {
+            NguoiDungDAO.Instance.DoiMatKhau(username, newPassword);
+            nguoiDung.MatKhau = newPassword;
+        }
+
+        public void SaoLuuCSDL(string fileName)
+        {
+            NguoiDungDAO.Instance.SaoLuuCSDL(fileName);
+        }
+
+        public void PhucHoiCSDL(string fileName)
+        {
+            NguoiDungDAO.Instance.PhucHoiCSDL(fileName);
+
         }
     }
 }

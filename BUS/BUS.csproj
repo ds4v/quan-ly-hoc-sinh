@@ -52,6 +52,7 @@
     <Compile Include="HocKyBUS.cs" />
     <Compile Include="HocLucBUS.cs" />
     <Compile Include="HocSinhBUS.cs" />
+    <Compile Include="KetQuaBUS.cs" />
     <Compile Include="KhoiLopBUS.cs" />
     <Compile Include="KQHSMonHocBUS.cs" />
     <Compile Include="LopBUS.cs" />

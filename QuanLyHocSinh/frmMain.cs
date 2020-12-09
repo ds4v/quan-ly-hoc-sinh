@@ -8,6 +8,8 @@ namespace QuanLyHocSinh
     public partial class frmMain : Office2007RibbonForm
     {
         frmDangNhap frmLogin = null;
+        frmDoiMatKhau frmChangePass= null;
+
         public frmMain()
         {
             InitializeComponent();
@@ -85,7 +87,7 @@ namespace QuanLyHocSinh
                         frmLogin.lblPassError.Text = "Mật khẩu không hợp lệ !";
                         continue;
                     case 2:
-                        string maLoai = NguoiDungBUS.Instance.LoaiNguoiDung.MaLoai;
+                        string maLoai = NguoiDungBUS.Instance.NguoiDung.LoaiNguoiDung.MaLoai;
                         if (maLoai == "LND001") ShowGiaoDienBGH();
                         else if (maLoai == "LND002") ShowGiaoDienGiaoVien();
                         else if (maLoai == "LND003") ShowGiaoDienGiaoVu();
@@ -111,7 +113,70 @@ namespace QuanLyHocSinh
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            while (true)
+            {
+                if (frmChangePass == null || frmChangePass.IsDisposed) frmChangePass = new frmDoiMatKhau();
+                if (frmChangePass.ShowDialog() != DialogResult.OK) return;
 
+                string username = NguoiDungBUS.Instance.NguoiDung.TenDangNhap;
+                string password = NguoiDungBUS.Instance.NguoiDung.MatKhau;
+
+                string oldPassword = frmChangePass.txtOldPassword.Text;
+                string newPassword = frmChangePass.txtNewPassword.Text;
+                string confirmPassword = frmChangePass.txtConfirmPassword.Text;
+
+                if (string.IsNullOrWhiteSpace(oldPassword))
+                {
+                    frmChangePass.lblOldPassError.Text = "Chưa nhập mật khẩu hiện tại!";
+                    frmChangePass.lblNewPassError.Text = "";
+                    frmChangePass.lblConfirmPassError.Text = "";
+                    continue;
+                }
+
+                if (string.IsNullOrWhiteSpace(newPassword))
+                {
+                    frmChangePass.lblOldPassError.Text = "";
+                    frmChangePass.lblNewPassError.Text = "Chưa nhập mật khẩu mới!";
+                    frmChangePass.lblConfirmPassError.Text = "";
+                    continue;
+                }
+
+                if (string.IsNullOrWhiteSpace(confirmPassword))
+                {
+                    frmChangePass.lblOldPassError.Text = "";
+                    frmChangePass.lblNewPassError.Text = "";
+                    frmChangePass.lblConfirmPassError.Text = "Chưa nhập xác nhận mật khẩu!";
+                    continue;
+                }
+
+                if (password != oldPassword)
+                {
+                    frmChangePass.lblOldPassError.Text = "Nhập sai mật khẩu cũ!";
+                    frmChangePass.lblNewPassError.Text = "";
+                    frmChangePass.lblConfirmPassError.Text = "";
+                    continue;
+                }
+                else if (newPassword != confirmPassword)
+                {
+                    frmChangePass.lblOldPassError.Text = "";
+                    frmChangePass.lblNewPassError.Text = "";
+                    frmChangePass.lblConfirmPassError.Text = "Nhập xác nhận không khớp!";
+                    continue;
+                }
+                else
+                {
+                    NguoiDungBUS.Instance.DoiMatKhau(username, newPassword);
+                    MessageBox.Show("Đổi mật khẩu thành công!", "PASSWORD CHANGED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    frmChangePass.txtOldPassword.Text = "";
+                    frmChangePass.txtNewPassword.Text = "";
+                    frmChangePass.txtConfirmPassword.Text = "";
+                    frmChangePass.lblOldPassError.Text = "";
+                    frmChangePass.lblNewPassError.Text = "";
+                    frmChangePass.lblConfirmPassError.Text = "";
+                    return;
+                }
+            }
         }
 
         private void btnQLNguoiDung_Click(object sender, EventArgs e)
@@ -121,12 +186,17 @@ namespace QuanLyHocSinh
 
         private void btnSaoLuu_Click(object sender, EventArgs e)
         {
+            if (backupDialog.ShowDialog() != DialogResult.OK) return;
+            NguoiDungBUS.Instance.SaoLuuCSDL(backupDialog.FileName.ToString());
+            MessageBox.Show("Sao lưu dữ liệu thành công!", "BACKUP COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private void btnPhucHoi_Click(object sender, EventArgs e)
         {
-
+            if (restoreDialog.ShowDialog() != DialogResult.OK) return;
+            NguoiDungBUS.Instance.SaoLuuCSDL(restoreDialog.FileName.ToString());
+            MessageBox.Show("Phục hồi dữ liệu thành công!", "RESTORE COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
