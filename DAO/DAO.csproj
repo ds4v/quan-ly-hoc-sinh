@@ -51,12 +51,14 @@
     <Compile Include="HocSinhDAO.cs" />
     <Compile Include="KetQuaDAO.cs" />
     <Compile Include="KhoiLopDAO.cs" />
-    <Compile Include="KQHSMonHocDAO.cs" />
+    <Compile Include="Reports\KQHSCaNamDAO.cs" />
+    <Compile Include="Reports\KQHSMonHocDAO.cs" />
     <Compile Include="LopDAO.cs" />
     <Compile Include="MonHocDAO.cs" />
     <Compile Include="NamHocDAO.cs" />
     <Compile Include="NgheNghiepDAO.cs" />
     <Compile Include="NguoiDungDAO.cs" />
+    <Compile Include="PhanCongDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuyDinhDAO.cs" />
     <Compile Include="TonGiaoDAO.cs" />

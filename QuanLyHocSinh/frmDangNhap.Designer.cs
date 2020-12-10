@@ -59,6 +59,7 @@
             this.gPanelDangNhap.Controls.Add(this.txtUsername);
             this.gPanelDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gPanelDangNhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gPanelDangNhap.IsShadowEnabled = true;
             this.gPanelDangNhap.Location = new System.Drawing.Point(0, 40);
             this.gPanelDangNhap.Name = "gPanelDangNhap";
             this.gPanelDangNhap.Size = new System.Drawing.Size(344, 148);
@@ -232,7 +233,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmDangNhap";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ĐĂNG NHẬP";
             this.gPanelDangNhap.ResumeLayout(false);
             this.gPanelDangNhap.PerformLayout();

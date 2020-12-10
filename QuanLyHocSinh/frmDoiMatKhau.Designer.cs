@@ -61,10 +61,11 @@
             this.gPanelDoiMatKhau.Controls.Add(this.txtOldPassword);
             this.gPanelDoiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gPanelDoiMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gPanelDoiMatKhau.IsShadowEnabled = true;
             this.gPanelDoiMatKhau.Location = new System.Drawing.Point(0, 0);
-            this.gPanelDoiMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gPanelDoiMatKhau.Name = "gPanelDoiMatKhau";
-            this.gPanelDoiMatKhau.Size = new System.Drawing.Size(516, 289);
+            this.gPanelDoiMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gPanelDoiMatKhau.Size = new System.Drawing.Size(344, 188);
             // 
             // 
             // 
@@ -94,10 +95,9 @@
             this.lblConfirmPassError.BackColor = System.Drawing.Color.Transparent;
             this.lblConfirmPassError.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPassError.ForeColor = System.Drawing.Color.Red;
-            this.lblConfirmPassError.Location = new System.Drawing.Point(250, 185);
-            this.lblConfirmPassError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConfirmPassError.Location = new System.Drawing.Point(167, 120);
             this.lblConfirmPassError.Name = "lblConfirmPassError";
-            this.lblConfirmPassError.Size = new System.Drawing.Size(0, 21);
+            this.lblConfirmPassError.Size = new System.Drawing.Size(0, 13);
             this.lblConfirmPassError.TabIndex = 0;
             // 
             // lblNewPassError
@@ -106,10 +106,9 @@
             this.lblNewPassError.BackColor = System.Drawing.Color.Transparent;
             this.lblNewPassError.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPassError.ForeColor = System.Drawing.Color.Red;
-            this.lblNewPassError.Location = new System.Drawing.Point(250, 123);
-            this.lblNewPassError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNewPassError.Location = new System.Drawing.Point(167, 80);
             this.lblNewPassError.Name = "lblNewPassError";
-            this.lblNewPassError.Size = new System.Drawing.Size(0, 21);
+            this.lblNewPassError.Size = new System.Drawing.Size(0, 13);
             this.lblNewPassError.TabIndex = 0;
             // 
             // lblOldPassError
@@ -118,10 +117,9 @@
             this.lblOldPassError.BackColor = System.Drawing.Color.Transparent;
             this.lblOldPassError.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOldPassError.ForeColor = System.Drawing.Color.Red;
-            this.lblOldPassError.Location = new System.Drawing.Point(250, 62);
-            this.lblOldPassError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOldPassError.Location = new System.Drawing.Point(167, 40);
             this.lblOldPassError.Name = "lblOldPassError";
-            this.lblOldPassError.Size = new System.Drawing.Size(0, 21);
+            this.lblOldPassError.Size = new System.Drawing.Size(0, 13);
             this.lblOldPassError.TabIndex = 0;
             // 
             // btnHuyBo
@@ -129,10 +127,9 @@
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnHuyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnHuyBo.Location = new System.Drawing.Point(381, 208);
-            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHuyBo.Location = new System.Drawing.Point(254, 135);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(112, 35);
+            this.btnHuyBo.Size = new System.Drawing.Size(75, 23);
             this.btnHuyBo.TabIndex = 5;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
@@ -142,10 +139,9 @@
             this.btnDongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDongY.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnDongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnDongY.Location = new System.Drawing.Point(254, 208);
-            this.btnDongY.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDongY.Location = new System.Drawing.Point(169, 135);
             this.btnDongY.Name = "btnDongY";
-            this.btnDongY.Size = new System.Drawing.Size(112, 35);
+            this.btnDongY.Size = new System.Drawing.Size(75, 23);
             this.btnDongY.TabIndex = 4;
             this.btnDongY.Text = "Đồng ý";
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
@@ -154,10 +150,9 @@
             // 
             this.lblConfirmNewPass.BackColor = System.Drawing.Color.Transparent;
             this.lblConfirmNewPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmNewPass.Location = new System.Drawing.Point(12, 146);
-            this.lblConfirmNewPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblConfirmNewPass.Location = new System.Drawing.Point(8, 95);
             this.lblConfirmNewPass.Name = "lblConfirmNewPass";
-            this.lblConfirmNewPass.Size = new System.Drawing.Size(232, 35);
+            this.lblConfirmNewPass.Size = new System.Drawing.Size(155, 23);
             this.lblConfirmNewPass.TabIndex = 0;
             this.lblConfirmNewPass.Text = "Nhập lại mật khẩu mới:";
             // 
@@ -165,10 +160,9 @@
             // 
             this.lblNewPass.BackColor = System.Drawing.Color.Transparent;
             this.lblNewPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewPass.Location = new System.Drawing.Point(12, 85);
-            this.lblNewPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblNewPass.Location = new System.Drawing.Point(8, 55);
             this.lblNewPass.Name = "lblNewPass";
-            this.lblNewPass.Size = new System.Drawing.Size(232, 35);
+            this.lblNewPass.Size = new System.Drawing.Size(155, 23);
             this.lblNewPass.TabIndex = 0;
             this.lblNewPass.Text = "Mật khẩu mới:";
             // 
@@ -176,10 +170,9 @@
             // 
             this.lblOldPass.BackColor = System.Drawing.Color.Transparent;
             this.lblOldPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOldPass.Location = new System.Drawing.Point(12, 23);
-            this.lblOldPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblOldPass.Location = new System.Drawing.Point(8, 15);
             this.lblOldPass.Name = "lblOldPass";
-            this.lblOldPass.Size = new System.Drawing.Size(232, 35);
+            this.lblOldPass.Size = new System.Drawing.Size(155, 23);
             this.lblOldPass.TabIndex = 0;
             this.lblOldPass.Text = "Mật khẩu cũ:";
             // 
@@ -189,12 +182,11 @@
             // 
             // 
             this.txtConfirmPassword.Border.Class = "TextBoxBorder";
-            this.txtConfirmPassword.Location = new System.Drawing.Point(254, 146);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(169, 95);
             this.txtConfirmPassword.MaxLength = 30;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '●';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(240, 31);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(160, 23);
             this.txtConfirmPassword.TabIndex = 3;
             this.txtConfirmPassword.WatermarkText = "Xác nhận mật khẩu mới";
             // 
@@ -204,12 +196,11 @@
             // 
             // 
             this.txtNewPassword.Border.Class = "TextBoxBorder";
-            this.txtNewPassword.Location = new System.Drawing.Point(254, 85);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNewPassword.Location = new System.Drawing.Point(169, 55);
             this.txtNewPassword.MaxLength = 30;
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '●';
-            this.txtNewPassword.Size = new System.Drawing.Size(240, 31);
+            this.txtNewPassword.Size = new System.Drawing.Size(160, 23);
             this.txtNewPassword.TabIndex = 2;
             this.txtNewPassword.WatermarkText = "Mật khẩu mới";
             // 
@@ -219,24 +210,22 @@
             // 
             // 
             this.txtOldPassword.Border.Class = "TextBoxBorder";
-            this.txtOldPassword.Location = new System.Drawing.Point(254, 23);
-            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOldPassword.Location = new System.Drawing.Point(169, 15);
             this.txtOldPassword.MaxLength = 30;
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.PasswordChar = '●';
-            this.txtOldPassword.Size = new System.Drawing.Size(240, 31);
+            this.txtOldPassword.Size = new System.Drawing.Size(160, 23);
             this.txtOldPassword.TabIndex = 1;
             this.txtOldPassword.WatermarkText = "Mật khẩu cũ";
             // 
             // frmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 289);
+            this.ClientSize = new System.Drawing.Size(344, 188);
             this.Controls.Add(this.gPanelDoiMatKhau);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDoiMatKhau";

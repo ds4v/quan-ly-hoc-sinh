@@ -427,7 +427,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TBKT Miệng</Value>
+                                  <Value>TBKT MIỆNG</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontWeight>Bold</FontWeight>
@@ -647,7 +647,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MaHocSinh</Value>
+                                  <Value>=Fields!MaHocSinh.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -684,7 +684,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!HoTen</Value>
+                                  <Value>=Fields!HoTen.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -777,6 +777,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

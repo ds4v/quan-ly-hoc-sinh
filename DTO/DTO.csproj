@@ -45,11 +45,13 @@
     <Compile Include="GiaoVienDTO.cs" />
     <Compile Include="HocKyDTO.cs" />
     <Compile Include="HocSinhDTO.cs" />
-    <Compile Include="KQHSMonHocDTO.cs" />
+    <Compile Include="Reports\KQHSCaNamDTO.cs" />
+    <Compile Include="Reports\KQHSMonHocDTO.cs" />
     <Compile Include="LopDTO.cs" />
     <Compile Include="MonHocDTO.cs" />
     <Compile Include="NamHocDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
+    <Compile Include="PhanCongDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoaiNguoiDungDTO.cs" />
   </ItemGroup>

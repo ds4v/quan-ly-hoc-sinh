@@ -2,6 +2,7 @@
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 using DTO;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -57,11 +58,27 @@ namespace BUS
             cmbGiaoVien.DataBindings.Add("SelectedValue", bindingSource, "MaGiaoVien");
         }
 
+        public void HienThiComboBox(ComboBoxEx comboBox)
+        {
+            comboBox.DataSource = LopDAO.Instance.LayDanhSachLop();
+            comboBox.DisplayMember = "TenLop";
+            comboBox.ValueMember = "MaLop";
+        }
+
         public void HienThiComboBox(string namHoc, ComboBoxEx comboBox)
         {
             comboBox.DataSource = LopDAO.Instance.LayDanhSachLop(namHoc);
             comboBox.DisplayMember = "TenLop";
             comboBox.ValueMember = "MaLop";
+        }
+
+        public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
+        {
+            cmbColumn.DataSource = LopDAO.Instance.LayDanhSachLop();
+            cmbColumn.DisplayMember = "MaLop";
+            cmbColumn.ValueMember = "MaLop";
+            cmbColumn.DataPropertyName = "MaLop";
+            cmbColumn.HeaderText = "Mã lớp";
         }
 
         public void CapNhatLop(DataTable dataTable)

@@ -3,6 +3,7 @@ using DevComponents.DotNetBar;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace QuanLyHocSinh.Reports
 {
@@ -56,7 +57,9 @@ namespace QuanLyHocSinh.Reports
             param.Add(new ReportParameter("Lop", cmbLop.Text));
             param.Add(new ReportParameter("MonHoc", cmbMonHoc.Text));
 
-            bsKQHSMH.DataSource = KQHSMonHocBUS.Instance.ReportKQHSMonHoc(
+            if (cmbLop.SelectedValue != null && cmbMonHoc.SelectedValue != null &&
+                cmbHocKy.SelectedValue != null && cmbNamHoc.SelectedValue != null)
+                bsKQHSMH.DataSource = KQHSMonHocBUS.Instance.ReportKQHSMonHoc(
                 cmbLop.SelectedValue.ToString(),
                 cmbMonHoc.SelectedValue.ToString(),
                 cmbHocKy.SelectedValue.ToString(),
