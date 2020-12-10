@@ -7,7 +7,7 @@ namespace DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = "Data Source=(local)\\QUANKUN; Initial Catalog=QuanLyHocSinh; Integrated Security=True";
+        private string connectionString = "Data Source=(local); Initial Catalog=QuanLyHocSinh; Integrated Security=True";
 
         // private string connectionString = @"
         //        Server=tcp:mysqlserver18520339.database.windows.net,1433;

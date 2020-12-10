@@ -81,13 +81,13 @@ namespace QuanLyHocSinh
                 #region Lưu vào bảng kết quả
                 if (rowCount <= dgvDiem.Rows.Count)
                 {
-                    //KQHSMonHocBUS.Instance.LuuKetQua(
-                    //    row.Cells["colMaHocSinh"].Value.ToString(),
-                    //    cmbLop.SelectedValue.ToString(),
-                    //    cmbMonHoc.SelectedValue.ToString(),
-                    //    cmbHocKy.SelectedValue.ToString(),
-                    //    cmbNamHoc.SelectedValue.ToString()
-                    //);
+                    KQHSMonHocBUS.Instance.LuuKetQua(
+                        row.Cells["colMaHocSinh"].Value.ToString(),
+                        cmbLop.SelectedValue.ToString(),
+                        cmbMonHoc.SelectedValue.ToString(),
+                        cmbHocKy.SelectedValue.ToString(),
+                        cmbNamHoc.SelectedValue.ToString()
+                    );
 
                     //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
                     //                                    cmbLop.SelectedValue.ToString(),
@@ -197,6 +197,11 @@ namespace QuanLyHocSinh
         internal void btnHienThiClicked(object sender, EventArgs e)
         {
             btnHienThiDanhSach_Click(sender, e);
+        }
+
+        internal void btnLuuDiemClicked(object sender, EventArgs e)
+        {
+            btnLuuDiem_Click(sender, e);
         }
     }
 }

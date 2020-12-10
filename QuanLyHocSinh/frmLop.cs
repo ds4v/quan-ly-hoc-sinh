@@ -119,15 +119,11 @@ namespace QuanLyHocSinh
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
         {
-            string maKhoiLop = cmbKhoiLop.SelectedValue.ToString();
-            string maNamHoc = cmbNamHoc.SelectedValue.ToString();
-            string maGiaoVien = cmbGiaoVien.SelectedValue.ToString();
-
             if (string.IsNullOrWhiteSpace(txtMaLop.Text) ||
                 string.IsNullOrWhiteSpace(txtTenLop.Text)  ||
-                string.IsNullOrWhiteSpace(maKhoiLop) ||
-                string.IsNullOrWhiteSpace(maNamHoc) ||
-                string.IsNullOrWhiteSpace(maGiaoVien) ||
+                cmbKhoiLop.SelectedValue == null ||
+                cmbNamHoc.SelectedValue == null ||
+                cmbGiaoVien.SelectedValue == null ||
                 !QuyDinhBUS.Instance.KiemTraSiSo(iniSiSo.Value))
                 MessageBox.Show(
                     "Giá trị của các ô không được rỗng và sỉ số phải theo quy định !", 
@@ -137,7 +133,14 @@ namespace QuanLyHocSinh
                 );
             else
             {
-                LopDTO lop = new LopDTO(txtMaLop.Text, txtTenLop.Text, maKhoiLop, maNamHoc, iniSiSo.Value, maGiaoVien);
+                LopDTO lop = new LopDTO(
+                    txtMaLop.Text, 
+                    txtTenLop.Text,
+                    cmbKhoiLop.SelectedValue.ToString(),
+                    cmbNamHoc.SelectedValue.ToString(), 
+                    iniSiSo.Value,
+                    cmbGiaoVien.SelectedValue.ToString()
+                );
                 LopBUS.Instance.ThemLop(lop);
                 bindingNavigatorRefreshItem_Click(sender, e);
             }
@@ -148,6 +151,5 @@ namespace QuanLyHocSinh
             if (chkTimTheoMa.Checked) LopBUS.Instance.TimTheoMa(txtTimKiem.Text);
             else LopBUS.Instance.TimTheoTen(txtTimKiem.Text);
         }
-
     }
 }

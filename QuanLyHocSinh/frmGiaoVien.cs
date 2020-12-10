@@ -109,14 +109,14 @@ namespace QuanLyHocSinh
                 );
             else
             {
-                GiaoVienDTO GiaoVien = new GiaoVienDTO(
+                GiaoVienDTO giaoVien = new GiaoVienDTO(
                     txtMaGiaoVien.Text, 
                     txtTenGiaoVien.Text, 
                     txtDiaChi.Text, 
                     txtDienThoai.Text, 
                     cmbMonHoc.SelectedValue.ToString()
                 );
-                GiaoVienBUS.Instance.ThemGiaoVien(GiaoVien);
+                GiaoVienBUS.Instance.ThemGiaoVien(giaoVien);
                 bindingNavigatorRefreshItem_Click(sender, e);
             }
         }

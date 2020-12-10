@@ -123,6 +123,20 @@ GO
 
 --===================================================================================================================================================
 
+CREATE PROCEDURE ThemPhanCong
+	@maNamHoc NVARCHAR(6), 
+	@maLop NVARCHAR(10), 
+	@maMonHoc NVARCHAR(6), 
+	@maGiaoVien NVARCHAR(6)
+AS
+BEGIN
+	INSERT INTO PHANCONG (MaNamHoc, MaLop, MaMonHoc, MaGiaoVien)
+	VALUES (@maNamHoc, @maLop, @maMonHoc, @maGiaoVien)
+END
+GO
+
+--===================================================================================================================================================
+
 CREATE PROCEDURE ReportKQHSMonHoc
 	@maLop NVARCHAR(10), 
 	@maMonHoc NVARCHAR(6), 
@@ -162,6 +176,59 @@ END
 GO
 
 CREATE PROCEDURE XoaKQHSMonHoc
+	@maHocSinh NVARCHAR(6),
+	@maLop NVARCHAR(10), 
+	@maMonHoc NVARCHAR(6), 
+	@maHocKy NVARCHAR(3), 
+	@maNamHoc NVARCHAR(6)
+AS
+BEGIN
+	DELETE FROM KQ_HOCSINH_MONHOC 
+	WHERE MaHocSinh = @maHocSinh 
+	  AND MaLop = @maLop 
+	  AND MaMonHoc = @maMonHoc 
+	  AND MaHocKy = @maHocKy 
+	  AND MaNamHoc = @maNamHoc
+END 
+GO
+
+--===================================================================================================================================================
+
+CREATE PROCEDURE ReportKQHSCaNam
+	@maLop NVARCHAR(10), 
+	@maNamHoc NVARCHAR(6)
+AS
+BEGIN
+	SELECT * FROM HOCSINH HS 
+	INNER JOIN KQ_HOCSINH_CANAM KQ ON KQ.MaHocSinh = HS.MaHocSinh 
+	INNER JOIN LOP ON KQ.MaLop = LOP.MaLop 
+    INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
+	INNER JOIN HOCLUC HL ON KQ.MaHocLuc = HL.MaHocLuc
+	INNER JOIN HANHKIEM HK ON KQ.MaHanhKiem = HK.MaHanhKiem 
+	INNER JOIN KETQUA KQUA ON KQ.MaKetQua = KQUA.MaKetQua
+    WHERE KQ.MaLop = @maLop AND KQ.MaNamHoc = @maNamHoc
+END 
+GO
+
+CREATE PROCEDURE ThemKQHSCaNam
+	@maHocSinh NVARCHAR(6),
+	@maLop NVARCHAR(10), 
+	@maMonHoc NVARCHAR(6), 
+	@maHocKy NVARCHAR(3), 
+	@maNamHoc NVARCHAR(6),
+	@diemMiengTB FLOAT,
+	@diem15PhutTB FLOAT,
+	@diem45PhutTB FLOAT,
+	@diemThi FLOAT,
+	@diemTBHK FLOAT
+AS
+BEGIN
+	INSERT INTO KQ_HOCSINH_MONHOC (MaHocSinh, MaLop, MaMonHoc, MaHocKy, MaNamHoc, DiemMiengTB, Diem15PhutTB, Diem45PhutTB, DiemThi, DiemTBHK)
+	VALUES (@maHocSinh, @maLop, @maMonHoc, @maHocKy, @maNamHoc, @diemMiengTB, @diem15PhutTB, @diem45PhutTB, @diemThi, @diemTBHK)
+END
+GO
+
+CREATE PROCEDURE XoaKQHSCaNam
 	@maHocSinh NVARCHAR(6),
 	@maLop NVARCHAR(10), 
 	@maMonHoc NVARCHAR(6), 

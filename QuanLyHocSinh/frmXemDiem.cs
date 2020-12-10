@@ -57,6 +57,7 @@ namespace QuanLyHocSinh
 
             frmDiem frm = (frmDiem)Application.OpenForms["frmDiem"];
             frm.btnHienThiClicked(sender, e);
+            frm.btnLuuDiemClicked(sender, e);
         }
 
         private void bindingNavigatorExitItem_Click(object sender, EventArgs e)

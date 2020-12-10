@@ -54,12 +54,14 @@
     <Compile Include="HocSinhBUS.cs" />
     <Compile Include="KetQuaBUS.cs" />
     <Compile Include="KhoiLopBUS.cs" />
-    <Compile Include="KQHSMonHocBUS.cs" />
+    <Compile Include="Reports\KQHSCaNamBUS.cs" />
+    <Compile Include="Reports\KQHSMonHocBUS.cs" />
     <Compile Include="LopBUS.cs" />
     <Compile Include="MonHocBUS.cs" />
     <Compile Include="NamHocBUS.cs" />
     <Compile Include="NgheNghiepBUS.cs" />
     <Compile Include="NguoiDungBUS.cs" />
+    <Compile Include="PhanCongBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuyDinhBUS.cs" />
     <Compile Include="TonGiaoBUS.cs" />

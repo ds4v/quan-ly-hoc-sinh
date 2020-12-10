@@ -46,7 +46,6 @@ namespace QuanLyHocSinh
         private void btnKQLHMonHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQLHMonHoc"); }
         private void btnKQLHHocKy_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQLHHocKy"); }
         private void btnDanhSachHocSinh_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachHocSinh"); }
-        private void btnDanhSachGiaoVien_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachGiaoVien"); }
         private void btnDanhSachLopHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachLopHoc"); }
         private void btnDoTuoi_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh"); }
         private void btnSiSo_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh"); }
@@ -244,7 +243,6 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = false;
             btnKQLHHocKy.Enabled = false;
             btnDanhSachHocSinh.Enabled = false;
-            btnDanhSachGiaoVien.Enabled = false;
             btnDanhSachLopHoc.Enabled = false;
 
             btnSiSo.Enabled = false;
@@ -293,7 +291,6 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachGiaoVien.Enabled = true;
             btnDanhSachLopHoc.Enabled = true;
 
             btnSiSo.Enabled = true;
@@ -322,7 +319,6 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachGiaoVien.Enabled = true;
             btnDanhSachLopHoc.Enabled = true;
 
             //False
@@ -383,7 +379,6 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachGiaoVien.Enabled = true;
             btnDanhSachLopHoc.Enabled = true;
 
             //False
