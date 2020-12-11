@@ -58,16 +58,34 @@ CREATE PROCEDURE LayDanhSachDiem
 	@maLop NVARCHAR(10)
 AS
 BEGIN
-	SELECT * FROM DIEM, LOP, HOCSINH HS, MONHOC MH, LOAIDIEM LD
-	WHERE DIEM.MaHocSinh = HS.MaHocSinh 
-	  AND DIEM.MaMonHoc = MH.MaMonHoc 
-	  AND DIEM.MaLoai = LD.MaLoai 
+	SELECT * FROM DIEM, LOP, HOCSINH, MONHOC, LOAIDIEM
+	WHERE DIEM.MaHocSinh = HOCSINH.MaHocSinh 
+	  AND DIEM.MaMonHoc = MONHOC.MaMonHoc 
+	  AND DIEM.MaLoai = LOAIDIEM.MaLoai 
 	  AND DIEM.MaLop = LOP.MaLop 
-	  AND HS.MaHocSinh = @maHocSinh
-	  AND MH.MaMonHoc = @maMonHoc
+	  AND HOCSINH.MaHocSinh = @maHocSinh
+	  AND MONHOC.MaMonHoc = @maMonHoc
 	  AND DIEM.MaHocKy = @maHocKy
 	  AND DIEM.MaNamHoc = @maNamHoc
 	  AND LOP.MaLop = @maLop
+END
+GO
+
+CREATE PROCEDURE LayDanhSachDiemHocSinh
+	@maHocSinh NVARCHAR(6), 
+	@maMonHoc NVARCHAR(6), 
+	@maHocKy NVARCHAR(3), 
+	@maNamHoc NVARCHAR(6), 
+	@maLop NVARCHAR(10)
+AS
+BEGIN
+	SELECT * FROM DIEM, LOAIDIEM 
+	WHERE DIEM.MaLoai = LOAIDIEM.MaLoai 
+	  AND DIEM.MaHocSinh = @maHocSinh
+	  AND DIEM.MaMonHoc = @maMonHoc
+	  AND DIEM.MaHocKy = @maHocKy 
+	  AND DIEM.MaNamHoc = @maNamHoc
+	  AND DIEM.MaLop = @maLop
 END
 GO
 
@@ -139,30 +157,30 @@ GO
 
 CREATE PROCEDURE ReportKQHSMonHoc
 	@maLop NVARCHAR(10), 
+	@maNamHoc NVARCHAR(6),
 	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6)
+	@maHocKy NVARCHAR(3)
 AS
 BEGIN
 	SELECT * FROM HOCSINH HS 
 	INNER JOIN KQ_HOCSINH_MONHOC KQ ON KQ.MaHocSinh = HS.MaHocSinh 
 	INNER JOIN LOP ON KQ.MaLop = LOP.MaLop 
+	INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
 	INNER JOIN MONHOC MH ON KQ.MaMonHoc = MH.MaMonHoc 
 	INNER JOIN HOCKY HK ON KQ.MaHocKy = HK.MaHocKy 
-	INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
 	WHERE KQ.MaLop = @maLop
+	  AND KQ.MaNamHoc = @maNamHoc
 	  AND KQ.MaMonHoc = @maMonHoc
 	  AND KQ.MaHocKy = @maHocKy
-	  AND KQ.MaNamHoc = @maNamHoc
 END 
 GO
 
 CREATE PROCEDURE ThemKQHSMonHoc
 	@maHocSinh NVARCHAR(6),
 	@maLop NVARCHAR(10), 
+	@maNamHoc NVARCHAR(6),
 	@maMonHoc NVARCHAR(6), 
 	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6),
 	@diemMiengTB FLOAT,
 	@diem15PhutTB FLOAT,
 	@diem45PhutTB FLOAT,
@@ -170,25 +188,25 @@ CREATE PROCEDURE ThemKQHSMonHoc
 	@diemTBHK FLOAT
 AS
 BEGIN
-	INSERT INTO KQ_HOCSINH_MONHOC (MaHocSinh, MaLop, MaMonHoc, MaHocKy, MaNamHoc, DiemMiengTB, Diem15PhutTB, Diem45PhutTB, DiemThi, DiemTBHK)
-	VALUES (@maHocSinh, @maLop, @maMonHoc, @maHocKy, @maNamHoc, @diemMiengTB, @diem15PhutTB, @diem45PhutTB, @diemThi, @diemTBHK)
+	INSERT INTO KQ_HOCSINH_MONHOC (MaHocSinh, MaLop, MaNamHoc, MaMonHoc, MaHocKy, DiemMiengTB, Diem15PhutTB, Diem45PhutTB, DiemThi, DiemTBHK)
+	VALUES (@maHocSinh, @maLop, @maNamHoc, @maMonHoc, @maHocKy, @diemMiengTB, @diem15PhutTB, @diem45PhutTB, @diemThi, @diemTBHK)
 END
 GO
 
 CREATE PROCEDURE XoaKQHSMonHoc
 	@maHocSinh NVARCHAR(6),
 	@maLop NVARCHAR(10), 
+	@maNamHoc NVARCHAR(6),
 	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6)
+	@maHocKy NVARCHAR(3)
 AS
 BEGIN
 	DELETE FROM KQ_HOCSINH_MONHOC 
 	WHERE MaHocSinh = @maHocSinh 
 	  AND MaLop = @maLop 
+	  AND MaNamHoc = @maNamHoc
 	  AND MaMonHoc = @maMonHoc 
 	  AND MaHocKy = @maHocKy 
-	  AND MaNamHoc = @maNamHoc
 END 
 GO
 
@@ -211,43 +229,38 @@ END
 GO
 
 CREATE PROCEDURE ThemKQHSCaNam
-	@maHocSinh NVARCHAR(6),
+	@maHocSinh NVARCHAR(6), 
 	@maLop NVARCHAR(10), 
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6),
-	@diemMiengTB FLOAT,
-	@diem15PhutTB FLOAT,
-	@diem45PhutTB FLOAT,
-	@diemThi FLOAT,
-	@diemTBHK FLOAT
+	@maNamHoc NVARCHAR(6), 
+	@maHocLuc NVARCHAR(6), 
+	@maHanhKiem NVARCHAR(6), 
+	@maKetQua NVARCHAR(6), 
+	@diemTBHK1 FLOAT, 
+	@diemTBHK2 FLOAT, 
+	@diemTBCN FLOAT
 AS
 BEGIN
-	INSERT INTO KQ_HOCSINH_MONHOC (MaHocSinh, MaLop, MaMonHoc, MaHocKy, MaNamHoc, DiemMiengTB, Diem15PhutTB, Diem45PhutTB, DiemThi, DiemTBHK)
-	VALUES (@maHocSinh, @maLop, @maMonHoc, @maHocKy, @maNamHoc, @diemMiengTB, @diem15PhutTB, @diem45PhutTB, @diemThi, @diemTBHK)
+	INSERT INTO KQ_HOCSINH_CANAM (MaHocSinh, MaLop, MaNamHoc, MaHocLuc, MaHanhKiem, MaKetQua, DiemTBHK1, DiemTBHK2, DiemTBCN)
+	VALUES (@maHocSinh, @maLop, @maNamHoc, @maHocLuc, @maHanhKiem, @maKetQua, @diemTBHK1, @diemTBHK2, @diemTBCN)
 END
 GO
 
 CREATE PROCEDURE XoaKQHSCaNam
 	@maHocSinh NVARCHAR(6),
 	@maLop NVARCHAR(10), 
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
 	@maNamHoc NVARCHAR(6)
 AS
 BEGIN
-	DELETE FROM KQ_HOCSINH_MONHOC 
+	DELETE FROM KQ_HOCSINH_CANAM 
 	WHERE MaHocSinh = @maHocSinh 
 	  AND MaLop = @maLop 
-	  AND MaMonHoc = @maMonHoc 
-	  AND MaHocKy = @maHocKy 
 	  AND MaNamHoc = @maNamHoc
 END 
 GO
 
 --===================================================================================================================================================
 
-CREATE PROCEDURE CapNhatSiSoQuyDinh
+CREATE PROCEDURE CapNhatQuyDinhSiSo
 	@siSoCanDuoi INT,
 	@siSoCanTren INT 
 AS
@@ -256,7 +269,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE CapNhatDoTuoiQuyDinh
+CREATE PROCEDURE CapNhatQuyDinhDoTuoi
 	@tuoiCanDuoi INT,
 	@tuoiCanTren INT 
 AS
@@ -265,7 +278,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE CapNhatThangDiemQuyDinh @thangDiem INT 
+CREATE PROCEDURE CapNhatQuyDinhThangDiem @thangDiem INT 
 AS
 BEGIN
 	UPDATE QUYDINH SET ThangDiem = @thangDiem
@@ -274,9 +287,20 @@ GO
 
 --===================================================================================================================================================
 
+CREATE PROCEDURE DangNhap
+	@tenDangNhap NVARCHAR(30),
+	@matKhau VARCHAR(64)
+AS
+BEGIN
+	SELECT * FROM NGUOIDUNG 
+	WHERE TenDangNhap = @tendangnhap
+	  AND MatKhau = HASHBYTES('SHA2_512', @tenDangNhap + '@!?#?' + @matKhau)
+END
+GO
+
 CREATE PROCEDURE DoiMatKhau
 	@tenDangNhap NVARCHAR(30),
-	@matKhau NVARCHAR(30) 
+	@matKhau VARCHAR(64) 
 AS
 BEGIN
 	UPDATE NGUOIDUNG SET MatKhau = @matkhau WHERE TenDangNhap = @tendangnhap

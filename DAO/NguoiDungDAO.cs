@@ -19,10 +19,17 @@ namespace DAO
             private set => instance = value;
         }
 
-        public DataTable LayNguoiDung(string username)
+        public object LayDanhSachNguoiDung()
         {
-            string query = $"SELECT * FROM NGUOIDUNG WHERE TenDangNhap = '{username}'";
-            return DataProvider.Instance.ExecuteQuery(query);
+            string query = "SELECT * FROM NGUOIDUNG";
+            return DataProvider.Instance.ExecuteQuery(query); ;
+        }
+
+        public DataTable DangNhap(string username, string password)
+        {
+            string query = "EXEC DangNhap @tenDangNhap , @matKhau";
+            object[] parameters = new object[] { username, password };
+            return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
         public void DoiMatKhau(string username, string newPassword)
@@ -30,6 +37,11 @@ namespace DAO
             string query = "EXEC DoiMatKhau @tenDangNhap , @matKhau";
             object[] parameters = new object[] { username, newPassword };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
+        }
+
+        public void CapNhatNguoiDung(DataTable dataTable)
+        {
+            DataProvider.Instance.UpdateTable(dataTable, "NGUOIDUNG");
         }
 
         public void SaoLuuCSDL(string fileName)

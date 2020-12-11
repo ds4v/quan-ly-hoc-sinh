@@ -1,4 +1,5 @@
 ﻿using DTO;
+using System;
 using System.Data;
 
 namespace DAO
@@ -22,6 +23,13 @@ namespace DAO
         public DataTable LayDanhSachDiem(string maHocSinh, string maMonHoc, string maHocKy, string maNamHoc, string maLop)
         {
             string query = "EXEC LayDanhSachDiem @maHocSinh , @maMonHoc , @maHocKy , @maNamHoc , @maLop";
+            object[] parameters = new object[] { maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop };
+            return DataProvider.Instance.ExecuteQuery(query, parameters);
+        }
+
+        public DataTable LayDanhSachDiemHocSinh(string maHocSinh, string maMonHoc, string maHocKy, string maNamHoc, string maLop)
+        {
+            string query = "EXEC LayDanhSachDiemHocSinh @maHocSinh , @maMonHoc , @maHocKy , @maNamHoc , @maLop";
             object[] parameters = new object[] { maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop };
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }

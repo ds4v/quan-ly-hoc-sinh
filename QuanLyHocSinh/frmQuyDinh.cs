@@ -42,7 +42,7 @@ namespace QuanLyHocSinh
                     );
                 else
                 {
-                    QuyDinhBUS.Instance.CapNhatSiSoQuyDinh(txtSiSoCanDuoi.Value, txtSiSoCanTren.Value);
+                    QuyDinhBUS.Instance.CapNhatQuyDinhSiSo(txtSiSoCanDuoi.Value, txtSiSoCanTren.Value);
                     MessageBoxEx.Show(
                         "Cập nhật thành công quy định về sỉ số !", 
                         "COMPLETED", 
@@ -63,7 +63,7 @@ namespace QuanLyHocSinh
                     );
                 else
                 {
-                    QuyDinhBUS.Instance.CapNhatDoTuoiQuyDinh(txtDoTuoiCanDuoi.Value, txtDoTuoiCanTren.Value);
+                    QuyDinhBUS.Instance.CapNhatQuyDinhDoTuoi(txtDoTuoiCanDuoi.Value, txtDoTuoiCanTren.Value);
                     MessageBoxEx.Show(
                         "Cập nhật thành công quy định về độ tuổi !", 
                         "COMPLETED", 
@@ -77,7 +77,7 @@ namespace QuanLyHocSinh
             {
                 if (ckbThang10.Checked)
                 {
-                    QuyDinhBUS.Instance.CapNhatThangDiemQuyDinh(10);
+                    QuyDinhBUS.Instance.CapNhatQuyDinhThangDiem(10);
                     MessageBoxEx.Show(
                         "Cập nhật thành công quy định về thang điểm !", 
                         "COMPLETED", 
@@ -88,7 +88,7 @@ namespace QuanLyHocSinh
                 }
                 else
                 {
-                    QuyDinhBUS.Instance.CapNhatThangDiemQuyDinh(100);
+                    QuyDinhBUS.Instance.CapNhatQuyDinhThangDiem(100);
                     MessageBoxEx.Show(
                         "Cập nhật thành công quy định về thang điểm !", 
                         "COMPLETED", 

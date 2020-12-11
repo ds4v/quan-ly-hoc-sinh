@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DTO">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>82d74cc8-028e-4519-a01b-fa75f0d4efef</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="KQHSCaNamDTO">
+      <Query>
+        <DataSourceName>DTO</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="DiemTBCN">
+          <DataField>DiemTBCN</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="DiemTBHK1">
+          <DataField>DiemTBHK1</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="DiemTBHK2">
+          <DataField>DiemTBHK2</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="HanhKiem">
+          <DataField>HanhKiem</DataField>
+          <rd:TypeName>DTO.HanhKiemDTO</rd:TypeName>
+        </Field>
+        <Field Name="HocLuc">
+          <DataField>HocLuc</DataField>
+          <rd:TypeName>DTO.HocLucDTO</rd:TypeName>
+        </Field>
+        <Field Name="HocSinh">
+          <DataField>HocSinh</DataField>
+          <rd:TypeName>DTO.HocSinhDTO</rd:TypeName>
+        </Field>
+        <Field Name="HoTen">
+          <DataField>HoTen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KetQua">
+          <DataField>KetQua</DataField>
+          <rd:TypeName>DTO.KetQuaDTO</rd:TypeName>
+        </Field>
+        <Field Name="Lop">
+          <DataField>Lop</DataField>
+          <rd:TypeName>DTO.LopDTO</rd:TypeName>
+        </Field>
+        <Field Name="MaHocSinh">
+          <DataField>MaHocSinh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NamHoc">
+          <DataField>NamHoc</DataField>
+          <rd:TypeName>DTO.NamHocDTO</rd:TypeName>
+        </Field>
+        <Field Name="TenHanhKiem">
+          <DataField>TenHanhKiem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TenHocLuc">
+          <DataField>TenHocLuc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TenKetQua">
+          <DataField>TenKetQua</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DTO</rd:DataSetName>
+        <rd:TableName>KQHSCaNamDTO</rd:TableName>
+        <rd:ObjectDataSourceType>DTO.KQHSCaNamDTO, DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -70,7 +150,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>KẾT QUẢ CẢ NĂM TỔNG HỢP</Value>
+                    <Value>BÁO CÁO TRUNG BÌNH CẢ NĂM CỦA HỌC SINH</Value>
                     <Style>
                       <FontSize>20pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -83,9 +163,9 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.288cm</Top>
-            <Left>7.52952cm</Left>
+            <Left>4.33941cm</Left>
             <Height>1cm</Height>
-            <Width>12.75cm</Width>
+            <Width>19.13024cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <VerticalAlign>Middle</VerticalAlign>
@@ -530,14 +610,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="HocSinh">
+                        <Textbox Name="MaHocSinh">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!HocSinh.Value.MaHocSinh</Value>
+                                  <Value>=Fields!MaHocSinh.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -549,7 +629,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>HocSinh</rd:DefaultName>
+                          <rd:DefaultName>MaHocSinh</rd:DefaultName>
                           <ZIndex>5</ZIndex>
                           <Style>
                             <Border>
@@ -574,7 +654,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!HocSinh.Value.HoTen</Value>
+                                  <Value>=Fields!HoTen.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -603,14 +683,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox2">
+                        <Textbox Name="DiemTBHK1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!DiemTBHK1.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -621,7 +701,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <rd:DefaultName>DiemTBHK1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -637,14 +717,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox4">
+                        <Textbox Name="DiemTBHK2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!DiemTBHK2.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -655,7 +735,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <rd:DefaultName>DiemTBHK2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -678,7 +758,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!DTBCaNam.Value</Value>
+                                  <Value>=Fields!DiemTBCN.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -714,7 +794,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!HocLuc.Value.TenHocLuc</Value>
+                                  <Value>=Fields!TenHocLuc.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -750,7 +830,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!HanhKiem.Value.TenHanhKiem</Value>
+                                  <Value>=Fields!TenHanhKiem.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -779,14 +859,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="KetQua">
+                        <Textbox Name="TenKetQua">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!KetQua.Value.TenKetQua</Value>
+                                  <Value>=Fields!TenKetQua.Value</Value>
                                   <Style>
                                     <FontFamily />
                                   </Style>
@@ -798,7 +878,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>KetQua</rd:DefaultName>
+                          <rd:DefaultName>TenKetQua</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -850,7 +930,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>QLHocSinhTHPT_Bussiness_KQCaNamTongHopInfo</DataSetName>
+            <DataSetName>KQHSCaNamDTO</DataSetName>
             <Top>1.51158in</Top>
             <Left>0.026cm</Left>
             <Height>0.5in</Height>
@@ -881,16 +961,6 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="TenTruong">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>TenTruong</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DiaChiTruong">
-      <DataType>String</DataType>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>DiaChiTruong</Prompt>
-    </ReportParameter>
     <ReportParameter Name="NgayLap">
       <DataType>String</DataType>
       <AllowBlank>true</AllowBlank>
@@ -912,16 +982,6 @@
       <NumberOfColumns>2</NumberOfColumns>
       <NumberOfRows>3</NumberOfRows>
       <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>TenTruong</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>DiaChiTruong</ParameterName>
-        </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>

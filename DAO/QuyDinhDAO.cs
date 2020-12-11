@@ -43,23 +43,23 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void CapNhatSiSoQuyDinh(int siSoCanDuoi, int siSoCanTren)
+        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
         {
-            string query = "EXEC CapNhatSiSoQuyDinh @siSoCanDuoi , @siSoCanTren";
+            string query = "EXEC CapNhatQuyDinhSiSo @siSoCanDuoi , @siSoCanTren";
             object[] parameters = new object[] { siSoCanDuoi, siSoCanTren };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
 
-        public void CapNhatDoTuoiQuyDinh(int tuoiCanDuoi, int tuoiCanTren)
+        public void CapNhatQuyDinhDoTuoi(int tuoiCanDuoi, int tuoiCanTren)
         {
-            string query = "EXEC CapNhatDoTuoiQuyDinh @tuoiCanDuoi , @tuoiCanTren";
+            string query = "EXEC CapNhatQuyDinhDoTuoi @tuoiCanDuoi , @tuoiCanTren";
             object[] parameters = new object[] { tuoiCanDuoi, tuoiCanTren };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
 
-        public void CapNhatThangDiemQuyDinh(int thangDiem)
+        public void CapNhatQuyDinhThangDiem(int thangDiem)
         {
-            string query = "EXEC CapNhatThangDiemQuyDinh @thangDiem";
+            string query = "EXEC CapNhatQuyDinhThangDiem @thangDiem";
             object[] parameters = new object[] { thangDiem };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }

@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,7 @@
     <Compile Include="HocSinhDAO.cs" />
     <Compile Include="KetQuaDAO.cs" />
     <Compile Include="KhoiLopDAO.cs" />
+    <Compile Include="LoaiNguoiDungDAO.cs" />
     <Compile Include="Reports\KQHSCaNamDAO.cs" />
     <Compile Include="Reports\KQHSMonHocDAO.cs" />
     <Compile Include="LopDAO.cs" />

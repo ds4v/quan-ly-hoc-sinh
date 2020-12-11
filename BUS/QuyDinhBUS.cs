@@ -52,19 +52,19 @@ namespace BUS
             txtDoTuoiCanTren.DataBindings.Add("Value", bindingSource, "TuoiCanTren");
         }
 
-        public void CapNhatSiSoQuyDinh(int siSoCanDuoi, int siSoCanTren)
+        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
         {
-            QuyDinhDAO.Instance.CapNhatSiSoQuyDinh(siSoCanDuoi, siSoCanTren);
+            QuyDinhDAO.Instance.CapNhatQuyDinhSiSo(siSoCanDuoi, siSoCanTren);
         }
 
-        public void CapNhatDoTuoiQuyDinh(int tuoiCanDuoi, int tuoiCanTren)
+        public void CapNhatQuyDinhDoTuoi(int tuoiCanDuoi, int tuoiCanTren)
         {
-            QuyDinhDAO.Instance.CapNhatDoTuoiQuyDinh(tuoiCanDuoi, tuoiCanTren);
+            QuyDinhDAO.Instance.CapNhatQuyDinhDoTuoi(tuoiCanDuoi, tuoiCanTren);
         }
 
-        public void CapNhatThangDiemQuyDinh(int thangDiem)
+        public void CapNhatQuyDinhThangDiem(int thangDiem)
         {
-            QuyDinhDAO.Instance.CapNhatThangDiemQuyDinh(thangDiem);
+            QuyDinhDAO.Instance.CapNhatQuyDinhThangDiem(thangDiem);
         }
 
         public bool KiemTraSiSo(int siSo)

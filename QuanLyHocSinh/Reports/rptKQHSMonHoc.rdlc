@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>372104df-6c3d-4e35-99f8-e8062df31893</rd:DataSourceID>
+      <rd:DataSourceID>a81a03fe-ad41-4eb1-a204-a8315ec0e76a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -53,24 +53,8 @@
           <DataField>Lop</DataField>
           <rd:TypeName>DTO.LopDTO</rd:TypeName>
         </Field>
-        <Field Name="MaHocKy">
-          <DataField>MaHocKy</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="MaHocSinh">
           <DataField>MaHocSinh</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MaLop">
-          <DataField>MaLop</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MaMonHoc">
-          <DataField>MaMonHoc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MaNamHoc">
-          <DataField>MaNamHoc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MonHoc">
@@ -777,7 +761,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

@@ -22,45 +22,45 @@ namespace BUS
             private set => instance = value;
         }
 
-        public void LuuKetQua(string maHocSinh, string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        public void LuuKetQua(string maHocSinh, string maLop, string maNamHoc, string maMonHoc, string maHocKy)
         {
             HocSinhDTO hocSinh = new HocSinhDTO();
-            LopDTO lop = new LopDTO();
-            MonHocDTO monHoc = new MonHocDTO();
-            HocKyDTO hocKy = new HocKyDTO();
-            NamHocDTO namHoc = new NamHocDTO();
-
             hocSinh.MaHocSinh = maHocSinh;
+
+            LopDTO lop = new LopDTO();
             lop.MaLop = maLop;
+
+            MonHocDTO monHoc = new MonHocDTO();
             monHoc.MaMonHoc = maMonHoc;
+
+            HocKyDTO hocKy = new HocKyDTO();
             hocKy.MaHocKy = maHocKy;
+
+            NamHocDTO namHoc = new NamHocDTO();
             namHoc.MaNamHoc = maNamHoc;
 
-            KQHSMonHocDTO ketQua = new KQHSMonHocDTO(
+            KQHSMonHocDAO.Instance.XoaKetQua(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy);
+            KQHSMonHocDAO.Instance.LuuKetQua(new KQHSMonHocDTO(
                 hocSinh,
                 lop,
+                namHoc,
                 monHoc,
                 hocKy,
-                namHoc,
-                DiemBUS.Instance.LayDiemMiengTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
-                DiemBUS.Instance.LayDiem15PhutTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
-                DiemBUS.Instance.LayDiem45PhutTB(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
-                DiemBUS.Instance.LayDiemThi(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc),
-                DiemBUS.Instance.LayDiemTBHK(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc)
-            );
-            KQHSMonHocDAO.Instance.XoaKetQua(maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc);
-            KQHSMonHocDAO.Instance.LuuKetQua(ketQua);
+                DiemBUS.Instance.LayDiemMiengTB(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy),
+                DiemBUS.Instance.LayDiem15PhutTB(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy),
+                DiemBUS.Instance.LayDiem45PhutTB(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy),
+                DiemBUS.Instance.LayDiemThi(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy),
+                DiemBUS.Instance.LayDiemTBHKTheoMon(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy)
+            ));
         }
 
-        public IList<KQHSMonHocDTO> ReportKQHSMonHoc(string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        public IList<KQHSMonHocDTO> ReportKQHSMonHoc(string maLop, string maNamHoc, string maMonHoc, string maHocKy)
         {
-            DataTable dataTable = KQHSMonHocDAO.Instance.Report(maLop, maMonHoc, maHocKy, maNamHoc);
+            DataTable dataTable = KQHSMonHocDAO.Instance.Report(maLop, maNamHoc, maMonHoc, maHocKy);
             IList<KQHSMonHocDTO> ilist = new List<KQHSMonHocDTO>();
 
             foreach (DataRow Row in dataTable.Rows)
             {
-                KQHSMonHocDTO ketQua = new KQHSMonHocDTO();
-
                 HocSinhDTO hocSinh = new HocSinhDTO();
                 hocSinh.MaHocSinh = Convert.ToString(Row["MaHocSinh"]);
                 hocSinh.HoTen = Convert.ToString(Row["HoTen"]);
@@ -68,6 +68,10 @@ namespace BUS
                 LopDTO lop = new LopDTO();
                 lop.MaLop = Convert.ToString(Row["MaLop"]);
                 lop.TenLop = Convert.ToString(Row["TenLop"]);
+
+                NamHocDTO namHoc = new NamHocDTO();
+                namHoc.MaNamHoc = Convert.ToString(Row["MaNamHoc"]);
+                namHoc.TenNamHoc = Convert.ToString(Row["TenNamHoc"]);
 
                 MonHocDTO monHoc = new MonHocDTO();
                 monHoc.MaMonHoc = Convert.ToString(Row["MaMonHoc"]);
@@ -77,22 +81,18 @@ namespace BUS
                 hocKy.MaHocKy = Convert.ToString(Row["MaHocKy"]);
                 hocKy.TenHocKy = Convert.ToString(Row["TenHocKy"]);
 
-                NamHocDTO namHoc = new NamHocDTO();
-                namHoc.MaNamHoc = Convert.ToString(Row["MaNamHoc"]);
-                namHoc.TenNamHoc = Convert.ToString(Row["TenNamHoc"]);
-
-                ketQua.HocSinh = hocSinh;
-                ketQua.Lop = lop;
-                ketQua.MonHoc = monHoc;
-                ketQua.HocKy = hocKy;
-                ketQua.NamHoc = namHoc;
-                ketQua.DiemMiengTB = Convert.ToSingle(Row["DiemMiengTB"]);
-                ketQua.Diem15PhutTB = Convert.ToSingle(Row["Diem15PhutTB"]);
-                ketQua.Diem45PhutTB = Convert.ToSingle(Row["Diem45PhutTB"]);
-                ketQua.DiemThi = Convert.ToSingle(Row["DiemThi"]);
-                ketQua.DiemTBHK = Convert.ToSingle(Row["DiemTBHK"]);
-
-                ilist.Add(ketQua);
+                ilist.Add(new KQHSMonHocDTO(
+                    hocSinh,
+                    lop,
+                    namHoc,
+                    monHoc,
+                    hocKy,
+                    Convert.ToSingle(Row["DiemMiengTB"]),
+                    Convert.ToSingle(Row["Diem15PhutTB"]),
+                    Convert.ToSingle(Row["Diem45PhutTB"]),
+                    Convert.ToSingle(Row["DiemThi"]),
+                    Convert.ToSingle(Row["DiemTBHK"])
+                ));
             }
             return ilist;
         }

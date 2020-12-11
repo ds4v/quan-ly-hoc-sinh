@@ -18,6 +18,7 @@ namespace QuanLyHocSinh
         private void frmMain_Load(object sender, EventArgs e)
         {
             Show();
+            CenterToScreen();
             ShowGiaoDienMacDinh();
             btnDangNhap_Click(sender, e);
 
@@ -75,37 +76,33 @@ namespace QuanLyHocSinh
                     continue;
                 }
 
-                switch (NguoiDungBUS.Instance.DangNhap(username, password))
+                if (NguoiDungBUS.Instance.DangNhap(username, password))
                 {
-                    case 0:
-                        frmLogin.lblPassError.Text = "";
-                        frmLogin.lblUserError.Text = "Người dùng này không tồn tại !";
-                        continue;
-                    case 1:
-                        frmLogin.lblUserError.Text = "";
-                        frmLogin.lblPassError.Text = "Mật khẩu không hợp lệ !";
-                        continue;
-                    case 2:
-                        string maLoai = NguoiDungBUS.Instance.NguoiDung.LoaiNguoiDung.MaLoai;
-                        if (maLoai == "LND001") ShowGiaoDienBGH();
-                        else if (maLoai == "LND002") ShowGiaoDienGiaoVien();
-                        else if (maLoai == "LND003") ShowGiaoDienGiaoVu();
-                        else ShowGiaoDienMacDinh();
+                    string maLoai = NguoiDungBUS.Instance.NguoiDung.LoaiNguoiDung.MaLoai;
+                    if (maLoai == "LND001") ShowGiaoDienBGH();
+                    else if (maLoai == "LND002") ShowGiaoDienGiaoVien();
+                    else if (maLoai == "LND003") ShowGiaoDienGiaoVu();
+                    else ShowGiaoDienMacDinh();
 
-                        string tenNguoiDung = NguoiDungBUS.Instance.NguoiDung.TenNguoiDung;
-                        lblTenNguoiDung.Text = tenNguoiDung;
-
-                        frmLogin.txtUsername.Text = "";
-                        frmLogin.txtPassword.Text = "";
-                        frmLogin.lblUserError.Text = "";
-                        frmLogin.lblPassError.Text = "";
-                        return;
+                    string tenNguoiDung = NguoiDungBUS.Instance.NguoiDung.TenNguoiDung;
+                    lblTenNguoiDung.Text = tenNguoiDung;
+                    frmLogin.lblUserError.Text = "";
+                    frmLogin.lblPassError.Text = "";
+                    return;
+                } 
+                else
+                {
+                    frmLogin.lblUserError.Text = "Thông tin không chính xác !";
+                    frmLogin.lblPassError.Text = "Thông tin không chính xác !";
+                    continue;
                 }
             }
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            frmLogin.txtUsername.Text = "";
+            frmLogin.txtPassword.Text = "";
             lblTenNguoiDung.Text = "Không có";
             ShowGiaoDienMacDinh();
         }
@@ -117,8 +114,8 @@ namespace QuanLyHocSinh
                 if (frmChangePass == null || frmChangePass.IsDisposed) frmChangePass = new frmDoiMatKhau();
                 if (frmChangePass.ShowDialog() != DialogResult.OK) return;
 
-                string username = NguoiDungBUS.Instance.NguoiDung.TenDangNhap;
-                string password = NguoiDungBUS.Instance.NguoiDung.MatKhau;
+                string username = frmLogin.txtUsername.Text;
+                string password = frmLogin.txtPassword.Text;
 
                 string oldPassword = frmChangePass.txtOldPassword.Text;
                 string newPassword = frmChangePass.txtNewPassword.Text;
@@ -180,7 +177,7 @@ namespace QuanLyHocSinh
 
         private void btnQLNguoiDung_Click(object sender, EventArgs e)
         {
-
+            Utilities.ShowForm("frmNguoiDung");
         }
 
         private void btnSaoLuu_Click(object sender, EventArgs e)
@@ -188,7 +185,6 @@ namespace QuanLyHocSinh
             if (backupDialog.ShowDialog() != DialogResult.OK) return;
             NguoiDungBUS.Instance.SaoLuuCSDL(backupDialog.FileName.ToString());
             MessageBox.Show("Sao lưu dữ liệu thành công!", "BACKUP COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void btnPhucHoi_Click(object sender, EventArgs e)

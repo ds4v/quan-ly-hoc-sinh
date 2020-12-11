@@ -128,6 +128,12 @@
     <Compile Include="frmKetQua.Designer.cs">
       <DependentUpon>frmKetQua.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoaiNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiNguoiDung.Designer.cs">
+      <DependentUpon>frmLoaiNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     <EmbeddedResource Include="frmKetQua.resx">
       <DependentUpon>frmKetQua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiNguoiDung.resx">
+      <DependentUpon>frmLoaiNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLop.resx">
       <DependentUpon>frmLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,12 +313,20 @@
     <EmbeddedResource Include="Reports\rptKQHSMonHoc.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.DiemDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.GiaoVienDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.HanhKiemDTO.datasource" />
     <None Include="Properties\DataSources\DTO.HocKyDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.HocLucDTO.datasource" />
     <None Include="Properties\DataSources\DTO.HocSinhDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.KetQuaDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.KQHSCaNamDTO.datasource" />
     <None Include="Properties\DataSources\DTO.KQHSMonHocDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.LoaiNguoiDungDTO.datasource" />
     <None Include="Properties\DataSources\DTO.LopDTO.datasource" />
     <None Include="Properties\DataSources\DTO.MonHocDTO.datasource" />
     <None Include="Properties\DataSources\DTO.NamHocDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.NguoiDungDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.PhanCongDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

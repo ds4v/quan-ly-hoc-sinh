@@ -1,6 +1,9 @@
 ﻿using DAO;
+using DevComponents.DotNetBar.Controls;
 using DTO;
+using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -8,6 +11,7 @@ namespace BUS
     {
         private static NguoiDungBUS instance;
         private NguoiDungDTO nguoiDung;
+        private BindingSource bindingSource = new BindingSource();
 
         private NguoiDungBUS() { }
         public NguoiDungDTO NguoiDung { get => nguoiDung; set => nguoiDung = value; }
@@ -22,11 +26,17 @@ namespace BUS
             private set => instance = value;
         }
 
-        public int DangNhap(string username, string password)
+        public void HienThi(DataGridViewX dataGridViewX, BindingNavigator bindingNavigator)
         {
-            DataTable dataTable = NguoiDungDAO.Instance.LayNguoiDung(username);
-            if (dataTable.Rows.Count == 0) return 0;
-            if (password != dataTable.Rows[0]["MatKhau"].ToString()) return 1;
+            bindingSource.DataSource = NguoiDungDAO.Instance.LayDanhSachNguoiDung();
+            bindingNavigator.BindingSource = bindingSource;
+            dataGridViewX.DataSource = bindingSource;
+        }
+
+        public bool DangNhap(string username, string password)
+        {
+            DataTable dataTable = NguoiDungDAO.Instance.DangNhap(username, password);
+            if (dataTable.Rows.Count == 0) return false;
 
             LoaiNguoiDungDTO loaiNguoiDung = new LoaiNguoiDungDTO();
             loaiNguoiDung.MaLoai = dataTable.Rows[0]["MaLoai"].ToString();
@@ -38,13 +48,18 @@ namespace BUS
                 dataTable.Rows[0]["TenDangNhap"].ToString(),
                 dataTable.Rows[0]["MatKhau"].ToString()
             );
-            return 2;
+            return true;
         }
 
         public void DoiMatKhau(string username, string newPassword)
         {
             NguoiDungDAO.Instance.DoiMatKhau(username, newPassword);
             nguoiDung.MatKhau = newPassword;
+        }
+
+        public void CapNhatNguoiDung(DataTable dataTable)
+        {
+            NguoiDungDAO.Instance.CapNhatNguoiDung(dataTable);
         }
 
         public void SaoLuuCSDL(string fileName)
