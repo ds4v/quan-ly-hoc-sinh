@@ -20,22 +20,22 @@ namespace DAO
             private set => instance = value;
         }
 
-        public DataTable Report(string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        public DataTable Report(string maLop, string maNamHoc, string maMonHoc, string maHocKy)
         {
-            string query = "EXEC ReportKQHSMonHoc @maLop , @maMonHoc , @maHocKy , @maNamHoc";
-            object[] parameters = new object[] { maLop, maMonHoc, maHocKy, maNamHoc };
+            string query = "EXEC ReportKQHSMonHoc @maLop , @maNamHoc , @maMonHoc , @maHocKy";
+            object[] parameters = new object[] { maLop, maNamHoc, maMonHoc, maHocKy };
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
         public void LuuKetQua(KQHSMonHocDTO ketQua)
         {
-            string query = "EXEC ThemKQHSMonHoc @maHocSinh , @maLop , @maMonHoc , @maHocKy , @maNamHoc , @diemMiengTB , @diem15PhutTB , @diem45PhutTB , @diemThi , @diemTBHK";
+            string query = "EXEC ThemKQHSMonHoc @maHocSinh , @maLop , @maNamHoc , @maMonHoc , @maHocKy , @diemMiengTB , @diem15PhutTB , @diem45PhutTB , @diemThi , @diemTBHK";
             object[] parameters = new object[] {
                 ketQua.HocSinh.MaHocSinh,
                 ketQua.Lop.MaLop,
+                ketQua.NamHoc.MaNamHoc,
                 ketQua.MonHoc.MaMonHoc,
                 ketQua.HocKy.MaHocKy,
-                ketQua.NamHoc.MaNamHoc,
                 ketQua.DiemMiengTB,
                 ketQua.Diem15PhutTB,
                 ketQua.Diem45PhutTB,
@@ -45,10 +45,10 @@ namespace DAO
             DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
-        public void XoaKetQua(string maHocSinh, string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        public void XoaKetQua(string maHocSinh, string maLop, string maNamHoc, string maMonHoc, string maHocKy)
         {
-            string query = "EXEC XoaKQHSMonHoc @maHocSinh , @maLop , @maMonHoc , @maHocKy , @maNamHoc";
-            object[] parameters = new object[] {  maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc };
+            string query = "EXEC XoaKQHSMonHoc @maHocSinh , @maNamHoc , @maLop , @maMonHoc , @maHocKy";
+            object[] parameters = new object[] {  maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy };
             DataProvider.Instance.ExecuteQuery(query, parameters);
         }
     }

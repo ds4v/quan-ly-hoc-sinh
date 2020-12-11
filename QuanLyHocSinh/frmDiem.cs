@@ -36,15 +36,22 @@ namespace QuanLyHocSinh
         {
             string[] colNames = { "colDiemMieng", "colDiem15Phut", "colDiem45Phut", "colDiemThi" };
             if (!KiemTraTruocKhiLuu.KiemTraDiem(dgvDiem, colNames) || STT == null) return;
+
+            string maMonHoc = cmbMonHoc.SelectedValue.ToString();
+            string maHocKy = cmbHocKy.SelectedValue.ToString();
+            string maNamHoc = cmbNamHoc.SelectedValue.ToString();
+            string maLop = cmbLop.SelectedValue.ToString();
             int rowCount = 0;
 
             foreach (DataGridViewRow row in dgvDiem.Rows)
             {
+                string maHocSinh = row.Cells["colMaHocSinh"].Value.ToString();
                 rowCount++;
+
                 for (int i = 0; i < colNames.Length; i++)
                 {
-                    if (row.Cells[colNames[i]].Value == null) continue;
                     string chuoiDiem = row.Cells[colNames[i]].Value.ToString();
+                    if (string.IsNullOrWhiteSpace(chuoiDiem)) continue;
                     int count = 0;
 
                     for (int j = 0; j < chuoiDiem.Length; j++)
@@ -59,51 +66,15 @@ namespace QuanLyHocSinh
                             }
 
                             string diemDaXuLy = chuoiDiem.Substring(j - count, count);
-                            if (!string.IsNullOrWhiteSpace(diemDaXuLy) && 
-                                QuyDinhBUS.Instance.KiemTraDiem(diemDaXuLy))
+                            if (!string.IsNullOrWhiteSpace(diemDaXuLy) && QuyDinhBUS.Instance.KiemTraDiem(diemDaXuLy))
                             {
-                                DiemDTO diem = new DiemDTO(
-                                    row.Cells["colMaHocSinh"].Value.ToString(),
-                                    cmbMonHoc.SelectedValue.ToString(),
-                                    cmbHocKy.SelectedValue.ToString(),
-                                    cmbNamHoc.SelectedValue.ToString(),
-                                    cmbLop.SelectedValue.ToString(),
-                                    $"LD000{i + 1}",
-                                    float.Parse(diemDaXuLy.ToString())
-                                );
+                                DiemDTO diem = new DiemDTO(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop, $"LD000{i + 1}",  float.Parse(diemDaXuLy));
                                 DiemBUS.Instance.ThemDiem(diem);
                             }
                             count = 0;
                         }
                     }
                 }
-
-                #region Lưu vào bảng kết quả
-                if (rowCount <= dgvDiem.Rows.Count)
-                {
-                    KQHSMonHocBUS.Instance.LuuKetQua(
-                        row.Cells["colMaHocSinh"].Value.ToString(),
-                        cmbLop.SelectedValue.ToString(),
-                        cmbMonHoc.SelectedValue.ToString(),
-                        cmbHocKy.SelectedValue.ToString(),
-                        cmbNamHoc.SelectedValue.ToString()
-                    );
-
-                    //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                    //                                    cmbLop.SelectedValue.ToString(),
-                    //                                    cmbMonHoc.SelectedValue.ToString(),
-                    //                                    cmbNamHoc.SelectedValue.ToString());
-
-                    //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                    //                                    cmbLop.SelectedValue.ToString(),
-                    //                                    cmbHocKy.SelectedValue.ToString(),
-                    //                                    cmbNamHoc.SelectedValue.ToString());
-
-                    //    m_KQCaNamTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                    //                                    cmbLop.SelectedValue.ToString(),
-                    //                                    cmbNamHoc.SelectedValue.ToString());
-                }
-                #endregion
 
                 #region Xóa các kết quả cũ
                 for (int i = 1; i < 60; i++)
@@ -116,9 +87,33 @@ namespace QuanLyHocSinh
                     }
                 }
                 #endregion
+
+                #region Lưu vào bảng kết quả
+                if (rowCount <= dgvDiem.Rows.Count)
+                {
+                    KQHSMonHocBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy);
+                    KQHSCaNamBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc);
+
+                    //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
+                    //                                    cmbLop.SelectedValue.ToString(),
+                    //                                    cmbMonHoc.SelectedValue.ToString(),
+                    //                                    cmbNamHoc.SelectedValue.ToString());
+
+                    //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
+                    //                                    cmbLop.SelectedValue.ToString(),
+                    //                                    cmbHocKy.SelectedValue.ToString(),
+                    //                                    cmbNamHoc.SelectedValue.ToString());
+
+
+                }
+                #endregion
             }
+
             MessageBox.Show("Cập nhật thành công!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnHienThiDanhSach_Click(sender, e);
+
+            frmXemDiem frm = (frmXemDiem)Application.OpenForms["frmXemDiem"];
+            if (frm != null) frm.btnHienThiClicked(sender, e);
         }
 
         private void btnXemDiem_Click(object sender, EventArgs e)

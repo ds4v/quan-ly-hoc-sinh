@@ -24,7 +24,7 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public object LayDanhSachMonHoc(string namHoc, string lop)
+        public DataTable LayDanhSachMonHoc(string namHoc, string lop)
         {
             string query = "EXEC LayDanhSachMonHoc @maNamHoc , @maLop";
             object[] parameters = new object[] { namHoc, lop };

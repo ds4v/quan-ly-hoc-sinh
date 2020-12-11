@@ -1,13 +1,15 @@
 ﻿using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace DAO
 {
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = "Data Source=(local); Initial Catalog=QuanLyHocSinh; Integrated Security=True";
+        private string connectionString = "Data Source=(local)\\QUANKUN; Initial Catalog=QuanLyHocSinh; Integrated Security=True";
 
         // private string connectionString = @"
         //        Server=tcp:mysqlserver18520339.database.windows.net,1433;
@@ -50,30 +52,44 @@ namespace DAO
 
         public void UpdateTable(DataTable dataTable, string table)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                string query = $"SELECT * FROM {table}";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = $"SELECT * FROM {table}";
 
-                SqlCommand command = new SqlCommand(query, connection);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-                
-                adapter.Update(dataTable);
-                connection.Close();
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+
+                    adapter.Update(dataTable);
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             DataTable dataTable = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                SqlCommand command = GetSqlCommand(connection, query, parameters);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(dataTable);
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = GetSqlCommand(connection, query, parameters);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(dataTable);
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return dataTable;
         }
@@ -81,12 +97,19 @@ namespace DAO
         public int ExecuteNonQuery(string query, object[] parameters = null)
         {
             int data = 0;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                SqlCommand command = GetSqlCommand(connection, query, parameters);
-                data = command.ExecuteNonQuery();
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = GetSqlCommand(connection, query, parameters);
+                    data = command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return data;
         }
@@ -94,12 +117,19 @@ namespace DAO
         public object ExecuteScalar(string query, object[] parameters = null)
         {
             object data = 0;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                SqlCommand command = GetSqlCommand(connection, query, parameters);
-                data = command.ExecuteScalar();
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = GetSqlCommand(connection, query, parameters);
+                    data = command.ExecuteScalar();
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return data;
         }

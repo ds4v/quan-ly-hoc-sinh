@@ -1,20 +1,19 @@
 ﻿using DTO;
-using System;
 using System.Data;
 
 namespace DAO
 {
-    public class KQHSCaNam
+    public class KQHSCaNamDAO
     {
-        private static KQHSCaNam instance;
+        private static KQHSCaNamDAO instance;
 
-        private KQHSCaNam() { }
+        private KQHSCaNamDAO() { }
 
-        public static KQHSCaNam Instance
+        public static KQHSCaNamDAO Instance
         {
             get
             {
-                if (instance == null) instance = new KQHSCaNam();
+                if (instance == null) instance = new KQHSCaNamDAO();
                 return instance;
             }
             private set => instance = value;
@@ -27,28 +26,27 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
-        public void LuuKetQua(KQHSMonHocDTO ketQua)
+        public void LuuKetQua(KQHSCaNamDTO ketQua)
         {
-            string query = "EXEC ThemKQHSMonHoc @maHocSinh , @maLop , @maMonHoc , @maHocKy , @maNamHoc , @diemMiengTB , @diem15PhutTB , @diem45PhutTB , @diemThi , @diemTBHK";
+            string query = "EXEC ThemKQHSCaNam @maHocSinh , @maLop , @maNamHoc , @maHocLuc , @maHanhKiem , @maKetQua , @diemTBHK1 , @diemTBHK2 , @diemTBCN";
             object[] parameters = new object[] {
                 ketQua.HocSinh.MaHocSinh,
                 ketQua.Lop.MaLop,
-                ketQua.MonHoc.MaMonHoc,
-                ketQua.HocKy.MaHocKy,
                 ketQua.NamHoc.MaNamHoc,
-                ketQua.DiemMiengTB,
-                ketQua.Diem15PhutTB,
-                ketQua.Diem45PhutTB,
-                ketQua.DiemThi,
-                ketQua.DiemTBHK
+                ketQua.HocLuc.MaHocLuc,
+                ketQua.HanhKiem.MaHanhKiem,
+                ketQua.KetQua.MaKetQua,
+                ketQua.DiemTBHK1,
+                ketQua.DiemTBHK2,
+                ketQua.DiemTBCN,
             };
             DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 
-        public void XoaKetQua(string maHocSinh, string maLop, string maMonHoc, string maHocKy, string maNamHoc)
+        public void XoaKetQua(string maHocSinh, string maLop, string maNamHoc)
         {
-            string query = "EXEC XoaKQHSMonHoc @maHocSinh , @maLop , @maMonHoc , @maHocKy , @maNamHoc";
-            object[] parameters = new object[] { maHocSinh, maLop, maMonHoc, maHocKy, maNamHoc };
+            string query = "EXEC XoaKQHSCaNam @maHocSinh , @maLop , @maNamHoc";
+            object[] parameters = new object[] { maHocSinh, maLop, maNamHoc };
             DataProvider.Instance.ExecuteQuery(query, parameters);
         }
     }

@@ -57,13 +57,14 @@ namespace QuanLyHocSinh.Reports
             param.Add(new ReportParameter("Lop", cmbLop.Text));
             param.Add(new ReportParameter("MonHoc", cmbMonHoc.Text));
 
+            bsKQHSMH.DataSource = null;
             if (cmbLop.SelectedValue != null && cmbMonHoc.SelectedValue != null &&
                 cmbHocKy.SelectedValue != null && cmbNamHoc.SelectedValue != null)
                 bsKQHSMH.DataSource = KQHSMonHocBUS.Instance.ReportKQHSMonHoc(
                 cmbLop.SelectedValue.ToString(),
+                cmbNamHoc.SelectedValue.ToString(),
                 cmbMonHoc.SelectedValue.ToString(),
-                cmbHocKy.SelectedValue.ToString(),
-                cmbNamHoc.SelectedValue.ToString()
+                cmbHocKy.SelectedValue.ToString()
             );
 
             rpvKQHSMH.LocalReport.SetParameters(param);

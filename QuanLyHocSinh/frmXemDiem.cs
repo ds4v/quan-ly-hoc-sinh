@@ -55,9 +55,17 @@ namespace QuanLyHocSinh
                 }
             }
 
+            string maHocSinh = cmbHocSinh.SelectedValue.ToString();
+            string maMonHoc = cmbMonHoc.SelectedValue.ToString();
+            string maHocKy = cmbHocKy.SelectedValue.ToString();
+            string maNamHoc = cmbNamHoc.SelectedValue.ToString();
+            string maLop = cmbLop.SelectedValue.ToString();
+
+            KQHSMonHocBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy);
+            KQHSCaNamBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc);
+
             frmDiem frm = (frmDiem)Application.OpenForms["frmDiem"];
-            frm.btnHienThiClicked(sender, e);
-            frm.btnLuuDiemClicked(sender, e);
+            if (frm != null) frm.btnHienThiClicked(sender, e);
         }
 
         private void bindingNavigatorExitItem_Click(object sender, EventArgs e)
@@ -102,6 +110,11 @@ namespace QuanLyHocSinh
                 cmbNamHoc.SelectedValue.ToString(),
                 cmbLop.SelectedValue.ToString()
             );
+        }
+
+        internal void btnHienThiClicked(object sender, EventArgs e)
+        {
+            btnHienThiDanhSach_Click(sender, e);
         }
     }
 }

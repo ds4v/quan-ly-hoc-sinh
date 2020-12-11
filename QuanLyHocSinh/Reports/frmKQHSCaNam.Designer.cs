@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.bSKQCNTH = new System.Windows.Forms.BindingSource(this.components);
+            this.bsKQHSCN = new System.Windows.Forms.BindingSource(this.components);
             this.rpvKQHSCN = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupPanelDS = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnXem = new DevComponents.DotNetBar.ButtonX();
@@ -38,25 +38,26 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cmbNamHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX0 = new DevComponents.DotNetBar.LabelX();
-            ((System.ComponentModel.ISupportInitialize)(this.bSKQCNTH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKQHSCN)).BeginInit();
             this.groupPanelDS.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bSKQCNTH
+            // bsKQHSCN
             // 
-            this.bSKQCNTH.DataSource = typeof(DTO.KQHSCaNamDTO);
+            this.bsKQHSCN.DataSource = typeof(DTO.KQHSCaNamDTO);
             // 
             // rpvKQHSCN
             // 
             this.rpvKQHSCN.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "QuanLyHocSinh_Bussiness_KQCaNamTongHopInfo";
-            reportDataSource1.Value = this.bSKQCNTH;
+            reportDataSource1.Name = "KQHSCaNamDTO";
+            reportDataSource1.Value = this.bsKQHSCN;
             this.rpvKQHSCN.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpvKQHSCN.LocalReport.ReportEmbeddedResource = "QuanLyHocSinh.Reports.rptKetQuaCaNam_Lop.rdlc";
-            this.rpvKQHSCN.Location = new System.Drawing.Point(0, 58);
+            this.rpvKQHSCN.LocalReport.ReportEmbeddedResource = "QuanLyHocSinh.Reports.rptKQHSCaNam.rdlc";
+            this.rpvKQHSCN.Location = new System.Drawing.Point(0, 107);
+            this.rpvKQHSCN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.rpvKQHSCN.Name = "rpvKQHSCN";
             this.rpvKQHSCN.ServerReport.BearerToken = null;
-            this.rpvKQHSCN.Size = new System.Drawing.Size(792, 408);
+            this.rpvKQHSCN.Size = new System.Drawing.Size(1452, 753);
             this.rpvKQHSCN.TabIndex = 2;
             // 
             // groupPanelDS
@@ -70,8 +71,9 @@
             this.groupPanelDS.Controls.Add(this.labelX0);
             this.groupPanelDS.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanelDS.Location = new System.Drawing.Point(0, 0);
+            this.groupPanelDS.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupPanelDS.Name = "groupPanelDS";
-            this.groupPanelDS.Size = new System.Drawing.Size(792, 58);
+            this.groupPanelDS.Size = new System.Drawing.Size(1452, 107);
             // 
             // 
             // 
@@ -97,9 +99,10 @@
             // 
             this.btnXem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnXem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnXem.Location = new System.Drawing.Point(353, 16);
+            this.btnXem.Location = new System.Drawing.Point(647, 30);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(75, 21);
+            this.btnXem.Size = new System.Drawing.Size(138, 39);
             this.btnXem.TabIndex = 3;
             this.btnXem.Text = "Xem";
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
@@ -110,17 +113,19 @@
             this.cmbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbLop.FormattingEnabled = true;
             this.cmbLop.ItemHeight = 14;
-            this.cmbLop.Location = new System.Drawing.Point(223, 16);
+            this.cmbLop.Location = new System.Drawing.Point(409, 30);
+            this.cmbLop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbLop.Name = "cmbLop";
-            this.cmbLop.Size = new System.Drawing.Size(110, 20);
+            this.cmbLop.Size = new System.Drawing.Size(198, 20);
             this.cmbLop.TabIndex = 2;
             // 
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            this.labelX1.Location = new System.Drawing.Point(195, 16);
+            this.labelX1.Location = new System.Drawing.Point(358, 30);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(32, 21);
+            this.labelX1.Size = new System.Drawing.Size(59, 39);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Lớp:";
             // 
@@ -130,36 +135,39 @@
             this.cmbNamHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbNamHoc.FormattingEnabled = true;
             this.cmbNamHoc.ItemHeight = 14;
-            this.cmbNamHoc.Location = new System.Drawing.Point(65, 16);
+            this.cmbNamHoc.Location = new System.Drawing.Point(119, 30);
+            this.cmbNamHoc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbNamHoc.Name = "cmbNamHoc";
-            this.cmbNamHoc.Size = new System.Drawing.Size(110, 20);
+            this.cmbNamHoc.Size = new System.Drawing.Size(198, 20);
             this.cmbNamHoc.TabIndex = 1;
             this.cmbNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbNamHoc_SelectedIndexChanged);
             // 
             // labelX0
             // 
             this.labelX0.BackColor = System.Drawing.Color.Transparent;
-            this.labelX0.Location = new System.Drawing.Point(12, 16);
+            this.labelX0.Location = new System.Drawing.Point(22, 30);
+            this.labelX0.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.labelX0.Name = "labelX0";
-            this.labelX0.Size = new System.Drawing.Size(57, 21);
+            this.labelX0.Size = new System.Drawing.Size(105, 39);
             this.labelX0.TabIndex = 0;
             this.labelX0.Text = "Năm học:";
             // 
             // frmKQHSCaNam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 466);
+            this.ClientSize = new System.Drawing.Size(1452, 860);
             this.Controls.Add(this.rpvKQHSCN);
             this.Controls.Add(this.groupPanelDS);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmKQHSCaNam";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KẾT QUẢ CẢ NĂM THEO LỚP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmKQHSCaNam_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bSKQCNTH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsKQHSCN)).EndInit();
             this.groupPanelDS.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -168,7 +176,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rpvKQHSCN;
-        private System.Windows.Forms.BindingSource bSKQCNTH;
+        private System.Windows.Forms.BindingSource bsKQHSCN;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanelDS;
         private DevComponents.DotNetBar.ButtonX btnXem;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbLop;

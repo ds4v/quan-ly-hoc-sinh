@@ -34,8 +34,9 @@ namespace QuanLyHocSinh.Reports
             param.Add(new ReportParameter("NamHoc", cmbNamHoc.Text));
             param.Add(new ReportParameter("Lop", cmbLop.Text));
 
+            bsKQHSCN.DataSource = null;
             if (cmbLop.SelectedValue != null && cmbNamHoc.SelectedValue != null)
-                bSKQCNTH.DataSource = KQHSCaNamBUS.Instance.ReportKQHSCaNam(
+                bsKQHSCN.DataSource = KQHSCaNamBUS.Instance.ReportKQHSCaNam(
                     cmbLop.SelectedValue.ToString(),
                     cmbNamHoc.SelectedValue.ToString()
                 );
