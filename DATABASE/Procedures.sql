@@ -2,7 +2,7 @@ USE QuanLyHocSinh
 GO
 
 CREATE PROCEDURE ThemGiaoVien
-	@maGiaoVien NVARCHAR(6), 
+	@maGiaoVien VARCHAR(6), 
     @tenGiaoVien NVARCHAR(30), 
     @diaChi NVARCHAR(50), 
     @dienThoai NVARCHAR(15), 
@@ -17,8 +17,8 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE LayDanhSachHocSinh
-	@maNamHoc NVARCHAR(6),
-	@maLop NVARCHAR(10)
+	@maNamHoc VARCHAR(6),
+	@maLop VARCHAR(10)
 AS
 BEGIN
 	SELECT PL.MaHocSinh, HS.HoTen FROM HOCSINH HS 
@@ -29,17 +29,17 @@ END
 GO
 
 CREATE PROCEDURE ThemHocSinh
-	@maHocSinh NVARCHAR(6), 
+	@maHocSinh VARCHAR(6), 
     @hoTen NVARCHAR(30), 
     @gioiTinh BIT, 
     @ngaySinh DATETIME, 
     @diaChi NVARCHAR(50), 
-    @maDanToc NVARCHAR(6), 
-    @maTonGiao NVARCHAR(6), 
+    @maDanToc VARCHAR(6), 
+    @maTonGiao VARCHAR(6), 
     @hoTenCha NVARCHAR(30), 
-    @maNgheCha NVARCHAR(6), 
+    @maNgheCha VARCHAR(6), 
     @hoTenMe NVARCHAR(30), 
-    @maNgheMe NVARCHAR(6), 
+    @maNgheMe VARCHAR(6), 
     @email NVARCHAR(50)
 AS
 BEGIN
@@ -51,11 +51,11 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE LayDanhSachDiem
-	@maHocSinh NVARCHAR(6), 
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6), 
-	@maLop NVARCHAR(10)
+	@maHocSinh VARCHAR(6), 
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3), 
+	@maNamHoc VARCHAR(6), 
+	@maLop VARCHAR(10)
 AS
 BEGIN
 	SELECT * FROM DIEM, LOP, HOCSINH, MONHOC, LOAIDIEM
@@ -72,11 +72,11 @@ END
 GO
 
 CREATE PROCEDURE LayDanhSachDiemHocSinh
-	@maHocSinh NVARCHAR(6), 
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6), 
-	@maLop NVARCHAR(10)
+	@maHocSinh VARCHAR(6), 
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3), 
+	@maNamHoc VARCHAR(6), 
+	@maLop VARCHAR(10)
 AS
 BEGIN
 	SELECT * FROM DIEM, LOAIDIEM 
@@ -90,12 +90,12 @@ END
 GO
 
 CREATE PROCEDURE ThemDiem
-	@maHocSinh NVARCHAR(6), 
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
-	@maNamHoc NVARCHAR(6), 
-	@maLop NVARCHAR(10), 
-	@maLoaiDiem NVARCHAR(6),
+	@maHocSinh VARCHAR(6), 
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3), 
+	@maNamHoc VARCHAR(6), 
+	@maLop VARCHAR(10), 
+	@maLoaiDiem VARCHAR(6),
 	@diemSo FLOAT
 AS
 BEGIN
@@ -114,12 +114,12 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE ThemLop
-	@maLop NVARCHAR(10), 
+	@maLop VARCHAR(10), 
 	@tenLop NVARCHAR(30), 
-	@maKhoiLop NVARCHAR(6), 
-	@maNamHoc NVARCHAR(6), 
+	@maKhoiLop VARCHAR(6), 
+	@maNamHoc VARCHAR(6), 
 	@siSo INT, 
-	@maGiaoVien NVARCHAR(6)
+	@maGiaoVien VARCHAR(6)
 AS
 BEGIN
 	INSERT INTO LOP (MaLop, TenLop, MaKhoiLop, MaNamHoc, SiSo, MaGiaoVien)
@@ -130,8 +130,8 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE LayDanhSachMonHoc
-	@maNamHoc NVARCHAR(6),
-	@maLop NVARCHAR(10)
+	@maNamHoc VARCHAR(6),
+	@maLop VARCHAR(10)
 AS
 BEGIN
 	SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC 
@@ -142,10 +142,10 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE ThemPhanCong
-	@maNamHoc NVARCHAR(6), 
-	@maLop NVARCHAR(10), 
-	@maMonHoc NVARCHAR(6), 
-	@maGiaoVien NVARCHAR(6)
+	@maNamHoc VARCHAR(6), 
+	@maLop VARCHAR(10), 
+	@maMonHoc VARCHAR(6), 
+	@maGiaoVien VARCHAR(6)
 AS
 BEGIN
 	INSERT INTO PHANCONG (MaNamHoc, MaLop, MaMonHoc, MaGiaoVien)
@@ -156,10 +156,10 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE ReportKQHSMonHoc
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6),
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3)
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3)
 AS
 BEGIN
 	SELECT * FROM HOCSINH HS 
@@ -176,11 +176,11 @@ END
 GO
 
 CREATE PROCEDURE ThemKQHSMonHoc
-	@maHocSinh NVARCHAR(6),
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6),
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3), 
+	@maHocSinh VARCHAR(6),
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3), 
 	@diemMiengTB FLOAT,
 	@diem15PhutTB FLOAT,
 	@diem45PhutTB FLOAT,
@@ -194,11 +194,11 @@ END
 GO
 
 CREATE PROCEDURE XoaKQHSMonHoc
-	@maHocSinh NVARCHAR(6),
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6),
-	@maMonHoc NVARCHAR(6), 
-	@maHocKy NVARCHAR(3)
+	@maHocSinh VARCHAR(6),
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3)
 AS
 BEGIN
 	DELETE FROM KQ_HOCSINH_MONHOC 
@@ -213,8 +213,8 @@ GO
 --===================================================================================================================================================
 
 CREATE PROCEDURE ReportKQHSCaNam
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6)
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6)
 AS
 BEGIN
 	SELECT * FROM HOCSINH HS 
@@ -229,12 +229,12 @@ END
 GO
 
 CREATE PROCEDURE ThemKQHSCaNam
-	@maHocSinh NVARCHAR(6), 
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6), 
-	@maHocLuc NVARCHAR(6), 
-	@maHanhKiem NVARCHAR(6), 
-	@maKetQua NVARCHAR(6), 
+	@maHocSinh VARCHAR(6), 
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6), 
+	@maHocLuc VARCHAR(6), 
+	@maHanhKiem VARCHAR(6), 
+	@maKetQua VARCHAR(6), 
 	@diemTBHK1 FLOAT, 
 	@diemTBHK2 FLOAT, 
 	@diemTBCN FLOAT
@@ -246,9 +246,9 @@ END
 GO
 
 CREATE PROCEDURE XoaKQHSCaNam
-	@maHocSinh NVARCHAR(6),
-	@maLop NVARCHAR(10), 
-	@maNamHoc NVARCHAR(6)
+	@maHocSinh VARCHAR(6),
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6)
 AS
 BEGIN
 	DELETE FROM KQ_HOCSINH_CANAM 

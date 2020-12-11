@@ -6,7 +6,7 @@ namespace QuanLyHocSinh
 {
     public static class Utilities
     {
-        public static void ShowForm(string formName)
+        public static void ShowForm(string formName, bool mdiParent = true)
         {
             Form frm = Application.OpenForms[formName];
             if (frm != null) frm.Activate();
@@ -14,7 +14,7 @@ namespace QuanLyHocSinh
             {
                 Type type = Type.GetType($"QuanLyHocSinh.{formName}");
                 frm = (Form)Activator.CreateInstance(type);
-                frm.MdiParent = Form.ActiveForm;
+                if(mdiParent) frm.MdiParent = Form.ActiveForm;
                 frm.Show();
             }
         }

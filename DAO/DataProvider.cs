@@ -9,19 +9,19 @@ namespace DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = "Data Source=(local)\\QUANKUN; Initial Catalog=QuanLyHocSinh; Integrated Security=True";
+        //private string connectionString = "Data Source=(local)\\QUANKUN; Initial Catalog=QuanLyHocSinh; Integrated Security=True";
 
-        // private string connectionString = @"
-        //        Server=tcp:mysqlserver18520339.database.windows.net,1433;
-        //        Initial Catalog=QuanLyHocSinh;
-        //        Persist Security Info=False;
-        //        User ID=azureuser;
-        //        Password=P@ssword;
-        //        MultipleActiveResultSets=False;
-        //        Encrypt=True;
-        //        TrustServerCertificate=False;
-        //        Connection Timeout=30;
-        // ";
+        private string connectionString = @"
+            Server=tcp:sqlserver18520424.database.windows.net,1433;
+            Initial Catalog=QuanLyHocSinh;
+            Persist Security Info=False;
+            User ID=quankun;
+            Password=P@ssword;
+            MultipleActiveResultSets=False;
+            Encrypt=True;
+            TrustServerCertificate=False;
+            Connection Timeout=30;
+         ";
 
         private DataProvider() { }
 

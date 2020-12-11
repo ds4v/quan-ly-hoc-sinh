@@ -48,9 +48,9 @@ namespace QuanLyHocSinh
         private void btnKQLHHocKy_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQLHHocKy"); }
         private void btnDanhSachHocSinh_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachHocSinh"); }
         private void btnDanhSachLopHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachLopHoc"); }
-        private void btnDoTuoi_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh"); }
-        private void btnSiSo_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh"); }
-        private void btnThangDiem_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh"); }
+        private void btnDoTuoi_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
+        private void btnSiSo_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
+        private void btnThangDiem_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
