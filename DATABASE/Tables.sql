@@ -495,15 +495,49 @@ CREATE TABLE KQ_HOCSINH_CANAM
 
 --===================================================================================================================================================
 
+CREATE TABLE KQ_LOPHOC_MONHOC
+(
+	MaLop VARCHAR(10) NOT NULL,
+	MaNamHoc VARCHAR(6) NOT NULL,
+	MaMonHoc VARCHAR(6) NOT NULL,
+	MaHocKy VARCHAR(3) NOT NULL,
+	SoLuongDat INT NOT NULL,
+	TiLe FLOAT NOT NULL,
+	PRIMARY KEY(MaLop, MaNamHoc, MaMonHoc, MaHocKy),
+
+	CONSTRAINT FK_KQLHMH_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
+	CONSTRAINT FK_KQLHMH_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc),
+	CONSTRAINT FK_KQLHMH_MONHOC FOREIGN KEY(MaMonHoc) REFERENCES MONHOC(MaMonHoc),
+	CONSTRAINT FK_KQLHMH_HOCKY FOREIGN KEY(MaHocKy) REFERENCES HOCKY(MaHocKy),
+)
+
+--===================================================================================================================================================
+
+CREATE TABLE KQ_LOPHOC_HOCKY
+(
+	MaLop VARCHAR(10) NOT NULL,
+	MaNamHoc VARCHAR(6) NOT NULL,
+	MaHocKy VARCHAR(3) NOT NULL,
+	SoLuongDat INT NOT NULL,
+	TiLe FLOAT NOT NULL,
+	PRIMARY KEY(MaLop, MaNamHoc, MaHocKy),
+
+	CONSTRAINT FK_KQLHHK_LOP FOREIGN KEY(MaLop) REFERENCES LOP(MaLop),
+	CONSTRAINT FK_KQLHHK_NAMHOC FOREIGN KEY(MaNamHoc) REFERENCES NAMHOC(MaNamHoc),
+	CONSTRAINT FK_KQLHHK_HOCKY FOREIGN KEY(MaHocKy) REFERENCES HOCKY(MaHocKy),
+)
+
+--===================================================================================================================================================
+
 CREATE TABLE QUYDINH
 (
 	TuoiCanDuoi INT NOT NULL,
 	TuoiCanTren INT NOT NULL,
 	SiSoCanDuoi INT NOT NULL,
 	SiSoCanTren INT NOT NULL,
-	ThangDiem INT NOT NULL,
+	DiemDat INT NOT NULL,
 )
 
-INSERT INTO QUYDINH VALUES(15, 20, 30, 40, 10)
+INSERT INTO QUYDINH VALUES(15, 20, 30, 40, 5)
 
 --===================================================================================================================================================

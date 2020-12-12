@@ -37,10 +37,10 @@ namespace QuanLyHocSinh
             string[] colNames = { "colDiemMieng", "colDiem15Phut", "colDiem45Phut", "colDiemThi" };
             if (!KiemTraTruocKhiLuu.KiemTraDiem(dgvDiem, colNames) || STT == null) return;
 
+            string maLop = cmbLop.SelectedValue.ToString();
+            string maNamHoc = cmbNamHoc.SelectedValue.ToString();
             string maMonHoc = cmbMonHoc.SelectedValue.ToString();
             string maHocKy = cmbHocKy.SelectedValue.ToString();
-            string maNamHoc = cmbNamHoc.SelectedValue.ToString();
-            string maLop = cmbLop.SelectedValue.ToString();
             int rowCount = 0;
 
             foreach (DataGridViewRow row in dgvDiem.Rows)
@@ -50,7 +50,9 @@ namespace QuanLyHocSinh
 
                 for (int i = 0; i < colNames.Length; i++)
                 {
+                    if (row.Cells[colNames[i]].Value.ToString() == "") row.Cells[colNames[i]].Value = 0;
                     string chuoiDiem = row.Cells[colNames[i]].Value.ToString();
+
                     if (string.IsNullOrWhiteSpace(chuoiDiem)) continue;
                     int count = 0;
 
@@ -93,11 +95,7 @@ namespace QuanLyHocSinh
                 {
                     KQHSMonHocBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy);
                     KQHSCaNamBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc);
-
-                    //    m_KQCaNamMonHocCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                    //                                    cmbLop.SelectedValue.ToString(),
-                    //                                    cmbMonHoc.SelectedValue.ToString(),
-                    //                                    cmbNamHoc.SelectedValue.ToString());
+                    KQLHMonHocBUS.Instance.LuuKetQua(maLop, maNamHoc, maMonHoc, maHocKy);
 
                     //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
                     //                                    cmbLop.SelectedValue.ToString(),

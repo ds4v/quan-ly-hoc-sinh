@@ -136,7 +136,15 @@ GO
 
 --===================================================================================================================================================
 
-CREATE PROCEDURE LayDanhSachMonHoc
+CREATE PROCEDURE LayDanhSachMonHocTheoNam @maNamHoc VARCHAR(6)
+AS
+BEGIN
+	SELECT MH.MaMonHoc, MH.TenMonHoc, MH.HeSo FROM MONHOC MH, PHANCONG PC 
+	WHERE MH.MaMonHoc = PC.MaMonHoc AND PC.MaNamHoc = @maNamHoc
+END
+GO
+
+CREATE PROCEDURE LayDanhSachMonHocTheoLop
 	@maNamHoc VARCHAR(6),
 	@maLop VARCHAR(10)
 AS
@@ -267,14 +275,53 @@ GO
 
 --===================================================================================================================================================
 
-CREATE PROCEDURE CapNhatQuyDinhSiSo
-	@siSoCanDuoi INT,
-	@siSoCanTren INT 
+CREATE PROCEDURE ReportKQLHMonHoc
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3)
 AS
 BEGIN
-	UPDATE QUYDINH SET SiSoCanDuoi = @siSoCanDuoi, SiSoCanTren = @siSoCanTren
+	SELECT * FROM LOP 
+	INNER JOIN KQ_LOPHOC_MONHOC KQ ON KQ.MaLop = LOP.MaLop 
+	INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
+	INNER JOIN MONHOC MH ON KQ.MaMonHoc = MH.MaMonHoc 
+	INNER JOIN HOCKY HK ON KQ.MaHocKy = HK.MaHocKy 
+	WHERE KQ.MaNamHoc = @maNamHoc
+	  AND KQ.MaMonHoc = @maMonHoc
+	  AND KQ.MaHocKy = @maHocKy
+END 
+GO
+
+CREATE PROCEDURE ThemKQLHMonHoc
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3), 
+	@soLuongDat INT,
+	@tiLe FLOAT
+AS
+BEGIN
+	INSERT INTO KQ_LOPHOC_MONHOC (MaLop, MaNamHoc, MaMonHoc, MaHocKy, SoLuongDat, TiLe)
+	VALUES (@maLop, @maNamHoc, @maMonHoc, @maHocKy, @soLuongDat, @tiLe)
 END
 GO
+
+CREATE PROCEDURE XoaKQLHMonHoc
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maMonHoc VARCHAR(6), 
+	@maHocKy VARCHAR(3)
+AS
+BEGIN
+	DELETE FROM KQ_LOPHOC_MONHOC 
+	WHERE MaLop = @maLop 
+	  AND MaNamHoc = @maNamHoc
+	  AND MaMonHoc = @maMonHoc 
+	  AND MaHocKy = @maHocKy 
+END 
+GO
+
+--===================================================================================================================================================
 
 CREATE PROCEDURE CapNhatQuyDinhDoTuoi
 	@tuoiCanDuoi INT,
@@ -285,10 +332,19 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE CapNhatQuyDinhThangDiem @thangDiem INT 
+CREATE PROCEDURE CapNhatQuyDinhSiSo
+	@siSoCanDuoi INT,
+	@siSoCanTren INT 
 AS
 BEGIN
-	UPDATE QUYDINH SET ThangDiem = @thangDiem
+	UPDATE QUYDINH SET SiSoCanDuoi = @siSoCanDuoi, SiSoCanTren = @siSoCanTren
+END
+GO
+
+CREATE PROCEDURE CapNhatQuyDinhDiemDat @diemDat INT 
+AS
+BEGIN
+	UPDATE QUYDINH SET DiemDat = @diemDat
 END
 GO
 

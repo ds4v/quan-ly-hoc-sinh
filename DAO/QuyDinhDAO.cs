@@ -25,29 +25,23 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable LaySiSoQuyDinh()
-        {
-            string query = "SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
-
         public DataTable LayDoTuoiQuyDinh()
         {
             string query = "SELECT TuoiCanDuoi, TuoiCanTren FROM QUYDINH";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable LayThangDiemQuyDinh()
+        public DataTable LaySiSoQuyDinh()
         {
-            string query = "SELECT ThangDiem FROM QUYDINH";
+            string query = "SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
+        public int LayDiemDatQuyDinh()
         {
-            string query = "EXEC CapNhatQuyDinhSiSo @siSoCanDuoi , @siSoCanTren";
-            object[] parameters = new object[] { siSoCanDuoi, siSoCanTren };
-            DataProvider.Instance.ExecuteNonQuery(query, parameters);
+            string query = "SELECT DiemDat FROM QUYDINH";
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            return Convert.ToInt32(dataTable.Rows[0]["DiemDat"]);
         }
 
         public void CapNhatQuyDinhDoTuoi(int tuoiCanDuoi, int tuoiCanTren)
@@ -57,10 +51,17 @@ namespace DAO
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
 
-        public void CapNhatQuyDinhThangDiem(int thangDiem)
+        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
         {
-            string query = "EXEC CapNhatQuyDinhThangDiem @thangDiem";
-            object[] parameters = new object[] { thangDiem };
+            string query = "EXEC CapNhatQuyDinhSiSo @siSoCanDuoi , @siSoCanTren";
+            object[] parameters = new object[] { siSoCanDuoi, siSoCanTren };
+            DataProvider.Instance.ExecuteNonQuery(query, parameters);
+        }
+
+        public void CapNhatQuyDinhDiemDat(int diemDat)
+        {
+            string query = "EXEC CapNhatQuyDinhDiemDat @diemDat";
+            object[] parameters = new object[] { diemDat };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }
     }

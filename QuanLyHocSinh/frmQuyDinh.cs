@@ -15,12 +15,11 @@ namespace QuanLyHocSinh
         private void HienThi()
         {
             QuyDinhBUS.Instance.HienThi(
+                txtTuoiCanDuoi,
+                txtTuoiCanTren,
                 txtSiSoCanDuoi,
                 txtSiSoCanTren,
-                txtDoTuoiCanDuoi,
-                txtDoTuoiCanTren,
-                ckbThang10,
-                ckbThang100
+                txtDiemDat
             );
         }
 
@@ -31,40 +30,19 @@ namespace QuanLyHocSinh
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (tabControlPanelSiSo.CanSelect)
+            if (tabControlPanelDoTuoi.CanSelect)
             {
-                if (txtSiSoCanDuoi.Value < 10 || txtSiSoCanTren.Value > 40)
-                    MessageBoxEx.Show(
-                        "Sỉ số phải nằm trong khoảng giới hạn 10 - 40 !", 
+                if (txtTuoiCanDuoi.Value > txtTuoiCanTren.Value)
+                    MessageBox.Show(
+                        "Đổ tuổi cận dưới phải nhỏ hơn độ tuổi cận trên !", 
                         "ERROR", 
                         MessageBoxButtons.OK, 
                         MessageBoxIcon.Error
                     );
                 else
                 {
-                    QuyDinhBUS.Instance.CapNhatQuyDinhSiSo(txtSiSoCanDuoi.Value, txtSiSoCanTren.Value);
-                    MessageBoxEx.Show(
-                        "Cập nhật thành công quy định về sỉ số !", 
-                        "COMPLETED", 
-                        MessageBoxButtons.OK, 
-                        MessageBoxIcon.Information
-                    );
-                    HienThi();
-                }
-            }
-            else if (tabControlPanelDoTuoi.CanSelect)
-            {
-                if (txtDoTuoiCanDuoi.Value < 15 || txtDoTuoiCanTren.Value > 20)
-                    MessageBoxEx.Show(
-                        "Độ tuổi phải nằm trong khoảng giới hạn 15 - 20 !", 
-                        "ERROR", 
-                        MessageBoxButtons.OK, 
-                        MessageBoxIcon.Error
-                    );
-                else
-                {
-                    QuyDinhBUS.Instance.CapNhatQuyDinhDoTuoi(txtDoTuoiCanDuoi.Value, txtDoTuoiCanTren.Value);
-                    MessageBoxEx.Show(
+                    QuyDinhBUS.Instance.CapNhatQuyDinhDoTuoi(txtTuoiCanDuoi.Value, txtTuoiCanTren.Value);
+                    MessageBox.Show(
                         "Cập nhật thành công quy định về độ tuổi !", 
                         "COMPLETED", 
                         MessageBoxButtons.OK, 
@@ -73,30 +51,37 @@ namespace QuanLyHocSinh
                     HienThi();
                 }
             }
-            else if (tabControlPanelThangDiem.CanSelect)
+            else if (tabControlPanelSiSo.CanSelect)
             {
-                if (ckbThang10.Checked)
-                {
-                    QuyDinhBUS.Instance.CapNhatQuyDinhThangDiem(10);
-                    MessageBoxEx.Show(
-                        "Cập nhật thành công quy định về thang điểm !", 
-                        "COMPLETED", 
-                        MessageBoxButtons.OK, 
-                        MessageBoxIcon.Information
+                if (txtSiSoCanDuoi.Value > txtSiSoCanTren.Value)
+                    MessageBox.Show(
+                        "Sỉ số cận dưới phải nhỏ hơn sỉ số cận trên !",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
                     );
-                    HienThi();
-                }
                 else
                 {
-                    QuyDinhBUS.Instance.CapNhatQuyDinhThangDiem(100);
-                    MessageBoxEx.Show(
-                        "Cập nhật thành công quy định về thang điểm !", 
-                        "COMPLETED", 
-                        MessageBoxButtons.OK, 
+                    QuyDinhBUS.Instance.CapNhatQuyDinhSiSo(txtSiSoCanDuoi.Value, txtSiSoCanTren.Value);
+                    MessageBox.Show(
+                        "Cập nhật thành công quy định về sỉ số !",
+                        "COMPLETED",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
                     HienThi();
                 }
+            }
+            else if (tabControlPanelDiemDat.CanSelect)
+            {
+                QuyDinhBUS.Instance.CapNhatQuyDinhDiemDat(txtDiemDat.Value);
+                MessageBox.Show(
+                    "Cập nhật thành công quy định về điểm đạt !", 
+                    "COMPLETED", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information
+                );
+                HienThi();
             }
         }
 

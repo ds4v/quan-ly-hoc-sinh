@@ -25,19 +25,20 @@ namespace BUS
         }
 
         public void HienThi(
+            IntegerInput txtDoTuoiCanDuoi,
+            IntegerInput txtDoTuoiCanTren,
             IntegerInput txtSiSoCanDuoi, 
             IntegerInput txtSiSoCanTren, 
-            IntegerInput txtDoTuoiCanDuoi, 
-            IntegerInput txtDoTuoiCanTren, 
-            CheckBoxX ckbThang10, 
-            CheckBoxX ckbThang100)
+            IntegerInput txtDiemDat)
         {
             DataTable dataTable = QuyDinhDAO.Instance.LayDanhSachQuyDinh();
             bindingSource.DataSource = dataTable;
 
-            int thangDiem = Convert.ToInt32(dataTable.Rows[0]["ThangDiem"]);
-            if (thangDiem == 10) ckbThang10.Checked = true;
-            else ckbThang100.Checked = true;
+            txtDoTuoiCanDuoi.DataBindings.Clear();
+            txtDoTuoiCanDuoi.DataBindings.Add("Value", bindingSource, "TuoiCanDuoi");
+
+            txtDoTuoiCanTren.DataBindings.Clear();
+            txtDoTuoiCanTren.DataBindings.Add("Value", bindingSource, "TuoiCanTren");
 
             txtSiSoCanDuoi.DataBindings.Clear();
             txtSiSoCanDuoi.DataBindings.Add("Value", bindingSource, "SiSoCanDuoi");
@@ -45,16 +46,8 @@ namespace BUS
             txtSiSoCanTren.DataBindings.Clear();
             txtSiSoCanTren.DataBindings.Add("Value", bindingSource, "SiSoCanTren");
 
-            txtDoTuoiCanDuoi.DataBindings.Clear();
-            txtDoTuoiCanDuoi.DataBindings.Add("Value", bindingSource, "TuoiCanDuoi");
-
-            txtDoTuoiCanTren.DataBindings.Clear();
-            txtDoTuoiCanTren.DataBindings.Add("Value", bindingSource, "TuoiCanTren");
-        }
-
-        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
-        {
-            QuyDinhDAO.Instance.CapNhatQuyDinhSiSo(siSoCanDuoi, siSoCanTren);
+            txtDiemDat.DataBindings.Clear();
+            txtDiemDat.DataBindings.Add("Value", bindingSource, "DiemDat");
         }
 
         public void CapNhatQuyDinhDoTuoi(int tuoiCanDuoi, int tuoiCanTren)
@@ -62,9 +55,26 @@ namespace BUS
             QuyDinhDAO.Instance.CapNhatQuyDinhDoTuoi(tuoiCanDuoi, tuoiCanTren);
         }
 
-        public void CapNhatQuyDinhThangDiem(int thangDiem)
+        public void CapNhatQuyDinhSiSo(int siSoCanDuoi, int siSoCanTren)
         {
-            QuyDinhDAO.Instance.CapNhatQuyDinhThangDiem(thangDiem);
+            QuyDinhDAO.Instance.CapNhatQuyDinhSiSo(siSoCanDuoi, siSoCanTren);
+        }
+
+        public void CapNhatQuyDinhDiemDat(int diemDat)
+        {
+            QuyDinhDAO.Instance.CapNhatQuyDinhDiemDat(diemDat);
+        }
+
+        public bool KiemTraDoTuoi(DateTime ngaySinh)
+        {
+            DataTable dataTable = QuyDinhDAO.Instance.LayDoTuoiQuyDinh();
+
+            int doTuoiMin = Convert.ToInt32(dataTable.Rows[0]["TuoiCanDuoi"]);
+            int doTuoiMax = Convert.ToInt32(dataTable.Rows[0]["TuoiCanTren"]);
+
+            int doTuoi = DateTime.Today.Year - ngaySinh.Year;
+            if (doTuoi >= doTuoiMin && doTuoi <= doTuoiMax) return true;
+            else return false;
         }
 
         public bool KiemTraSiSo(int siSo)
@@ -78,49 +88,20 @@ namespace BUS
             else return false;
         }
 
-        public bool KiemTraDoTuoi(DateTime ngaySinh)
-        {
-            DataTable dataTable = QuyDinhDAO.Instance.LayDoTuoiQuyDinh();
-
-            int doTuoiMin = Convert.ToInt32(dataTable.Rows[0]["TuoiCanDuoi"]);
-            int doTuoiMax = Convert.ToInt32(dataTable.Rows[0]["TuoiCanTren"]);
-
-            int doTuoi = DateTime.Today.Year - ngaySinh.Year;
-            if (doTuoi >= doTuoiMin && doTuoi <= doTuoiMax)  return true;
-            else return false;
-        }
-
         public bool KiemTraDiem(string diem)
         {
             IList<string> gioiHanDiem = new List<string>();
-            DataTable dataTable = QuyDinhDAO.Instance.LayThangDiemQuyDinh();
-
-            int thangDiem = Convert.ToInt32(dataTable.Rows[0]["ThangDiem"]);
             float nacDiemTrongGioiHan = 0;
 
-            if (thangDiem == 10)
+            for (int i = 0; i <= 1010; i++)
             {
-                for (int i = 0; i <= 1010; i++)
-                {
-                    gioiHanDiem.Add(nacDiemTrongGioiHan.ToString());
-                    nacDiemTrongGioiHan += 0.01F;
-                    nacDiemTrongGioiHan = (float)Math.Round(nacDiemTrongGioiHan, 2);
-                }
-
-                if (gioiHanDiem.Contains(diem)) return true;
-                else return false;
+                gioiHanDiem.Add(nacDiemTrongGioiHan.ToString());
+                nacDiemTrongGioiHan += 0.01F;
+                nacDiemTrongGioiHan = (float)Math.Round(nacDiemTrongGioiHan, 2);
             }
-            else
-            {
-                for (int i = 0; i <= 100; i++)
-                {
-                    gioiHanDiem.Add(nacDiemTrongGioiHan.ToString());
-                    nacDiemTrongGioiHan += 1;
-                }
 
-                if (gioiHanDiem.Contains(diem)) return true;
-                else return false;
-            }
+            if (gioiHanDiem.Contains(diem)) return true;
+            else return false;
         }
     }
 }

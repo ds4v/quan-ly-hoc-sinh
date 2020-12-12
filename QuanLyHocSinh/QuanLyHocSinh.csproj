@@ -227,6 +227,18 @@
     <Compile Include="Reports\frmKQHSMonHoc.Designer.cs">
       <DependentUpon>frmKQHSMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmKQLHHocKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmKQLHHocKy.Designer.cs">
+      <DependentUpon>frmKQLHHocKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmKQLHMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmKQLHMonHoc.Designer.cs">
+      <DependentUpon>frmKQLHMonHoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,10 +327,14 @@
     <EmbeddedResource Include="Reports\frmKQHSMonHoc.resx">
       <DependentUpon>frmKQHSMonHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmKQLHMonHoc.resx">
+      <DependentUpon>frmKQLHMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptDanhSachHocSinh.rdlc" />
     <EmbeddedResource Include="Reports\rptHoSoLopHoc.rdlc" />
     <EmbeddedResource Include="Reports\rptKQHSCaNam.rdlc" />
     <EmbeddedResource Include="Reports\rptKQHSMonHoc.rdlc" />
+    <EmbeddedResource Include="Reports\rptKQLHMonHoc.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DTO.DiemDTO.datasource" />
     <None Include="Properties\DataSources\DTO.GiaoVienDTO.datasource" />
@@ -329,6 +345,7 @@
     <None Include="Properties\DataSources\DTO.KetQuaDTO.datasource" />
     <None Include="Properties\DataSources\DTO.KQHSCaNamDTO.datasource" />
     <None Include="Properties\DataSources\DTO.KQHSMonHocDTO.datasource" />
+    <None Include="Properties\DataSources\DTO.KQLHMonHocDTO.datasource" />
     <None Include="Properties\DataSources\DTO.LoaiNguoiDungDTO.datasource" />
     <None Include="Properties\DataSources\DTO.LopDTO.datasource" />
     <None Include="Properties\DataSources\DTO.MonHocDTO.datasource" />
@@ -367,7 +384,7 @@
     <None Include="Resources\qdsiso.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\qdthangdiem.png" />
+    <None Include="Resources\qddiemdat.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\quanlynguoidung.png" />
@@ -512,9 +529,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\namhoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\timkiem_small.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
