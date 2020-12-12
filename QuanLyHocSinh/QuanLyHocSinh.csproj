@@ -203,6 +203,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Helpers.cs" />
+    <Compile Include="Reports\frmDanhSachHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDanhSachHocSinh.Designer.cs">
+      <DependentUpon>frmDanhSachHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmHoSoLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmHoSoLopHoc.Designer.cs">
+      <DependentUpon>frmHoSoLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmKQHSCaNam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,18 +226,6 @@
     </Compile>
     <Compile Include="Reports\frmKQHSMonHoc.Designer.cs">
       <DependentUpon>frmKQHSMonHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\frmKQLHHocKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\frmKQLHHocKy.Designer.cs">
-      <DependentUpon>frmKQLHHocKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\frmKQLHMonHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\frmKQLHMonHoc.Designer.cs">
-      <DependentUpon>frmKQLHMonHoc.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -303,12 +303,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\frmDanhSachHocSinh.resx">
+      <DependentUpon>frmDanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmHoSoLopHoc.resx">
+      <DependentUpon>frmHoSoLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmKQHSCaNam.resx">
       <DependentUpon>frmKQHSCaNam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmKQHSMonHoc.resx">
       <DependentUpon>frmKQHSMonHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDanhSachHocSinh.rdlc" />
+    <EmbeddedResource Include="Reports\rptHoSoLopHoc.rdlc" />
     <EmbeddedResource Include="Reports\rptKQHSCaNam.rdlc" />
     <EmbeddedResource Include="Reports\rptKQHSMonHoc.rdlc" />
     <None Include="packages.config" />

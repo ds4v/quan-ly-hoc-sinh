@@ -5,6 +5,7 @@ using System;
 using DevComponents.Editors.DateTimeAdv;
 using System.Data;
 using DTO;
+using System.Collections.Generic;
 
 namespace BUS
 {
@@ -107,6 +108,43 @@ namespace BUS
             comboBox.DataSource = HocSinhDAO.Instance.LayDanhSachHocSinh(namHoc, lop);
             comboBox.DisplayMember = "HoTen";
             comboBox.ValueMember = "MaHocSinh";
+        }
+
+        public IList<HocSinhDTO> Report()
+        {
+            DataTable dataTable = HocSinhDAO.Instance.LayDanhSachHocSinh();
+            IList<HocSinhDTO> ilist = new List<HocSinhDTO>();
+
+            foreach (DataRow Row in dataTable.Rows)
+            {
+                HocSinhDTO hocSinh = new HocSinhDTO();
+                hocSinh.MaHocSinh = Convert.ToString(Row["MaHocSinh"]);
+                hocSinh.HoTen = Convert.ToString(Row["HoTen"]);
+                hocSinh.GioiTinh = Convert.ToBoolean(Row["GioiTinh"]);
+                hocSinh.NgaySinh = Convert.ToDateTime(Row["NgaySinh"]);
+                hocSinh.DiaChi = Convert.ToString(Row["DiaChi"]);
+                hocSinh.Email = Convert.ToString(Row["Email"]);
+                ilist.Add(hocSinh);
+            }
+            return ilist;
+        }
+
+        public IList<HocSinhDTO> Report(string namHoc, string lop)
+        {
+            DataTable dataTable = HocSinhDAO.Instance.LayDanhSachHocSinh(namHoc, lop, true);
+            IList<HocSinhDTO> ilist = new List<HocSinhDTO>();
+
+            foreach (DataRow Row in dataTable.Rows)
+            {
+                HocSinhDTO hocSinh = new HocSinhDTO();
+                hocSinh.MaHocSinh = Convert.ToString(Row["MaHocSinh"]);
+                hocSinh.HoTen = Convert.ToString(Row["HoTen"]);
+                hocSinh.GioiTinh = Convert.ToBoolean(Row["GioiTinh"]);
+                hocSinh.NgaySinh = Convert.ToDateTime(Row["NgaySinh"]);
+                hocSinh.DiaChi = Convert.ToString(Row["DiaChi"]);
+                ilist.Add(hocSinh);
+            }
+            return ilist;
         }
 
         public void CapNhatHocSinh(DataTable dataTable)

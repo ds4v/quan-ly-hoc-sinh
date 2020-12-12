@@ -36,7 +36,7 @@ namespace QuanLyHocSinh.Reports
 
             bsKQHSCN.DataSource = null;
             if (cmbLop.SelectedValue != null && cmbNamHoc.SelectedValue != null)
-                bsKQHSCN.DataSource = KQHSCaNamBUS.Instance.ReportKQHSCaNam(
+                bsKQHSCN.DataSource = KQHSCaNamBUS.Instance.Report(
                     cmbLop.SelectedValue.ToString(),
                     cmbNamHoc.SelectedValue.ToString()
                 );

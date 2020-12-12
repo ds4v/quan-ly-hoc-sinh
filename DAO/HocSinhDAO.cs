@@ -25,10 +25,10 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable LayDanhSachHocSinh(string namHoc, string lop)
+        public DataTable LayDanhSachHocSinh(string namHoc, string lop, bool tatCaCot = false)
         {
-            string query = "EXEC LayDanhSachHocSinh @maNamHoc , @maLop";
-            object[] parameters = new object[] { namHoc, lop };
+            string query = "EXEC LayDanhSachHocSinh @maNamHoc , @maLop , @tatCaCot";
+            object[] parameters = new object[] { namHoc, lop, tatCaCot };
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
 

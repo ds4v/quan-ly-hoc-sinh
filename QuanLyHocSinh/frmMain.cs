@@ -42,12 +42,14 @@ namespace QuanLyHocSinh
         private void btnNgheNghiep_Click(object sender, EventArgs e) { Utilities.ShowForm("frmNgheNghiep"); }
         private void btnGiaoVien_Click(object sender, EventArgs e) { Utilities.ShowForm("frmGiaoVien"); }
         private void btnPhanCong_Click(object sender, EventArgs e) {  Utilities.ShowForm("frmPhanCong"); }
+
         private void btnKQHSMonHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQHSMonHoc"); }
         private void btnKQHSCaNam_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQHSCaNam"); }
         private void btnKQLHMonHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQLHMonHoc"); }
         private void btnKQLHHocKy_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmKQLHHocKy"); }
-        private void btnDanhSachHocSinh_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachHocSinh"); }
-        private void btnDanhSachLopHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("frmDanhSachLopHoc"); }
+        private void btnDanhSachHocSinh_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmDanhSachHocSinh"); }
+        private void btnDanhSachLopHoc_Click(object sender, EventArgs e) { Utilities.ShowForm("Reports.frmHoSoLopHoc"); }
+
         private void btnDoTuoi_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
         private void btnSiSo_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
         private void btnThangDiem_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
@@ -239,7 +241,7 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = false;
             btnKQLHHocKy.Enabled = false;
             btnDanhSachHocSinh.Enabled = false;
-            btnDanhSachLopHoc.Enabled = false;
+            btnHoSoLopHoc.Enabled = false;
 
             btnSiSo.Enabled = false;
             btnThangDiem.Enabled = false;
@@ -287,7 +289,7 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachLopHoc.Enabled = true;
+            btnHoSoLopHoc.Enabled = true;
 
             btnSiSo.Enabled = true;
             btnThangDiem.Enabled = true;
@@ -315,7 +317,7 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachLopHoc.Enabled = true;
+            btnHoSoLopHoc.Enabled = true;
 
             //False
             btnDangNhap.Enabled = false;
@@ -375,7 +377,7 @@ namespace QuanLyHocSinh
             btnKQLHMonHoc.Enabled = true;
             btnKQLHHocKy.Enabled = true;
             btnDanhSachHocSinh.Enabled = true;
-            btnDanhSachLopHoc.Enabled = true;
+            btnHoSoLopHoc.Enabled = true;
 
             //False
             btnDangNhap.Enabled = false;
