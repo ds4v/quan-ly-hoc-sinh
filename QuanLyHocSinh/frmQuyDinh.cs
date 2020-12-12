@@ -23,6 +23,7 @@ namespace QuanLyHocSinh
             );
         }
 
+
         private void frmQuyDinh_Load(object sender, EventArgs e)
         {
             HienThi();

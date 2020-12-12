@@ -323,6 +323,48 @@ GO
 
 --===================================================================================================================================================
 
+CREATE PROCEDURE ReportKQLHHocKy
+	@maNamHoc VARCHAR(6),
+	@maHocKy VARCHAR(3)
+AS
+BEGIN
+	SELECT * FROM LOP 
+	INNER JOIN KQ_LOPHOC_HOCKY KQ ON KQ.MaLop = LOP.MaLop 
+	INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
+	INNER JOIN HOCKY HK ON KQ.MaHocKy = HK.MaHocKy 
+	WHERE KQ.MaNamHoc = @maNamHoc
+	  AND KQ.MaHocKy = @maHocKy
+END 
+GO
+
+CREATE PROCEDURE ThemKQLHHocKy
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maHocKy VARCHAR(3), 
+	@soLuongDat INT,
+	@tiLe FLOAT
+AS
+BEGIN
+	INSERT INTO KQ_LOPHOC_HOCKY (MaLop, MaNamHoc, MaHocKy, SoLuongDat, TiLe)
+	VALUES (@maLop, @maNamHoc, @maHocKy, @soLuongDat, @tiLe)
+END
+GO
+
+CREATE PROCEDURE XoaKQLHHocKy
+	@maLop VARCHAR(10), 
+	@maNamHoc VARCHAR(6),
+	@maHocKy VARCHAR(3)
+AS
+BEGIN
+	DELETE FROM KQ_LOPHOC_HOCKY 
+	WHERE MaLop = @maLop 
+	  AND MaNamHoc = @maNamHoc
+	  AND MaHocKy = @maHocKy 
+END 
+GO
+
+--===================================================================================================================================================
+
 CREATE PROCEDURE CapNhatQuyDinhDoTuoi
 	@tuoiCanDuoi INT,
 	@tuoiCanTren INT 
