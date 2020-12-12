@@ -493,6 +493,16 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap qddiemdat {
+            get {
+                object obj = ResourceManager.GetObject("qddiemdat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap qddotuoi {
             get {
                 object obj = ResourceManager.GetObject("qddotuoi", resourceCulture);
@@ -506,16 +516,6 @@ namespace QuanLyHocSinh.Properties {
         internal static System.Drawing.Bitmap qdsiso {
             get {
                 object obj = ResourceManager.GetObject("qdsiso", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap qdthangdiem {
-            get {
-                object obj = ResourceManager.GetObject("qdthangdiem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

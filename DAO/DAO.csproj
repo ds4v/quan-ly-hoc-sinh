@@ -63,6 +63,8 @@
     <Compile Include="PhanCongDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuyDinhDAO.cs" />
+    <Compile Include="Reports\KQLHHocKyDAO.cs" />
+    <Compile Include="Reports\KQLHMonHocDAO.cs" />
     <Compile Include="TonGiaoDAO.cs" />
   </ItemGroup>
   <ItemGroup>

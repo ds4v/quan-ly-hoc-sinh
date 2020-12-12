@@ -52,7 +52,7 @@ namespace QuanLyHocSinh
 
         private void btnDoTuoi_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
         private void btnSiSo_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
-        private void btnThangDiem_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
+        private void btnDiemDat_Click(object sender, EventArgs e) { Utilities.ShowForm("frmQuyDinh", false); }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
@@ -244,7 +244,7 @@ namespace QuanLyHocSinh
             btnHoSoLopHoc.Enabled = false;
 
             btnSiSo.Enabled = false;
-            btnThangDiem.Enabled = false;
+            btnDiemDat.Enabled = false;
             btnDoTuoi.Enabled = false;
         }
         #endregion
@@ -292,7 +292,7 @@ namespace QuanLyHocSinh
             btnHoSoLopHoc.Enabled = true;
 
             btnSiSo.Enabled = true;
-            btnThangDiem.Enabled = true;
+            btnDiemDat.Enabled = true;
             btnDoTuoi.Enabled = true;
         }
         #endregion
@@ -341,7 +341,7 @@ namespace QuanLyHocSinh
             btnPhanCong.Enabled = false;
 
             btnSiSo.Enabled = false;
-            btnThangDiem.Enabled = false;
+            btnDiemDat.Enabled = false;
             btnDoTuoi.Enabled = false;
         }
         #endregion
@@ -390,7 +390,7 @@ namespace QuanLyHocSinh
             btnPhanCong.Enabled = false;
 
             btnSiSo.Enabled = false;
-            btnThangDiem.Enabled = false;
+            btnDiemDat.Enabled = false;
             btnDoTuoi.Enabled = false;
         }
         #endregion
