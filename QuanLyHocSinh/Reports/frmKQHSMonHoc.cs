@@ -60,7 +60,7 @@ namespace QuanLyHocSinh.Reports
             bsKQHSMH.DataSource = null;
             if (cmbLop.SelectedValue != null && cmbMonHoc.SelectedValue != null &&
                 cmbHocKy.SelectedValue != null && cmbNamHoc.SelectedValue != null)
-                bsKQHSMH.DataSource = KQHSMonHocBUS.Instance.ReportKQHSMonHoc(
+                bsKQHSMH.DataSource = KQHSMonHocBUS.Instance.Report(
                 cmbLop.SelectedValue.ToString(),
                 cmbNamHoc.SelectedValue.ToString(),
                 cmbMonHoc.SelectedValue.ToString(),

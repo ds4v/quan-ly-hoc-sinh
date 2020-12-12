@@ -18,13 +18,20 @@ GO
 
 CREATE PROCEDURE LayDanhSachHocSinh
 	@maNamHoc VARCHAR(6),
-	@maLop VARCHAR(10)
+	@maLop VARCHAR(10),
+	@tatCaCot BIT
 AS
 BEGIN
-	SELECT PL.MaHocSinh, HS.HoTen FROM HOCSINH HS 
-	INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
-	INNER JOIN LOP L ON L.MaLop = PL.MaLop 
-	WHERE PL.MaNamHoc = @maNamHoc AND PL.MaLop = @maLop
+	IF @tatCaCot = 1
+		SELECT PL.MaHocSinh, HS.* FROM HOCSINH HS 
+		INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
+		INNER JOIN LOP L ON L.MaLop = PL.MaLop 
+		WHERE PL.MaNamHoc = @maNamHoc AND PL.MaLop = @maLop
+	ELSE
+		SELECT PL.MaHocSinh, HS.HoTen FROM HOCSINH HS 
+		INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
+		INNER JOIN LOP L ON L.MaLop = PL.MaLop 
+		WHERE PL.MaNamHoc = @maNamHoc AND PL.MaLop = @maLop
 END
 GO
 

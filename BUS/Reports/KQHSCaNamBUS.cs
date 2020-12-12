@@ -56,7 +56,7 @@ namespace BUS
             ));
         }
 
-        public IList<KQHSCaNamDTO> ReportKQHSCaNam(string maLop, string maNamHoc)
+        public IList<KQHSCaNamDTO> Report(string maLop, string maNamHoc)
         {
             DataTable dataTable = KQHSCaNamDAO.Instance.Report(maLop, maNamHoc);
             IList<KQHSCaNamDTO> ilist = new List<KQHSCaNamDTO>();

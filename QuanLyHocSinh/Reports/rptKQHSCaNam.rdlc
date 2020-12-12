@@ -103,7 +103,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.5cm</Top>
-            <Left>14.74146cm</Left>
+            <Left>15.05896cm</Left>
             <Height>0.635cm</Height>
             <Width>4.8cm</Width>
             <Style>
@@ -132,7 +132,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.5cm</Top>
-            <Left>8.88563cm</Left>
+            <Left>9.83813cm</Left>
             <Height>0.635cm</Height>
             <Width>4.8cm</Width>
             <ZIndex>1</ZIndex>
@@ -150,7 +150,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>BÁO CÁO TRUNG BÌNH CẢ NĂM CỦA HỌC SINH</Value>
+                    <Value>BÁO CÁO CẢ NĂM CỦA HỌC SINH</Value>
                     <Style>
                       <FontSize>20pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -589,7 +589,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -606,6 +606,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -697,7 +698,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -731,7 +732,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -766,7 +767,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -802,7 +803,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -838,7 +839,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -874,7 +875,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -918,7 +919,7 @@
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="tblKQCNTH_Details_Group">
+                  <Group Name="tblKQHSCN_Details_Group">
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>

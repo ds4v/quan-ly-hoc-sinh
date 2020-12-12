@@ -54,7 +54,7 @@ namespace BUS
             ));
         }
 
-        public IList<KQHSMonHocDTO> ReportKQHSMonHoc(string maLop, string maNamHoc, string maMonHoc, string maHocKy)
+        public IList<KQHSMonHocDTO> Report(string maLop, string maNamHoc, string maMonHoc, string maHocKy)
         {
             DataTable dataTable = KQHSMonHocDAO.Instance.Report(maLop, maNamHoc, maMonHoc, maHocKy);
             IList<KQHSMonHocDTO> ilist = new List<KQHSMonHocDTO>();

@@ -892,7 +892,7 @@
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="tblKQHKMH_Details_Group">
+                  <Group Name="tblKQHSMH_Details_Group">
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>

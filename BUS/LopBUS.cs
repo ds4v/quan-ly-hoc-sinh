@@ -91,6 +91,11 @@ namespace BUS
             LopDAO.Instance.ThemLop(lop);
         }
 
+        public DataTable TimTheoMa(ComboBoxEx cmbLop)
+        {
+            return LopDAO.Instance.TimTheoMa(cmbLop.SelectedValue.ToString());
+        }
+
         public void TimTheoMa(string maLop)
         {
             bindingSource.DataSource = LopDAO.Instance.TimTheoMa(maLop);
