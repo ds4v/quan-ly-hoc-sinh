@@ -11,7 +11,6 @@
         public KQLHHocKyDTO(
             LopDTO lop,
             NamHocDTO namHoc,
-            MonHocDTO monHoc,
             HocKyDTO hocKy,
             int soLuongDat,
             float tiLe)

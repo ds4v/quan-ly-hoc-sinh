@@ -267,6 +267,20 @@ namespace BUS
             return soLuongDat;
         }
 
+        public int LaySoLuongDat(string maLop, string maNamHoc, string maHocKy)
+        {
+            DataTable dataTable = HocSinhDAO.Instance.LayDanhSachHocSinh(maNamHoc, maLop);
+            int diemDat = QuyDinhDAO.Instance.LayDiemDatQuyDinh();
+            int soLuongDat = 0;
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                float diemTBHK = LayDiemTBHKChung(row["MaHocSinh"].ToString(), maLop, maNamHoc, maHocKy);
+                soLuongDat += Convert.ToInt32(diemTBHK >= diemDat);
+            }
+            return soLuongDat;
+        }
+
         public void ThemDiem(DiemDTO diem)
         {
             DiemDAO.Instance.ThemDiem(diem);

@@ -501,7 +501,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -538,7 +538,7 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily />
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>

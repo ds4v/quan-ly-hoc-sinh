@@ -96,13 +96,7 @@ namespace QuanLyHocSinh
                     KQHSMonHocBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc, maMonHoc, maHocKy);
                     KQHSCaNamBUS.Instance.LuuKetQua(maHocSinh, maLop, maNamHoc);
                     KQLHMonHocBUS.Instance.LuuKetQua(maLop, maNamHoc, maMonHoc, maHocKy);
-
-                    //    m_KQHocKyTongHopCtrl.LuuKetQua(row.Cells["colMaHocSinh"].Value.ToString(),
-                    //                                    cmbLop.SelectedValue.ToString(),
-                    //                                    cmbHocKy.SelectedValue.ToString(),
-                    //                                    cmbNamHoc.SelectedValue.ToString());
-
-
+                    KQLHHocKyBUS.Instance.LuuKetQua(maLop, maNamHoc, maHocKy);
                 }
                 #endregion
             }
