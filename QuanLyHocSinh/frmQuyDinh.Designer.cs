@@ -92,12 +92,11 @@
             this.tabControlPanelDoTuoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanelDoTuoi.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanelDoTuoi.Name = "tabControlPanelDoTuoi";
-            this.tabControlPanelDoTuoi.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabControlPanelDoTuoi.Padding = new System.Windows.Forms.Padding(1);
             this.tabControlPanelDoTuoi.Size = new System.Drawing.Size(344, 125);
-            this.tabControlPanelDoTuoi.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanelDoTuoi.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanelDoTuoi.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabControlPanelDoTuoi.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanelDoTuoi.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanelDoTuoi.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(147)))), ((int)(((byte)(160)))));
             this.tabControlPanelDoTuoi.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanelDoTuoi.Style.GradientAngle = 90;
@@ -166,12 +165,11 @@
             this.tabControlPanelSiSo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanelSiSo.Location = new System.Drawing.Point(0, 23);
             this.tabControlPanelSiSo.Name = "tabControlPanelSiSo";
-            this.tabControlPanelSiSo.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabControlPanelSiSo.Padding = new System.Windows.Forms.Padding(1);
             this.tabControlPanelSiSo.Size = new System.Drawing.Size(344, 125);
-            this.tabControlPanelSiSo.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanelSiSo.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanelSiSo.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabControlPanelSiSo.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanelSiSo.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanelSiSo.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(147)))), ((int)(((byte)(160)))));
             this.tabControlPanelSiSo.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanelSiSo.Style.GradientAngle = 90;
@@ -236,14 +234,13 @@
             this.tabControlPanelDiemDat.Controls.Add(this.labelX1);
             this.tabControlPanelDiemDat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanelDiemDat.Location = new System.Drawing.Point(0, 23);
-            this.tabControlPanelDiemDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlPanelDiemDat.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlPanelDiemDat.Name = "tabControlPanelDiemDat";
             this.tabControlPanelDiemDat.Padding = new System.Windows.Forms.Padding(1);
             this.tabControlPanelDiemDat.Size = new System.Drawing.Size(344, 125);
-            this.tabControlPanelDiemDat.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
-            this.tabControlPanelDiemDat.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
+            this.tabControlPanelDiemDat.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabControlPanelDiemDat.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanelDiemDat.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.tabControlPanelDiemDat.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(147)))), ((int)(((byte)(160)))));
             this.tabControlPanelDiemDat.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.tabControlPanelDiemDat.Style.GradientAngle = 90;
@@ -282,7 +279,8 @@
             // btnDongY
             // 
             this.btnDongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDongY.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDongY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnDongY.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnDongY.Location = new System.Drawing.Point(164, 10);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(70, 23);
@@ -293,7 +291,8 @@
             // btnHuyBo
             // 
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyBo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHuyBo.Location = new System.Drawing.Point(240, 10);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(70, 23);

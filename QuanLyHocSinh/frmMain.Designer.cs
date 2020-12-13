@@ -53,6 +53,11 @@
             this.ribbonBarLop = new DevComponents.DotNetBar.RibbonBar();
             this.btnLopHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnKhoiLop = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanelQuyDinh = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBarQuyDinh = new DevComponents.DotNetBar.RibbonBar();
+            this.btnDoTuoi = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSiSo = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDiemDat = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanelThongKe = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBarXuatDanhSach = new DevComponents.DotNetBar.RibbonBar();
             this.btnDanhSachHocSinh = new DevComponents.DotNetBar.ButtonItem();
@@ -63,11 +68,6 @@
             this.ribbonBarKQHocKy = new DevComponents.DotNetBar.RibbonBar();
             this.btnKQHSMonHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnKQHSCaNam = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelQuyDinh = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBarQuyDinh = new DevComponents.DotNetBar.RibbonBar();
-            this.btnDoTuoi = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSiSo = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDiemDat = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabQuanLy = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabThongKe = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabQuyDinh = new DevComponents.DotNetBar.RibbonTabItem();
@@ -100,8 +100,8 @@
             this.btnThoatContext = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl.SuspendLayout();
             this.ribbonPanelQuanLy.SuspendLayout();
-            this.ribbonPanelThongKe.SuspendLayout();
             this.ribbonPanelQuyDinh.SuspendLayout();
+            this.ribbonPanelThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenuMain)).BeginInit();
@@ -112,8 +112,8 @@
             this.ribbonControl.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl.CaptionVisible = true;
             this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
-            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
             this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
+            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
             this.ribbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ribbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -183,7 +183,7 @@
             // 
             // btnGiaoVien
             // 
-            this.btnGiaoVien.Image = global::QuanLyHocSinh.Properties.Resources.giaovien;
+            this.btnGiaoVien.Image = global::QuanLyHocSinh.Properties.Resources.giao_vien;
             this.btnGiaoVien.ImagePaddingHorizontal = 8;
             this.btnGiaoVien.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnGiaoVien.Name = "btnGiaoVien";
@@ -195,7 +195,7 @@
             // 
             // btnPhanCong
             // 
-            this.btnPhanCong.Image = global::QuanLyHocSinh.Properties.Resources.phancong;
+            this.btnPhanCong.Image = global::QuanLyHocSinh.Properties.Resources.phan_cong;
             this.btnPhanCong.ImagePaddingHorizontal = 8;
             this.btnPhanCong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnPhanCong.Name = "btnPhanCong";
@@ -221,7 +221,7 @@
             // 
             // btnHocSinh
             // 
-            this.btnHocSinh.Image = global::QuanLyHocSinh.Properties.Resources.pupils;
+            this.btnHocSinh.Image = global::QuanLyHocSinh.Properties.Resources.hoc_sinh;
             this.btnHocSinh.ImagePaddingHorizontal = 8;
             this.btnHocSinh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnHocSinh.Name = "btnHocSinh";
@@ -244,7 +244,7 @@
             // btnDanToc
             // 
             this.btnDanToc.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnDanToc.Image = global::QuanLyHocSinh.Properties.Resources.dantoc;
+            this.btnDanToc.Image = global::QuanLyHocSinh.Properties.Resources.dan_toc;
             this.btnDanToc.ImagePaddingHorizontal = 8;
             this.btnDanToc.Name = "btnDanToc";
             this.btnDanToc.RibbonWordWrap = false;
@@ -255,7 +255,7 @@
             // btnTonGiao
             // 
             this.btnTonGiao.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnTonGiao.Image = global::QuanLyHocSinh.Properties.Resources.tongiao;
+            this.btnTonGiao.Image = global::QuanLyHocSinh.Properties.Resources.ton_giao;
             this.btnTonGiao.ImagePaddingHorizontal = 8;
             this.btnTonGiao.Name = "btnTonGiao";
             this.btnTonGiao.RibbonWordWrap = false;
@@ -266,7 +266,7 @@
             // btnNgheNghiep
             // 
             this.btnNgheNghiep.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnNgheNghiep.Image = global::QuanLyHocSinh.Properties.Resources.nghenghiep;
+            this.btnNgheNghiep.Image = global::QuanLyHocSinh.Properties.Resources.nghe_nghiep;
             this.btnNgheNghiep.ImagePaddingHorizontal = 8;
             this.btnNgheNghiep.Name = "btnNgheNghiep";
             this.btnNgheNghiep.RibbonWordWrap = false;
@@ -291,7 +291,7 @@
             // 
             // btnKetQua
             // 
-            this.btnKetQua.Image = global::QuanLyHocSinh.Properties.Resources.ketqua;
+            this.btnKetQua.Image = global::QuanLyHocSinh.Properties.Resources.ket_qua;
             this.btnKetQua.ImagePaddingHorizontal = 8;
             this.btnKetQua.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKetQua.Name = "btnKetQua";
@@ -303,7 +303,7 @@
             // 
             // btnHocLuc
             // 
-            this.btnHocLuc.Image = global::QuanLyHocSinh.Properties.Resources.hocluc;
+            this.btnHocLuc.Image = global::QuanLyHocSinh.Properties.Resources.hoc_luc;
             this.btnHocLuc.ImagePaddingHorizontal = 8;
             this.btnHocLuc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnHocLuc.Name = "btnHocLuc";
@@ -315,7 +315,7 @@
             // 
             // btnHanhKiem
             // 
-            this.btnHanhKiem.Image = global::QuanLyHocSinh.Properties.Resources.hanhkiem;
+            this.btnHanhKiem.Image = global::QuanLyHocSinh.Properties.Resources.hanh_kiem;
             this.btnHanhKiem.ImagePaddingHorizontal = 8;
             this.btnHanhKiem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnHanhKiem.Name = "btnHanhKiem";
@@ -343,7 +343,7 @@
             // 
             // btnMonHoc
             // 
-            this.btnMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.monhoc;
+            this.btnMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.mon_hoc;
             this.btnMonHoc.ImagePaddingHorizontal = 8;
             this.btnMonHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnMonHoc.Name = "btnMonHoc";
@@ -381,7 +381,7 @@
             // 
             // btnHocKy
             // 
-            this.btnHocKy.Image = global::QuanLyHocSinh.Properties.Resources.hocky;
+            this.btnHocKy.Image = global::QuanLyHocSinh.Properties.Resources.hoc_ky;
             this.btnHocKy.ImagePaddingHorizontal = 8;
             this.btnHocKy.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnHocKy.Name = "btnHocKy";
@@ -393,7 +393,7 @@
             // 
             // btnNamHoc
             // 
-            this.btnNamHoc.Image = global::QuanLyHocSinh.Properties.Resources.namhoc;
+            this.btnNamHoc.Image = global::QuanLyHocSinh.Properties.Resources.nam_hoc;
             this.btnNamHoc.ImagePaddingHorizontal = 8;
             this.btnNamHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnNamHoc.Name = "btnNamHoc";
@@ -419,7 +419,7 @@
             // 
             // btnLopHoc
             // 
-            this.btnLopHoc.Image = global::QuanLyHocSinh.Properties.Resources.lophoc;
+            this.btnLopHoc.Image = global::QuanLyHocSinh.Properties.Resources.lop_hoc;
             this.btnLopHoc.ImagePaddingHorizontal = 8;
             this.btnLopHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnLopHoc.Name = "btnLopHoc";
@@ -431,7 +431,7 @@
             // 
             // btnKhoiLop
             // 
-            this.btnKhoiLop.Image = global::QuanLyHocSinh.Properties.Resources.khoilop;
+            this.btnKhoiLop.Image = global::QuanLyHocSinh.Properties.Resources.khoi_lop;
             this.btnKhoiLop.ImagePaddingHorizontal = 8;
             this.btnKhoiLop.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKhoiLop.Name = "btnKhoiLop";
@@ -440,6 +440,66 @@
             this.btnKhoiLop.Text = "Khối lớp";
             this.btnKhoiLop.Tooltip = "Khối lớp";
             this.btnKhoiLop.Click += new System.EventHandler(this.btnKhoiLop_Click);
+            // 
+            // ribbonPanelQuyDinh
+            // 
+            this.ribbonPanelQuyDinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonPanelQuyDinh.Controls.Add(this.ribbonBarQuyDinh);
+            this.ribbonPanelQuyDinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelQuyDinh.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelQuyDinh.Name = "ribbonPanelQuyDinh";
+            this.ribbonPanelQuyDinh.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelQuyDinh.Size = new System.Drawing.Size(1461, 89);
+            this.ribbonPanelQuyDinh.TabIndex = 3;
+            this.ribbonPanelQuyDinh.Visible = false;
+            // 
+            // ribbonBarQuyDinh
+            // 
+            this.ribbonBarQuyDinh.AutoOverflowEnabled = true;
+            this.ribbonBarQuyDinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBarQuyDinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnDoTuoi,
+            this.btnSiSo,
+            this.btnDiemDat});
+            this.ribbonBarQuyDinh.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBarQuyDinh.Name = "ribbonBarQuyDinh";
+            this.ribbonBarQuyDinh.Size = new System.Drawing.Size(185, 86);
+            this.ribbonBarQuyDinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBarQuyDinh.TabIndex = 1;
+            this.ribbonBarQuyDinh.Text = "Quy Định Chung";
+            // 
+            // btnDoTuoi
+            // 
+            this.btnDoTuoi.Image = global::QuanLyHocSinh.Properties.Resources.qui_dinh_do_tuoi;
+            this.btnDoTuoi.ImagePaddingHorizontal = 8;
+            this.btnDoTuoi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDoTuoi.Name = "btnDoTuoi";
+            this.btnDoTuoi.SplitButton = true;
+            this.btnDoTuoi.Text = "Quy định về độ tuổi";
+            this.btnDoTuoi.Tooltip = "Quy định về độ tuổi";
+            this.btnDoTuoi.Click += new System.EventHandler(this.btnDoTuoi_Click);
+            // 
+            // btnSiSo
+            // 
+            this.btnSiSo.Image = global::QuanLyHocSinh.Properties.Resources.qui_dinh_si_so;
+            this.btnSiSo.ImagePaddingHorizontal = 8;
+            this.btnSiSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnSiSo.Name = "btnSiSo";
+            this.btnSiSo.SplitButton = true;
+            this.btnSiSo.Text = "Quy định về sỉ số";
+            this.btnSiSo.Tooltip = "Quy định về sỉ số";
+            this.btnSiSo.Click += new System.EventHandler(this.btnSiSo_Click);
+            // 
+            // btnDiemDat
+            // 
+            this.btnDiemDat.Image = global::QuanLyHocSinh.Properties.Resources.qui_dinh_diem_dat;
+            this.btnDiemDat.ImagePaddingHorizontal = 8;
+            this.btnDiemDat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDiemDat.Name = "btnDiemDat";
+            this.btnDiemDat.SplitButton = true;
+            this.btnDiemDat.Text = "Quy định về điểm đạt";
+            this.btnDiemDat.Tooltip = "Quy định về điểm đạt";
+            this.btnDiemDat.Click += new System.EventHandler(this.btnDiemDat_Click);
             // 
             // ribbonPanelThongKe
             // 
@@ -471,7 +531,7 @@
             // 
             // btnDanhSachHocSinh
             // 
-            this.btnDanhSachHocSinh.Image = global::QuanLyHocSinh.Properties.Resources.dshocsinh;
+            this.btnDanhSachHocSinh.Image = global::QuanLyHocSinh.Properties.Resources.danh_sach_hoc_sinh;
             this.btnDanhSachHocSinh.ImagePaddingHorizontal = 8;
             this.btnDanhSachHocSinh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnDanhSachHocSinh.Name = "btnDanhSachHocSinh";
@@ -482,7 +542,7 @@
             // 
             // btnHoSoLopHoc
             // 
-            this.btnHoSoLopHoc.Image = global::QuanLyHocSinh.Properties.Resources.dslophoc;
+            this.btnHoSoLopHoc.Image = global::QuanLyHocSinh.Properties.Resources.ho_so_lop_hoc;
             this.btnHoSoLopHoc.ImagePaddingHorizontal = 8;
             this.btnHoSoLopHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnHoSoLopHoc.Name = "btnHoSoLopHoc";
@@ -507,7 +567,7 @@
             // 
             // btnKQLHMonHoc
             // 
-            this.btnKQLHMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.kqhockytheolop;
+            this.btnKQLHMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.ket_qua_lop_hoc_mon_hoc;
             this.btnKQLHMonHoc.ImagePaddingHorizontal = 8;
             this.btnKQLHMonHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKQLHMonHoc.Name = "btnKQLHMonHoc";
@@ -518,7 +578,7 @@
             // 
             // btnKQLHHocKy
             // 
-            this.btnKQLHHocKy.Image = global::QuanLyHocSinh.Properties.Resources.kqcnamtheolop;
+            this.btnKQLHHocKy.Image = global::QuanLyHocSinh.Properties.Resources.ket_qua_lop_hoc_hoc_ky;
             this.btnKQLHHocKy.ImagePaddingHorizontal = 8;
             this.btnKQLHHocKy.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKQLHHocKy.Name = "btnKQLHHocKy";
@@ -543,7 +603,7 @@
             // 
             // btnKQHSMonHoc
             // 
-            this.btnKQHSMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.kqhockytheomon;
+            this.btnKQHSMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.ket_qua_hoc_sinh_mon_hoc;
             this.btnKQHSMonHoc.ImagePaddingHorizontal = 8;
             this.btnKQHSMonHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKQHSMonHoc.Name = "btnKQHSMonHoc";
@@ -554,7 +614,7 @@
             // 
             // btnKQHSCaNam
             // 
-            this.btnKQHSCaNam.Image = global::QuanLyHocSinh.Properties.Resources.kqcnamtheomon;
+            this.btnKQHSCaNam.Image = global::QuanLyHocSinh.Properties.Resources.ket_qua_hoc_sinh_ca_nam;
             this.btnKQHSCaNam.ImagePaddingHorizontal = 8;
             this.btnKQHSCaNam.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnKQHSCaNam.Name = "btnKQHSCaNam";
@@ -562,66 +622,6 @@
             this.btnKQHSCaNam.Text = "Báo cáo cả năm";
             this.btnKQHSCaNam.Tooltip = "Báo cáo cả năm";
             this.btnKQHSCaNam.Click += new System.EventHandler(this.btnKQHSCaNam_Click);
-            // 
-            // ribbonPanelQuyDinh
-            // 
-            this.ribbonPanelQuyDinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonPanelQuyDinh.Controls.Add(this.ribbonBarQuyDinh);
-            this.ribbonPanelQuyDinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelQuyDinh.Location = new System.Drawing.Point(0, 37);
-            this.ribbonPanelQuyDinh.Name = "ribbonPanelQuyDinh";
-            this.ribbonPanelQuyDinh.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelQuyDinh.Size = new System.Drawing.Size(812, 110);
-            this.ribbonPanelQuyDinh.TabIndex = 3;
-            this.ribbonPanelQuyDinh.Visible = false;
-            // 
-            // ribbonBarQuyDinh
-            // 
-            this.ribbonBarQuyDinh.AutoOverflowEnabled = true;
-            this.ribbonBarQuyDinh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBarQuyDinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnDoTuoi,
-            this.btnSiSo,
-            this.btnDiemDat});
-            this.ribbonBarQuyDinh.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBarQuyDinh.Name = "ribbonBarQuyDinh";
-            this.ribbonBarQuyDinh.Size = new System.Drawing.Size(185, 107);
-            this.ribbonBarQuyDinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBarQuyDinh.TabIndex = 1;
-            this.ribbonBarQuyDinh.Text = "Quy Định Chung";
-            // 
-            // btnDoTuoi
-            // 
-            this.btnDoTuoi.Image = global::QuanLyHocSinh.Properties.Resources.qddotuoi;
-            this.btnDoTuoi.ImagePaddingHorizontal = 8;
-            this.btnDoTuoi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDoTuoi.Name = "btnDoTuoi";
-            this.btnDoTuoi.SplitButton = true;
-            this.btnDoTuoi.Text = "Quy định về độ tuổi";
-            this.btnDoTuoi.Tooltip = "Quy định về độ tuổi";
-            this.btnDoTuoi.Click += new System.EventHandler(this.btnDoTuoi_Click);
-            // 
-            // btnSiSo
-            // 
-            this.btnSiSo.Image = global::QuanLyHocSinh.Properties.Resources.qdsiso;
-            this.btnSiSo.ImagePaddingHorizontal = 8;
-            this.btnSiSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSiSo.Name = "btnSiSo";
-            this.btnSiSo.SplitButton = true;
-            this.btnSiSo.Text = "Quy định về sỉ số";
-            this.btnSiSo.Tooltip = "Quy định về sỉ số";
-            this.btnSiSo.Click += new System.EventHandler(this.btnSiSo_Click);
-            // 
-            // btnDiemDat
-            // 
-            this.btnDiemDat.Image = global::QuanLyHocSinh.Properties.Resources.qddiemdat;
-            this.btnDiemDat.ImagePaddingHorizontal = 8;
-            this.btnDiemDat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDiemDat.Name = "btnDiemDat";
-            this.btnDiemDat.SplitButton = true;
-            this.btnDiemDat.Text = "Quy định về điểm đạt";
-            this.btnDiemDat.Tooltip = "Quy định về điểm đạt";
-            this.btnDiemDat.Click += new System.EventHandler(this.btnDiemDat_Click);
             // 
             // ribbonTabQuanLy
             // 
@@ -699,7 +699,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnDangNhap.Image = global::QuanLyHocSinh.Properties.Resources.dangnhap;
+            this.btnDangNhap.Image = global::QuanLyHocSinh.Properties.Resources.dang_nhap;
             this.btnDangNhap.ImagePaddingHorizontal = 8;
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.SubItemsExpandWidth = 24;
@@ -709,7 +709,7 @@
             // btnDangXuat
             // 
             this.btnDangXuat.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnDangXuat.Image = global::QuanLyHocSinh.Properties.Resources.dangxuat;
+            this.btnDangXuat.Image = global::QuanLyHocSinh.Properties.Resources.dang_xuat;
             this.btnDangXuat.ImagePaddingHorizontal = 8;
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.SubItemsExpandWidth = 24;
@@ -720,7 +720,7 @@
             // 
             this.btnDoiMatKhau.BeginGroup = true;
             this.btnDoiMatKhau.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnDoiMatKhau.Image = global::QuanLyHocSinh.Properties.Resources.doimatkhau;
+            this.btnDoiMatKhau.Image = global::QuanLyHocSinh.Properties.Resources.doi_mat_khau;
             this.btnDoiMatKhau.ImagePaddingHorizontal = 8;
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.SubItemsExpandWidth = 24;
@@ -730,7 +730,7 @@
             // btnQLNguoiDung
             // 
             this.btnQLNguoiDung.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnQLNguoiDung.Image = global::QuanLyHocSinh.Properties.Resources.quanlynguoidung;
+            this.btnQLNguoiDung.Image = global::QuanLyHocSinh.Properties.Resources.quan_ly_nguoi_dung;
             this.btnQLNguoiDung.ImagePaddingHorizontal = 8;
             this.btnQLNguoiDung.Name = "btnQLNguoiDung";
             this.btnQLNguoiDung.SubItemsExpandWidth = 24;
@@ -741,7 +741,7 @@
             // 
             this.btnSaoLuu.BeginGroup = true;
             this.btnSaoLuu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnSaoLuu.Image = global::QuanLyHocSinh.Properties.Resources.saoluudulieu;
+            this.btnSaoLuu.Image = global::QuanLyHocSinh.Properties.Resources.sao_luu_du_lieu;
             this.btnSaoLuu.ImagePaddingHorizontal = 8;
             this.btnSaoLuu.Name = "btnSaoLuu";
             this.btnSaoLuu.SubItemsExpandWidth = 24;
@@ -751,7 +751,7 @@
             // btnPhucHoi
             // 
             this.btnPhucHoi.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnPhucHoi.Image = global::QuanLyHocSinh.Properties.Resources.phuchoidulieu;
+            this.btnPhucHoi.Image = global::QuanLyHocSinh.Properties.Resources.phuc_hoi_du_lieu;
             this.btnPhucHoi.ImagePaddingHorizontal = 8;
             this.btnPhucHoi.Name = "btnPhucHoi";
             this.btnPhucHoi.SubItemsExpandWidth = 24;
@@ -762,7 +762,7 @@
             // 
             this.btnThoat.BeginGroup = true;
             this.btnThoat.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
+            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.thoat_phan_mem;
             this.btnThoat.ImagePaddingHorizontal = 8;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.SubItemsExpandWidth = 24;
@@ -871,7 +871,7 @@
             // mdiClient
             // 
             this.mdiClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.mdiClient.BackgroundImage = global::QuanLyHocSinh.Properties.Resources.background;
+            this.mdiClient.BackgroundImage = global::QuanLyHocSinh.Properties.Resources.hinh_nen;
             this.mdiClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mdiClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mdiClient.Location = new System.Drawing.Point(4, 174);
@@ -932,7 +932,7 @@
             // 
             // btnDangNhapContext
             // 
-            this.btnDangNhapContext.Image = global::QuanLyHocSinh.Properties.Resources.dangnhapcontext;
+            this.btnDangNhapContext.Image = global::QuanLyHocSinh.Properties.Resources.dang_nhap_context;
             this.btnDangNhapContext.ImagePaddingHorizontal = 8;
             this.btnDangNhapContext.Name = "btnDangNhapContext";
             this.btnDangNhapContext.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlL);
@@ -941,7 +941,7 @@
             // 
             // btnDangXuatContext
             // 
-            this.btnDangXuatContext.Image = global::QuanLyHocSinh.Properties.Resources.dangxuatcontext;
+            this.btnDangXuatContext.Image = global::QuanLyHocSinh.Properties.Resources.dang_xuat_context;
             this.btnDangXuatContext.ImagePaddingHorizontal = 8;
             this.btnDangXuatContext.Name = "btnDangXuatContext";
             this.btnDangXuatContext.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlO);
@@ -950,7 +950,7 @@
             // 
             // btnDoiMatKhauContext
             // 
-            this.btnDoiMatKhauContext.Image = global::QuanLyHocSinh.Properties.Resources.doimatkhaucontext;
+            this.btnDoiMatKhauContext.Image = global::QuanLyHocSinh.Properties.Resources.doi_mat_khau_context;
             this.btnDoiMatKhauContext.ImagePaddingHorizontal = 8;
             this.btnDoiMatKhauContext.Name = "btnDoiMatKhauContext";
             this.btnDoiMatKhauContext.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlP);
@@ -959,7 +959,7 @@
             // 
             // btnThoatContext
             // 
-            this.btnThoatContext.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnThoatContext.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnThoatContext.ImagePaddingHorizontal = 8;
             this.btnThoatContext.Name = "btnThoatContext";
             this.btnThoatContext.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -970,6 +970,7 @@
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.BackgroundImage = global::QuanLyHocSinh.Properties.Resources.hinh_nen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1469, 879);
             this.Controls.Add(this.ctxMenuMain);
@@ -987,8 +988,8 @@
             this.ribbonControl.ResumeLayout(false);
             this.ribbonControl.PerformLayout();
             this.ribbonPanelQuanLy.ResumeLayout(false);
-            this.ribbonPanelThongKe.ResumeLayout(false);
             this.ribbonPanelQuyDinh.ResumeLayout(false);
+            this.ribbonPanelThongKe.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).EndInit();
             this.bottomBar.ResumeLayout(false);
             this.bottomBar.PerformLayout();
@@ -1071,4 +1072,3 @@
         private DevComponents.DotNetBar.ButtonItem btnThoatContext;
     }
 }
-

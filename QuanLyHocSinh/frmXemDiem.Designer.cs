@@ -107,7 +107,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.xoa;
             this.btnDelete.ImagePaddingHorizontal = 8;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
@@ -116,7 +116,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -205,7 +205,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnXoa.Image = global::QuanLyHocSinh.Properties.Resources.xoa;
             this.btnXoa.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.RightToLeftAutoMirrorImage = true;
@@ -215,7 +215,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnThoat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeftAutoMirrorImage = true;
@@ -234,7 +234,7 @@
             this.buttonItemNhapDuLieu});
             this.navPaneLeft.Location = new System.Drawing.Point(688, 0);
             this.navPaneLeft.Name = "navPaneLeft";
-            this.navPaneLeft.NavigationBarHeight = 75;
+            this.navPaneLeft.NavigationBarHeight = 59;
             this.navPaneLeft.Padding = new System.Windows.Forms.Padding(1);
             this.navPaneLeft.Size = new System.Drawing.Size(267, 453);
             this.navPaneLeft.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -278,7 +278,7 @@
             this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 25);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
-            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(265, 352);
+            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(265, 368);
             this.navPanelNhapDuLieu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelNhapDuLieu.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelNhapDuLieu.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -290,7 +290,8 @@
             // btnHienThiDanhSach
             // 
             this.btnHienThiDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHienThiDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnHienThiDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnHienThiDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHienThiDanhSach.Location = new System.Drawing.Point(17, 245);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(233, 23);
@@ -404,7 +405,7 @@
             // 
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.pupils;
+            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";

@@ -203,6 +203,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Helpers.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmDanhSachHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,14 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Reports\frmDanhSachHocSinh.resx">
       <DependentUpon>frmDanhSachHocSinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,174 +368,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nghenghiep.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\phancong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\phanlop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\phuchoidulieu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pupils.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\qddotuoi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\qdsiso.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\qddiemdat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\quanlynguoidung.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\saoluudulieu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\thoat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tongiao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tracuugiaovien.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tracuuhocsinh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tttruonghoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\xemdiem.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\xeploai.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\xoachuyenlop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cachnhapdiem.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chuyenlop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\closephanlop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dangnhap.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dangnhapcontext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dangxuat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dangxuatcontext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dantoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\diem.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doimatkhau.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doimatkhaucontext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dsgiaovien.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dshocsinh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dslophoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\giaovien.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hanhkiem.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hocky.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hocluc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ketqua.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\khoilop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kqcnamtheolop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kqcnamtheomon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kqhockytheolop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kqhockytheomon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loainguoidung.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginimage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lophoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\luuchuyenlop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\monhoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\namhoc.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{D6B3CDA8-5475-4761-A513-99D910CBABF3}</Project>
       <Name>BUS</Name>
@@ -546,19 +378,157 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-48.png" />
+    <None Include="Resources\xem diem.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login.png" />
+    <None Include="Resources\xoa.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login2.png" />
+    <None Include="Resources\cach nhap diem.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\User.ico" />
+    <None Include="Resources\cap nhat.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Coquan.png" />
+    <None Include="Resources\dan toc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dang nhap context.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dang nhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dang xuat context.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dang xuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danh sach hoc sinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doi mat khau context.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doi mat khau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanh kiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh nen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ho so lop hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoc ky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoc luc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoc sinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ket qua hoc sinh ca nam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ket qua hoc sinh mon hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ket qua lop hoc hoc ky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ket qua lop hoc mon hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ket qua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khoi lop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo dang nhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lop hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nghe nghiep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phan cong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phuc hoi du lieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan ly nguoi dung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qui dinh diem dat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qui dinh do tuoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qui dinh si so.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sao luu du lieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xep loai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nam hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giao vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ton giao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mon hoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat phan mem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dong dau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dong truoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loai nguoi dung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thong tin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

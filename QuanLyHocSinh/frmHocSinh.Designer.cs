@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -41,6 +42,18 @@
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.dgvHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNgaySinh = new QuanLyHocSinh.Components.CalendarColumn();
+            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -106,18 +119,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colNgaySinh = new QuanLyHocSinh.Components.CalendarColumn();
-            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
@@ -173,7 +174,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.them;
             this.btnAdd.ImagePaddingHorizontal = 8;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
@@ -182,7 +183,7 @@
             // 
             // btnRefesh
             // 
-            this.btnRefesh.Image = global::QuanLyHocSinh.Properties.Resources.refresh;
+            this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImagePaddingHorizontal = 8;
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
@@ -191,7 +192,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImagePaddingHorizontal = 8;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
@@ -200,7 +201,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImagePaddingHorizontal = 8;
             this.btnSave.Name = "btnSave";
             this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
@@ -209,7 +210,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -250,6 +251,93 @@
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(990, 482);
             this.dgvHocSinh.TabIndex = 5;
+            // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MaxInputLength = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.MaxInputLength = 30;
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Width = 150;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới tính nữ";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Width = 70;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Width = 85;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DiaChi";
+            this.colDiaChi.HeaderText = "Địa chỉ";
+            this.colDiaChi.MaxInputLength = 50;
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.Width = 150;
+            // 
+            // colMaDanToc
+            // 
+            this.colMaDanToc.DataPropertyName = "MaDanToc";
+            this.colMaDanToc.HeaderText = "Dân tộc";
+            this.colMaDanToc.Name = "colMaDanToc";
+            // 
+            // colMaTonGiao
+            // 
+            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
+            this.colMaTonGiao.HeaderText = "Tôn giáo";
+            this.colMaTonGiao.Name = "colMaTonGiao";
+            // 
+            // colHoTenCha
+            // 
+            this.colHoTenCha.DataPropertyName = "HoTenCha";
+            this.colHoTenCha.HeaderText = "Họ tên cha";
+            this.colHoTenCha.MaxInputLength = 30;
+            this.colHoTenCha.Name = "colHoTenCha";
+            this.colHoTenCha.Width = 150;
+            // 
+            // colMaNNghiepCha
+            // 
+            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
+            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
+            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
+            // 
+            // colHoTenMe
+            // 
+            this.colHoTenMe.DataPropertyName = "HoTenMe";
+            this.colHoTenMe.HeaderText = "Họ tên mẹ";
+            this.colHoTenMe.MaxInputLength = 30;
+            this.colHoTenMe.Name = "colHoTenMe";
+            this.colHoTenMe.Width = 150;
+            // 
+            // colMaNNghiepMe
+            // 
+            this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
+            this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
+            this.colMaNNghiepMe.Name = "colMaNNghiepMe";
+            // 
+            // colEmail
+            // 
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Width = 150;
             // 
             // bindingNavigatorHocSinh
             // 
@@ -294,6 +382,7 @@
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 32);
@@ -302,9 +391,9 @@
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMovePreviousItem.Text = "Trở lại dòng trước";
@@ -318,7 +407,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -332,8 +420,9 @@
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveNextItem.Text = "Tới dòng kế tiếp";
@@ -341,7 +430,9 @@
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveLastItem.Text = "Đến cuối danh sách";
@@ -354,7 +445,7 @@
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 32);
@@ -364,7 +455,7 @@
             // bindingNavigatorRefreshItem
             // 
             this.bindingNavigatorRefreshItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorRefreshItem.Image = global::QuanLyHocSinh.Properties.Resources.refresh;
+            this.bindingNavigatorRefreshItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorRefreshItem.Image")));
             this.bindingNavigatorRefreshItem.Name = "bindingNavigatorRefreshItem";
             this.bindingNavigatorRefreshItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorRefreshItem.Size = new System.Drawing.Size(23, 32);
@@ -374,7 +465,7 @@
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 32);
@@ -384,7 +475,7 @@
             // bindingNavigatorSaveItem
             // 
             this.bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorSaveItem.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.bindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorSaveItem.Image")));
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
             this.bindingNavigatorSaveItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 32);
@@ -394,7 +485,7 @@
             // bindingNavigatorExitItem
             // 
             this.bindingNavigatorExitItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorExitItem.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.bindingNavigatorExitItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorExitItem.Image")));
             this.bindingNavigatorExitItem.Name = "bindingNavigatorExitItem";
             this.bindingNavigatorExitItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorExitItem.Size = new System.Drawing.Size(23, 32);
@@ -613,7 +704,8 @@
             // btnLuuVaoDS
             // 
             this.btnLuuVaoDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnLuuVaoDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnLuuVaoDS.Location = new System.Drawing.Point(15, 562);
             this.btnLuuVaoDS.Name = "btnLuuVaoDS";
             this.btnLuuVaoDS.Size = new System.Drawing.Size(223, 23);
@@ -625,7 +717,7 @@
             // 
             this.btnThemNNMe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemNNMe.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNNMe.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemNNMe.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNNMe.Image")));
             this.btnThemNNMe.Location = new System.Drawing.Point(218, 477);
             this.btnThemNNMe.Name = "btnThemNNMe";
             this.btnThemNNMe.Size = new System.Drawing.Size(20, 20);
@@ -636,7 +728,7 @@
             // 
             this.btnThemNNCha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemNNCha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNNCha.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemNNCha.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNNCha.Image")));
             this.btnThemNNCha.Location = new System.Drawing.Point(218, 387);
             this.btnThemNNCha.Name = "btnThemNNCha";
             this.btnThemNNCha.Size = new System.Drawing.Size(20, 20);
@@ -647,7 +739,7 @@
             // 
             this.btnThemDanToc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemDanToc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemDanToc.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemDanToc.Image = ((System.Drawing.Image)(resources.GetObject("btnThemDanToc.Image")));
             this.btnThemDanToc.Location = new System.Drawing.Point(218, 252);
             this.btnThemDanToc.Name = "btnThemDanToc";
             this.btnThemDanToc.Size = new System.Drawing.Size(20, 20);
@@ -658,7 +750,7 @@
             // 
             this.btnThemTonGiao.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemTonGiao.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemTonGiao.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemTonGiao.Image = ((System.Drawing.Image)(resources.GetObject("btnThemTonGiao.Image")));
             this.btnThemTonGiao.Location = new System.Drawing.Point(218, 297);
             this.btnThemTonGiao.Name = "btnThemTonGiao";
             this.btnThemTonGiao.Size = new System.Drawing.Size(20, 20);
@@ -884,7 +976,7 @@
             // 
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";
@@ -903,7 +995,7 @@
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 448);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 534);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -945,7 +1037,8 @@
             // btnTimKiem
             // 
             this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnTimKiem.Location = new System.Drawing.Point(11, 105);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(170, 23);
@@ -968,7 +1061,7 @@
             // buttonItemTimKiem
             // 
             this.buttonItemTimKiem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemTimKiem.Image = global::QuanLyHocSinh.Properties.Resources.xemdiem;
+            this.buttonItemTimKiem.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemTimKiem.ImagePaddingHorizontal = 8;
             this.buttonItemTimKiem.Name = "buttonItemTimKiem";
             this.buttonItemTimKiem.OptionGroup = "navBar";
@@ -1028,93 +1121,6 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Email";
             this.dataGridViewTextBoxColumn6.HeaderText = "Email";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.MaxInputLength = 6;
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.MaxInputLength = 30;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Width = 150;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới tính nữ";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Width = 70;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.Width = 85;
-            // 
-            // colDiaChi
-            // 
-            this.colDiaChi.DataPropertyName = "DiaChi";
-            this.colDiaChi.HeaderText = "Địa chỉ";
-            this.colDiaChi.MaxInputLength = 50;
-            this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.Width = 150;
-            // 
-            // colMaDanToc
-            // 
-            this.colMaDanToc.DataPropertyName = "MaDanToc";
-            this.colMaDanToc.HeaderText = "Dân tộc";
-            this.colMaDanToc.Name = "colMaDanToc";
-            // 
-            // colMaTonGiao
-            // 
-            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
-            this.colMaTonGiao.HeaderText = "Tôn giáo";
-            this.colMaTonGiao.Name = "colMaTonGiao";
-            // 
-            // colHoTenCha
-            // 
-            this.colHoTenCha.DataPropertyName = "HoTenCha";
-            this.colHoTenCha.HeaderText = "Họ tên cha";
-            this.colHoTenCha.MaxInputLength = 30;
-            this.colHoTenCha.Name = "colHoTenCha";
-            this.colHoTenCha.Width = 150;
-            // 
-            // colMaNNghiepCha
-            // 
-            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
-            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
-            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
-            // 
-            // colHoTenMe
-            // 
-            this.colHoTenMe.DataPropertyName = "HoTenMe";
-            this.colHoTenMe.HeaderText = "Họ tên mẹ";
-            this.colHoTenMe.MaxInputLength = 30;
-            this.colHoTenMe.Name = "colHoTenMe";
-            this.colHoTenMe.Width = 150;
-            // 
-            // colMaNNghiepMe
-            // 
-            this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
-            this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
-            this.colMaNNghiepMe.Name = "colMaNNghiepMe";
-            // 
-            // colEmail
-            // 
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Width = 150;
             // 
             // frmHocSinh
             // 

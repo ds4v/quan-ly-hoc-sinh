@@ -118,187 +118,160 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cach nhap diem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cach nhap diem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cap nhat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cap nhat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cachnhapdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cachnhapdiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dan toc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dan toc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chuyenlop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chuyenlop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dang nhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dang nhap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closephanlop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closephanlop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dang nhap context" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dang nhap context.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Coquan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coquan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dang xuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dang xuat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dangnhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangnhap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dang xuat context" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dang xuat context.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dangnhapcontext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangnhapcontext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dangxuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangxuat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dangxuatcontext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dangxuatcontext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dantoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dantoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="danh sach hoc sinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\danh sach hoc sinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doimatkhau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doimatkhau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doi mat khau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doi mat khau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doimatkhaucontext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doimatkhaucontext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doi mat khau context" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doi mat khau context.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dsgiaovien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dsgiaovien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dong dau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dong dau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dshocsinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dshocsinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dong truoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dong truoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dslophoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dslophoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="giao vien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giao vien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="giaovien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giaovien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hanhkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hanhkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hanh kiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hanh kiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hocky" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hocky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh nen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hocluc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hocluc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ho so lop hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ho so lop hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ketqua" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ketqua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hoc ky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoc ky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="khoilop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\khoilop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hoc luc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoc luc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kqcnamtheolop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kqcnamtheolop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hoc sinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoc sinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kqcnamtheomon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kqcnamtheomon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ket qua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ket qua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kqhockytheolop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kqhockytheolop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ket qua hoc sinh ca nam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ket qua hoc sinh ca nam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kqhockytheomon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kqhockytheomon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ket qua hoc sinh mon hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ket qua hoc sinh mon hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loainguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loainguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ket qua lop hoc hoc ky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ket qua lop hoc hoc ky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ket qua lop hoc mon hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ket qua lop hoc mon hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="khoi lop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khoi lop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loai nguoi dung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loai nguoi dung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lophoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lophoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="luuchuyenlop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\luuchuyenlop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo dang nhap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo dang nhap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="monhoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monhoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="namhoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\namhoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lop hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lop hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nghenghiep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nghenghiep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="luu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\luu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phancong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phancong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mon hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mon hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phanlop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phanlop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nam hoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nam hoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phuchoidulieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phuchoidulieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nghe nghiep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nghe nghiep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pupils" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pupils.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phan cong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phan cong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="qddiemdat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qddiemdat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phuc hoi du lieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phuc hoi du lieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="qddotuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qddotuoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quan ly nguoi dung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quan ly nguoi dung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="qdsiso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\qdsiso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="qui dinh diem dat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qui dinh diem dat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quanlynguoidung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quanlynguoidung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="qui dinh do tuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qui dinh do tuoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="qui dinh si so" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qui dinh si so.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saoluudulieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saoluudulieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sao luu du lieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sao luu du lieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="them" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tongiao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tongiao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="thoat phan mem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thoat phan mem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tracuugiaovien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tracuugiaovien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="thong tin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thong tin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tracuuhocsinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tracuuhocsinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ton giao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ton giao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tttruonghoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tttruonghoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xem diem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xem diem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xep loai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xep loai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xemdiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xemdiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xeploai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xeploai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xoachuyenlop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xoachuyenlop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

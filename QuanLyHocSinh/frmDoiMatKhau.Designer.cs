@@ -45,7 +45,7 @@
             // 
             // gPanelDoiMatKhau
             // 
-            this.gPanelDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(179)))));
+            this.gPanelDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.gPanelDoiMatKhau.CanvasColor = System.Drawing.SystemColors.Control;
             this.gPanelDoiMatKhau.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.gPanelDoiMatKhau.Controls.Add(this.lblConfirmPassError);
@@ -125,7 +125,7 @@
             // btnHuyBo
             // 
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHuyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnHuyBo.Location = new System.Drawing.Point(254, 135);
             this.btnHuyBo.Name = "btnHuyBo";
@@ -137,7 +137,7 @@
             // btnDongY
             // 
             this.btnDongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDongY.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnDongY.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnDongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnDongY.Location = new System.Drawing.Point(169, 135);
             this.btnDongY.Name = "btnDongY";
