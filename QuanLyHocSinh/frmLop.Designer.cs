@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -141,7 +141,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImagePaddingHorizontal = 8;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
@@ -150,7 +150,7 @@
             // 
             // btnRefesh
             // 
-            this.btnRefesh.Image = global::QuanLyHocSinh.Properties.Resources.refresh;
+            this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImagePaddingHorizontal = 8;
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
@@ -159,7 +159,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImagePaddingHorizontal = 8;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
@@ -168,7 +168,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImagePaddingHorizontal = 8;
             this.btnSave.Name = "btnSave";
             this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
@@ -177,7 +177,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -321,6 +321,8 @@
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
+            this.bindingNavigatorMoveFirstItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 32);
@@ -329,10 +331,11 @@
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
+            this.bindingNavigatorMovePreviousItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 32);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMovePreviousItem.Text = "Trở lại dòng trước";
             // 
             // bindingNavigatorSeparator
@@ -344,7 +347,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -358,16 +360,21 @@
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
+            this.bindingNavigatorMoveNextItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 32);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveNextItem.Text = "Tới dòng kế tiếp";
             // 
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
+            this.bindingNavigatorMoveLastItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveLastItem.Text = "Đến cuối danh sách";
@@ -380,7 +387,7 @@
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
@@ -391,7 +398,7 @@
             // bindingNavigatorRefreshItem
             // 
             this.bindingNavigatorRefreshItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorRefreshItem.Image = global::QuanLyHocSinh.Properties.Resources.refresh;
+            this.bindingNavigatorRefreshItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorRefreshItem.Image")));
             this.bindingNavigatorRefreshItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorRefreshItem.Name = "bindingNavigatorRefreshItem";
             this.bindingNavigatorRefreshItem.RightToLeftAutoMirrorImage = true;
@@ -402,7 +409,7 @@
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
@@ -413,7 +420,7 @@
             // bindingNavigatorSaveItem
             // 
             this.bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorSaveItem.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.bindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorSaveItem.Image")));
             this.bindingNavigatorSaveItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
             this.bindingNavigatorSaveItem.RightToLeftAutoMirrorImage = true;
@@ -424,7 +431,7 @@
             // bindingNavigatorExitItem
             // 
             this.bindingNavigatorExitItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorExitItem.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.bindingNavigatorExitItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorExitItem.Image")));
             this.bindingNavigatorExitItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorExitItem.Name = "bindingNavigatorExitItem";
             this.bindingNavigatorExitItem.RightToLeftAutoMirrorImage = true;
@@ -446,7 +453,7 @@
             this.navPaneRight.Location = new System.Drawing.Point(527, 0);
             this.navPaneRight.Name = "navPaneRight";
             this.navPaneRight.NavigationBarHeight = 86;
-            this.navPaneRight.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.navPaneRight.Padding = new System.Windows.Forms.Padding(1);
             this.navPaneRight.Size = new System.Drawing.Size(267, 443);
             this.navPaneRight.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.navPaneRight.TabIndex = 0;
@@ -492,7 +499,7 @@
             this.navPanelNhapDuLieu.Controls.Add(this.txtTenLop);
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 25);
-            this.navPanelNhapDuLieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navPanelNhapDuLieu.Margin = new System.Windows.Forms.Padding(2);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
             this.navPanelNhapDuLieu.Size = new System.Drawing.Size(265, 331);
@@ -544,7 +551,8 @@
             // btnLuuVaoDS
             // 
             this.btnLuuVaoDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnLuuVaoDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnLuuVaoDS.Location = new System.Drawing.Point(16, 291);
             this.btnLuuVaoDS.Name = "btnLuuVaoDS";
             this.btnLuuVaoDS.Size = new System.Drawing.Size(233, 23);
@@ -556,7 +564,7 @@
             // 
             this.btnThemKhoiLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemKhoiLop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemKhoiLop.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemKhoiLop.Image = ((System.Drawing.Image)(resources.GetObject("btnThemKhoiLop.Image")));
             this.btnThemKhoiLop.Location = new System.Drawing.Point(229, 159);
             this.btnThemKhoiLop.Name = "btnThemKhoiLop";
             this.btnThemKhoiLop.Size = new System.Drawing.Size(20, 20);
@@ -567,7 +575,7 @@
             // 
             this.btnThemNamHoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemNamHoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNamHoc.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemNamHoc.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNamHoc.Image")));
             this.btnThemNamHoc.Location = new System.Drawing.Point(229, 204);
             this.btnThemNamHoc.Name = "btnThemNamHoc";
             this.btnThemNamHoc.Size = new System.Drawing.Size(20, 20);
@@ -578,7 +586,7 @@
             // 
             this.btnThemGiaoVien.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemGiaoVien.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemGiaoVien.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemGiaoVien.Image = ((System.Drawing.Image)(resources.GetObject("btnThemGiaoVien.Image")));
             this.btnThemGiaoVien.Location = new System.Drawing.Point(229, 250);
             this.btnThemGiaoVien.Name = "btnThemGiaoVien";
             this.btnThemGiaoVien.Size = new System.Drawing.Size(20, 20);
@@ -678,7 +686,7 @@
             // 
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";
@@ -694,10 +702,10 @@
             this.navPanelTimKiem.Controls.Add(this.txtTimKiem);
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
-            this.navPanelTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navPanelTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 355);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 441);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -739,7 +747,8 @@
             // btnTimKiem
             // 
             this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnTimKiem.Location = new System.Drawing.Point(11, 105);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(160, 23);
@@ -762,7 +771,7 @@
             // buttonItemTimKiem
             // 
             this.buttonItemTimKiem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemTimKiem.Image = global::QuanLyHocSinh.Properties.Resources.xemdiem;
+            this.buttonItemTimKiem.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemTimKiem.ImagePaddingHorizontal = 8;
             this.buttonItemTimKiem.Name = "buttonItemTimKiem";
             this.buttonItemTimKiem.OptionGroup = "navBar";

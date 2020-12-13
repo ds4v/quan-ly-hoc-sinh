@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gPanelDangNhap = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.lblUsername = new DevComponents.DotNetBar.LabelX();
             this.lblPassError = new System.Windows.Forms.Label();
             this.lblUserError = new System.Windows.Forms.Label();
             this.rImageDangNhap = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.btnHuyBo = new DevComponents.DotNetBar.ButtonX();
             this.btnDangNhap = new DevComponents.DotNetBar.ButtonX();
             this.lblPassword = new DevComponents.DotNetBar.LabelX();
-            this.lblUsername = new DevComponents.DotNetBar.LabelX();
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUsername = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelTop = new System.Windows.Forms.Panel();
@@ -46,24 +46,24 @@
             // 
             // gPanelDangNhap
             // 
+            this.gPanelDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.gPanelDangNhap.CanvasColor = System.Drawing.SystemColors.Control;
             this.gPanelDangNhap.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.gPanelDangNhap.Controls.Add(this.lblUsername);
             this.gPanelDangNhap.Controls.Add(this.lblPassError);
             this.gPanelDangNhap.Controls.Add(this.lblUserError);
             this.gPanelDangNhap.Controls.Add(this.rImageDangNhap);
             this.gPanelDangNhap.Controls.Add(this.btnHuyBo);
             this.gPanelDangNhap.Controls.Add(this.btnDangNhap);
             this.gPanelDangNhap.Controls.Add(this.lblPassword);
-            this.gPanelDangNhap.Controls.Add(this.lblUsername);
             this.gPanelDangNhap.Controls.Add(this.txtPassword);
             this.gPanelDangNhap.Controls.Add(this.txtUsername);
             this.gPanelDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gPanelDangNhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gPanelDangNhap.IsShadowEnabled = true;
-            this.gPanelDangNhap.Location = new System.Drawing.Point(0, 74);
-            this.gPanelDangNhap.Margin = new System.Windows.Forms.Padding(6);
+            this.gPanelDangNhap.Location = new System.Drawing.Point(0, 40);
             this.gPanelDangNhap.Name = "gPanelDangNhap";
-            this.gPanelDangNhap.Size = new System.Drawing.Size(631, 273);
+            this.gPanelDangNhap.Size = new System.Drawing.Size(344, 148);
             // 
             // 
             // 
@@ -87,16 +87,26 @@
             this.gPanelDangNhap.TabIndex = 0;
             this.gPanelDangNhap.Text = "Thông tin đăng nhập";
             // 
+            // lblUsername
+            // 
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(61, 15);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(102, 23);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Tên đăng nhập:";
+            this.lblUsername.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // lblPassError
             // 
             this.lblPassError.AutoSize = true;
             this.lblPassError.BackColor = System.Drawing.Color.Transparent;
             this.lblPassError.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassError.ForeColor = System.Drawing.Color.Red;
-            this.lblPassError.Location = new System.Drawing.Point(306, 148);
-            this.lblPassError.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPassError.Location = new System.Drawing.Point(167, 80);
             this.lblPassError.Name = "lblPassError";
-            this.lblPassError.Size = new System.Drawing.Size(0, 24);
+            this.lblPassError.Size = new System.Drawing.Size(0, 13);
             this.lblPassError.TabIndex = 5;
             // 
             // lblUserError
@@ -105,10 +115,9 @@
             this.lblUserError.BackColor = System.Drawing.Color.Transparent;
             this.lblUserError.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserError.ForeColor = System.Drawing.Color.Red;
-            this.lblUserError.Location = new System.Drawing.Point(306, 74);
-            this.lblUserError.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblUserError.Location = new System.Drawing.Point(167, 40);
             this.lblUserError.Name = "lblUserError";
-            this.lblUserError.Size = new System.Drawing.Size(0, 24);
+            this.lblUserError.Size = new System.Drawing.Size(0, 13);
             this.lblUserError.TabIndex = 5;
             // 
             // rImageDangNhap
@@ -117,25 +126,24 @@
             // 
             // 
             // 
+            this.rImageDangNhap.BackgroundStyle.BackgroundImage = global::QuanLyHocSinh.Properties.Resources.logo_dang_nhap;
             this.rImageDangNhap.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.rImageDangNhap.Image = global::QuanLyHocSinh.Properties.Resources.login;
-            this.rImageDangNhap.Location = new System.Drawing.Point(6, 28);
-            this.rImageDangNhap.Margin = new System.Windows.Forms.Padding(6);
+            this.rImageDangNhap.Location = new System.Drawing.Point(9, 25);
             this.rImageDangNhap.Name = "rImageDangNhap";
             this.rImageDangNhap.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rImageDangNhap.Size = new System.Drawing.Size(110, 190);
+            this.rImageDangNhap.Size = new System.Drawing.Size(88, 91);
             this.rImageDangNhap.TabIndex = 0;
             this.rImageDangNhap.Tag = ".";
             // 
             // btnHuyBo
             // 
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnHuyBo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnHuyBo.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHuyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnHuyBo.Location = new System.Drawing.Point(466, 175);
-            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(6);
+            this.btnHuyBo.Location = new System.Drawing.Point(254, 95);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(138, 42);
+            this.btnHuyBo.Size = new System.Drawing.Size(75, 23);
             this.btnHuyBo.TabIndex = 4;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
@@ -143,12 +151,12 @@
             // btnDangNhap
             // 
             this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnDangNhap.Location = new System.Drawing.Point(310, 175);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDangNhap.Location = new System.Drawing.Point(169, 95);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(138, 42);
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -157,25 +165,12 @@
             // 
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(112, 102);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.lblPassword.Location = new System.Drawing.Point(61, 55);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(187, 42);
+            this.lblPassword.Size = new System.Drawing.Size(102, 23);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Mật khẩu:";
             this.lblPassword.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsername.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(112, 28);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(6);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(187, 42);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Tên đăng nhập:";
-            this.lblUsername.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // txtPassword
             // 
@@ -183,12 +178,11 @@
             // 
             // 
             this.txtPassword.Border.Class = "TextBoxBorder";
-            this.txtPassword.Location = new System.Drawing.Point(310, 102);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPassword.Location = new System.Drawing.Point(169, 55);
             this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(293, 35);
+            this.txtPassword.Size = new System.Drawing.Size(160, 23);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.WatermarkText = "Mật khẩu";
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -201,11 +195,10 @@
             // 
             // 
             this.txtUsername.Border.Class = "TextBoxBorder";
-            this.txtUsername.Location = new System.Drawing.Point(310, 28);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6);
+            this.txtUsername.Location = new System.Drawing.Point(169, 15);
             this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(293, 35);
+            this.txtUsername.Size = new System.Drawing.Size(160, 23);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.WatermarkText = "Tên đăng nhập";
             // 
@@ -214,36 +207,33 @@
             this.panelTop.Controls.Add(this.lblTitle);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(6);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(631, 74);
+            this.panelTop.Size = new System.Drawing.Size(344, 40);
             this.panelTop.TabIndex = 1;
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(115)))));
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(6);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(631, 74);
+            this.lblTitle.Size = new System.Drawing.Size(344, 40);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "QUẢN LÝ HỌC SINH THPT";
             this.lblTitle.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(179)))));
-            this.ClientSize = new System.Drawing.Size(631, 347);
+            this.ClientSize = new System.Drawing.Size(344, 188);
             this.Controls.Add(this.gPanelDangNhap);
             this.Controls.Add(this.panelTop);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

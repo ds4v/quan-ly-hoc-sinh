@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiem));
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -129,7 +130,7 @@
             // 
             // btnXDiem
             // 
-            this.btnXDiem.Image = global::QuanLyHocSinh.Properties.Resources.xemdiem;
+            this.btnXDiem.Image = global::QuanLyHocSinh.Properties.Resources.xem_diem;
             this.btnXDiem.ImagePaddingHorizontal = 8;
             this.btnXDiem.Name = "btnXDiem";
             this.btnXDiem.Text = "Xem điểm";
@@ -137,7 +138,7 @@
             // 
             // btnLDiem
             // 
-            this.btnLDiem.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnLDiem.Image = global::QuanLyHocSinh.Properties.Resources.luu;
             this.btnLDiem.ImagePaddingHorizontal = 8;
             this.btnLDiem.Name = "btnLDiem";
             this.btnLDiem.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
@@ -146,7 +147,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -281,6 +282,7 @@
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 32);
@@ -289,9 +291,9 @@
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMovePreviousItem.Text = "Trở lại dòng trước";
@@ -318,8 +320,9 @@
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveNextItem.Text = "Tới dòng kế tiếp";
@@ -327,7 +330,9 @@
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveLastItem.Text = "Đến cuối danh sách";
@@ -339,7 +344,7 @@
             // 
             // btnLuuDiem
             // 
-            this.btnLuuDiem.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnLuuDiem.Image = global::QuanLyHocSinh.Properties.Resources.luu;
             this.btnLuuDiem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnLuuDiem.Name = "btnLuuDiem";
             this.btnLuuDiem.RightToLeftAutoMirrorImage = true;
@@ -349,7 +354,7 @@
             // 
             // btnXemDiem
             // 
-            this.btnXemDiem.Image = global::QuanLyHocSinh.Properties.Resources.xemdiem;
+            this.btnXemDiem.Image = global::QuanLyHocSinh.Properties.Resources.xem_diem;
             this.btnXemDiem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.RightToLeftAutoMirrorImage = true;
@@ -359,7 +364,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnThoat.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnThoat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeftAutoMirrorImage = true;
@@ -375,14 +380,10 @@
             // btnHelp
             // 
             this.btnHelp.AutoToolTip = false;
-            this.btnHelp.Image = global::QuanLyHocSinh.Properties.Resources.help;
             this.btnHelp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.RightToLeftAutoMirrorImage = true;
             this.btnHelp.Size = new System.Drawing.Size(23, 32);
-            this.superTooltip.SetSuperTooltip(this.btnHelp, new DevComponents.DotNetBar.SuperTooltipInfo("Cách nhập điểm cho môn học", "Nhấn F1 để biết thêm về cách nhập điểm", "Nếu loại điểm có nhiều cột điểm thì mỗi điểm nhập cách nhau một dấu chấm phẩy như" +
-            " hình bên.<br />\r\nGiả sử: Có 3 cột điểm miệng là 5.5; 7 và 9 điểm thì nhập: <b>5" +
-            ".5;7;9</b>", global::QuanLyHocSinh.Properties.Resources.cachnhapdiem, global::QuanLyHocSinh.Properties.Resources.help, DevComponents.DotNetBar.eTooltipColor.Office2003, true, true, new System.Drawing.Size(400, 125)));
             // 
             // navPaneLeft
             // 
@@ -453,7 +454,8 @@
             // btnHienThiDanhSach
             // 
             this.btnHienThiDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHienThiDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnHienThiDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnHienThiDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHienThiDanhSach.Location = new System.Drawing.Point(17, 200);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(233, 23);
@@ -465,7 +467,7 @@
             // 
             this.btnThemMonHoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemMonHoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemMonHoc.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemMonHoc.Image = ((System.Drawing.Image)(resources.GetObject("btnThemMonHoc.Image")));
             this.btnThemMonHoc.Location = new System.Drawing.Point(230, 160);
             this.btnThemMonHoc.Name = "btnThemMonHoc";
             this.btnThemMonHoc.Size = new System.Drawing.Size(20, 20);
@@ -476,7 +478,7 @@
             // 
             this.btnThemHocKy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemHocKy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemHocKy.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemHocKy.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHocKy.Image")));
             this.btnThemHocKy.Location = new System.Drawing.Point(230, 115);
             this.btnThemHocKy.Name = "btnThemHocKy";
             this.btnThemHocKy.Size = new System.Drawing.Size(20, 20);
@@ -487,7 +489,7 @@
             // 
             this.btnThemNamHoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemNamHoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNamHoc.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemNamHoc.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNamHoc.Image")));
             this.btnThemNamHoc.Location = new System.Drawing.Point(230, 25);
             this.btnThemNamHoc.Name = "btnThemNamHoc";
             this.btnThemNamHoc.Size = new System.Drawing.Size(20, 20);
@@ -498,7 +500,7 @@
             // 
             this.btnThemLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemLop.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemLop.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnThemLop.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLop.Image")));
             this.btnThemLop.Location = new System.Drawing.Point(230, 70);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(20, 20);
@@ -591,7 +593,7 @@
             // 
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.buttonItemNhapDuLieu.Image = global::QuanLyHocSinh.Properties.Resources.thong_tin;
             this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";

@@ -63,9 +63,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
+        internal static System.Drawing.Bitmap cach_nhap_diem {
             get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
+                object obj = ResourceManager.GetObject("cach nhap diem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap background {
+        internal static System.Drawing.Bitmap cap_nhat {
             get {
-                object obj = ResourceManager.GetObject("background", resourceCulture);
+                object obj = ResourceManager.GetObject("cap nhat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cachnhapdiem {
+        internal static System.Drawing.Bitmap dan_toc {
             get {
-                object obj = ResourceManager.GetObject("cachnhapdiem", resourceCulture);
+                object obj = ResourceManager.GetObject("dan toc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chuyenlop {
+        internal static System.Drawing.Bitmap dang_nhap {
             get {
-                object obj = ResourceManager.GetObject("chuyenlop", resourceCulture);
+                object obj = ResourceManager.GetObject("dang nhap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap closephanlop {
+        internal static System.Drawing.Bitmap dang_nhap_context {
             get {
-                object obj = ResourceManager.GetObject("closephanlop", resourceCulture);
+                object obj = ResourceManager.GetObject("dang nhap context", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Coquan {
+        internal static System.Drawing.Bitmap dang_xuat {
             get {
-                object obj = ResourceManager.GetObject("Coquan", resourceCulture);
+                object obj = ResourceManager.GetObject("dang xuat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dangnhap {
+        internal static System.Drawing.Bitmap dang_xuat_context {
             get {
-                object obj = ResourceManager.GetObject("dangnhap", resourceCulture);
+                object obj = ResourceManager.GetObject("dang xuat context", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,49 +133,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dangnhapcontext {
+        internal static System.Drawing.Bitmap danh_sach_hoc_sinh {
             get {
-                object obj = ResourceManager.GetObject("dangnhapcontext", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dangxuat {
-            get {
-                object obj = ResourceManager.GetObject("dangxuat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dangxuatcontext {
-            get {
-                object obj = ResourceManager.GetObject("dangxuatcontext", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dantoc {
-            get {
-                object obj = ResourceManager.GetObject("dantoc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap delete {
-            get {
-                object obj = ResourceManager.GetObject("delete", resourceCulture);
+                object obj = ResourceManager.GetObject("danh sach hoc sinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +153,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doimatkhau {
+        internal static System.Drawing.Bitmap doi_mat_khau {
             get {
-                object obj = ResourceManager.GetObject("doimatkhau", resourceCulture);
+                object obj = ResourceManager.GetObject("doi mat khau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +163,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doimatkhaucontext {
+        internal static System.Drawing.Bitmap doi_mat_khau_context {
             get {
-                object obj = ResourceManager.GetObject("doimatkhaucontext", resourceCulture);
+                object obj = ResourceManager.GetObject("doi mat khau context", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +173,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dsgiaovien {
+        internal static System.Drawing.Bitmap dong_dau {
             get {
-                object obj = ResourceManager.GetObject("dsgiaovien", resourceCulture);
+                object obj = ResourceManager.GetObject("dong dau", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +183,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dshocsinh {
+        internal static System.Drawing.Bitmap dong_truoc {
             get {
-                object obj = ResourceManager.GetObject("dshocsinh", resourceCulture);
+                object obj = ResourceManager.GetObject("dong truoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +193,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dslophoc {
+        internal static System.Drawing.Bitmap giao_vien {
             get {
-                object obj = ResourceManager.GetObject("dslophoc", resourceCulture);
+                object obj = ResourceManager.GetObject("giao vien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,29 +203,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit {
+        internal static System.Drawing.Bitmap hanh_kiem {
             get {
-                object obj = ResourceManager.GetObject("exit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap giaovien {
-            get {
-                object obj = ResourceManager.GetObject("giaovien", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hanhkiem {
-            get {
-                object obj = ResourceManager.GetObject("hanhkiem", resourceCulture);
+                object obj = ResourceManager.GetObject("hanh kiem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +223,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hocky {
+        internal static System.Drawing.Bitmap hinh_nen {
             get {
-                object obj = ResourceManager.GetObject("hocky", resourceCulture);
+                object obj = ResourceManager.GetObject("hinh nen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +233,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hocluc {
+        internal static System.Drawing.Bitmap ho_so_lop_hoc {
             get {
-                object obj = ResourceManager.GetObject("hocluc", resourceCulture);
+                object obj = ResourceManager.GetObject("ho so lop hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +243,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ketqua {
+        internal static System.Drawing.Bitmap hoc_ky {
             get {
-                object obj = ResourceManager.GetObject("ketqua", resourceCulture);
+                object obj = ResourceManager.GetObject("hoc ky", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +253,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap khoilop {
+        internal static System.Drawing.Bitmap hoc_luc {
             get {
-                object obj = ResourceManager.GetObject("khoilop", resourceCulture);
+                object obj = ResourceManager.GetObject("hoc luc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +263,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kqcnamtheolop {
+        internal static System.Drawing.Bitmap hoc_sinh {
             get {
-                object obj = ResourceManager.GetObject("kqcnamtheolop", resourceCulture);
+                object obj = ResourceManager.GetObject("hoc sinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +273,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kqcnamtheomon {
+        internal static System.Drawing.Bitmap ket_qua {
             get {
-                object obj = ResourceManager.GetObject("kqcnamtheomon", resourceCulture);
+                object obj = ResourceManager.GetObject("ket qua", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +283,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kqhockytheolop {
+        internal static System.Drawing.Bitmap ket_qua_hoc_sinh_ca_nam {
             get {
-                object obj = ResourceManager.GetObject("kqhockytheolop", resourceCulture);
+                object obj = ResourceManager.GetObject("ket qua hoc sinh ca nam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +293,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kqhockytheomon {
+        internal static System.Drawing.Bitmap ket_qua_hoc_sinh_mon_hoc {
             get {
-                object obj = ResourceManager.GetObject("kqhockytheomon", resourceCulture);
+                object obj = ResourceManager.GetObject("ket qua hoc sinh mon hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +303,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loainguoidung {
+        internal static System.Drawing.Bitmap ket_qua_lop_hoc_hoc_ky {
             get {
-                object obj = ResourceManager.GetObject("loainguoidung", resourceCulture);
+                object obj = ResourceManager.GetObject("ket qua lop hoc hoc ky", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +313,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login {
+        internal static System.Drawing.Bitmap ket_qua_lop_hoc_mon_hoc {
             get {
-                object obj = ResourceManager.GetObject("login", resourceCulture);
+                object obj = ResourceManager.GetObject("ket qua lop hoc mon hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,9 +323,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login2 {
+        internal static System.Drawing.Bitmap khoi_lop {
             get {
-                object obj = ResourceManager.GetObject("login2", resourceCulture);
+                object obj = ResourceManager.GetObject("khoi lop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +333,49 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginimage {
+        internal static System.Drawing.Bitmap loai_nguoi_dung {
             get {
-                object obj = ResourceManager.GetObject("loginimage", resourceCulture);
+                object obj = ResourceManager.GetObject("loai nguoi dung", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_dang_nhap {
+            get {
+                object obj = ResourceManager.GetObject("logo dang nhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lop_hoc {
+            get {
+                object obj = ResourceManager.GetObject("lop hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +383,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lophoc {
+        internal static System.Drawing.Bitmap luu {
             get {
-                object obj = ResourceManager.GetObject("lophoc", resourceCulture);
+                object obj = ResourceManager.GetObject("luu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +393,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap luuchuyenlop {
+        internal static System.Drawing.Bitmap mon_hoc {
             get {
-                object obj = ResourceManager.GetObject("luuchuyenlop", resourceCulture);
+                object obj = ResourceManager.GetObject("mon hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +403,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap monhoc {
+        internal static System.Drawing.Bitmap nam_hoc {
             get {
-                object obj = ResourceManager.GetObject("monhoc", resourceCulture);
+                object obj = ResourceManager.GetObject("nam hoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +413,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap namhoc {
+        internal static System.Drawing.Bitmap nghe_nghiep {
             get {
-                object obj = ResourceManager.GetObject("namhoc", resourceCulture);
+                object obj = ResourceManager.GetObject("nghe nghiep", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +423,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nghenghiep {
+        internal static System.Drawing.Bitmap phan_cong {
             get {
-                object obj = ResourceManager.GetObject("nghenghiep", resourceCulture);
+                object obj = ResourceManager.GetObject("phan cong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +433,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phancong {
+        internal static System.Drawing.Bitmap phuc_hoi_du_lieu {
             get {
-                object obj = ResourceManager.GetObject("phancong", resourceCulture);
+                object obj = ResourceManager.GetObject("phuc hoi du lieu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,9 +443,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phanlop {
+        internal static System.Drawing.Bitmap quan_ly_nguoi_dung {
             get {
-                object obj = ResourceManager.GetObject("phanlop", resourceCulture);
+                object obj = ResourceManager.GetObject("quan ly nguoi dung", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,9 +453,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap phuchoidulieu {
+        internal static System.Drawing.Bitmap qui_dinh_diem_dat {
             get {
-                object obj = ResourceManager.GetObject("phuchoidulieu", resourceCulture);
+                object obj = ResourceManager.GetObject("qui dinh diem dat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,9 +463,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pupils {
+        internal static System.Drawing.Bitmap qui_dinh_do_tuoi {
             get {
-                object obj = ResourceManager.GetObject("pupils", resourceCulture);
+                object obj = ResourceManager.GetObject("qui dinh do tuoi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +473,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap qddiemdat {
+        internal static System.Drawing.Bitmap qui_dinh_si_so {
             get {
-                object obj = ResourceManager.GetObject("qddiemdat", resourceCulture);
+                object obj = ResourceManager.GetObject("qui dinh si so", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,59 +483,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap qddotuoi {
+        internal static System.Drawing.Bitmap sao_luu_du_lieu {
             get {
-                object obj = ResourceManager.GetObject("qddotuoi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap qdsiso {
-            get {
-                object obj = ResourceManager.GetObject("qdsiso", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap quanlynguoidung {
-            get {
-                object obj = ResourceManager.GetObject("quanlynguoidung", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap refresh {
-            get {
-                object obj = ResourceManager.GetObject("refresh", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap saoluudulieu {
-            get {
-                object obj = ResourceManager.GetObject("saoluudulieu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap save {
-            get {
-                object obj = ResourceManager.GetObject("save", resourceCulture);
+                object obj = ResourceManager.GetObject("sao luu du lieu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -573,6 +503,16 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap them {
+            get {
+                object obj = ResourceManager.GetObject("them", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thoat {
             get {
                 object obj = ResourceManager.GetObject("thoat", resourceCulture);
@@ -583,9 +523,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tongiao {
+        internal static System.Drawing.Bitmap thoat_phan_mem {
             get {
-                object obj = ResourceManager.GetObject("tongiao", resourceCulture);
+                object obj = ResourceManager.GetObject("thoat phan mem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -593,9 +533,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tracuugiaovien {
+        internal static System.Drawing.Bitmap thong_tin {
             get {
-                object obj = ResourceManager.GetObject("tracuugiaovien", resourceCulture);
+                object obj = ResourceManager.GetObject("thong tin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -603,9 +543,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tracuuhocsinh {
+        internal static System.Drawing.Bitmap ton_giao {
             get {
-                object obj = ResourceManager.GetObject("tracuuhocsinh", resourceCulture);
+                object obj = ResourceManager.GetObject("ton giao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -613,29 +553,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tttruonghoc {
+        internal static System.Drawing.Bitmap xem_diem {
             get {
-                object obj = ResourceManager.GetObject("tttruonghoc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon User {
-            get {
-                object obj = ResourceManager.GetObject("User", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap user_48 {
-            get {
-                object obj = ResourceManager.GetObject("user_48", resourceCulture);
+                object obj = ResourceManager.GetObject("xem diem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,9 +563,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap xemdiem {
+        internal static System.Drawing.Bitmap xep_loai {
             get {
-                object obj = ResourceManager.GetObject("xemdiem", resourceCulture);
+                object obj = ResourceManager.GetObject("xep loai", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -653,19 +573,9 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap xeploai {
+        internal static System.Drawing.Bitmap xoa {
             get {
-                object obj = ResourceManager.GetObject("xeploai", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap xoachuyenlop {
-            get {
-                object obj = ResourceManager.GetObject("xoachuyenlop", resourceCulture);
+                object obj = ResourceManager.GetObject("xoa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

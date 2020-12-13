@@ -81,7 +81,7 @@
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(141, 168);
-            this.ctxMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ctxMenu.Margin = new System.Windows.Forms.Padding(2);
             this.ctxMenu.Name = "ctxMenu";
             this.ctxMenu.Size = new System.Drawing.Size(71, 25);
             this.ctxMenu.Stretch = true;
@@ -105,7 +105,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.btnAdd.Image = global::QuanLyHocSinh.Properties.Resources.them;
             this.btnAdd.ImagePaddingHorizontal = 8;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
@@ -114,7 +114,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.btnDelete.Image = global::QuanLyHocSinh.Properties.Resources.xoa;
             this.btnDelete.ImagePaddingHorizontal = 8;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
@@ -123,7 +123,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.btnSave.Image = global::QuanLyHocSinh.Properties.Resources.luu;
             this.btnSave.ImagePaddingHorizontal = 8;
             this.btnSave.Name = "btnSave";
             this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
@@ -132,7 +132,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.btnClose.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
@@ -243,6 +243,8 @@
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
+            this.bindingNavigatorMoveFirstItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 32);
@@ -251,11 +253,12 @@
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMovePreviousItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
+            this.bindingNavigatorMovePreviousItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bindingNavigatorMovePreviousItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 32);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMovePreviousItem.Text = "Trở lại dòng trước";
             // 
             // bindingNavigatorSeparator
@@ -280,16 +283,21 @@
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.chuyenlop;
+            this.bindingNavigatorMoveNextItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_truoc;
+            this.bindingNavigatorMoveNextItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 32);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveNextItem.Text = "Tới dòng kế tiếp";
             // 
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = global::QuanLyHocSinh.Properties.Resources.dong_dau;
+            this.bindingNavigatorMoveLastItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 32);
             this.bindingNavigatorMoveLastItem.Text = "Đến cuối danh sách";
@@ -302,7 +310,7 @@
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = global::QuanLyHocSinh.Properties.Resources.add;
+            this.bindingNavigatorAddNewItem.Image = global::QuanLyHocSinh.Properties.Resources.them;
             this.bindingNavigatorAddNewItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
@@ -313,7 +321,7 @@
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = global::QuanLyHocSinh.Properties.Resources.delete;
+            this.bindingNavigatorDeleteItem.Image = global::QuanLyHocSinh.Properties.Resources.xoa;
             this.bindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
@@ -324,7 +332,7 @@
             // bindingNavigatorSaveItem
             // 
             this.bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorSaveItem.Image = global::QuanLyHocSinh.Properties.Resources.save;
+            this.bindingNavigatorSaveItem.Image = global::QuanLyHocSinh.Properties.Resources.luu;
             this.bindingNavigatorSaveItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
             this.bindingNavigatorSaveItem.RightToLeftAutoMirrorImage = true;
@@ -335,7 +343,7 @@
             // bindingNavigatorExitItem
             // 
             this.bindingNavigatorExitItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorExitItem.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.bindingNavigatorExitItem.Image = global::QuanLyHocSinh.Properties.Resources.thoat;
             this.bindingNavigatorExitItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bindingNavigatorExitItem.Name = "bindingNavigatorExitItem";
             this.bindingNavigatorExitItem.RightToLeftAutoMirrorImage = true;
