@@ -3,10 +3,10 @@ GO
 
 CREATE PROCEDURE ThemGiaoVien
 	@maGiaoVien VARCHAR(6), 
-    @tenGiaoVien NVARCHAR(30), 
-    @diaChi NVARCHAR(50), 
-    @dienThoai NVARCHAR(15), 
-    @chuyenMon NVARCHAR(6)
+	@tenGiaoVien NVARCHAR(30), 
+	@diaChi NVARCHAR(50), 
+	@dienThoai NVARCHAR(15), 
+	@chuyenMon NVARCHAR(6)
 AS
 BEGIN
 	INSERT INTO GiaoVien (MaGiaoVien, TenGiaoVien, DiaChi, DienThoai, MaMonHoc) 
@@ -37,17 +37,17 @@ GO
 
 CREATE PROCEDURE ThemHocSinh
 	@maHocSinh VARCHAR(6), 
-    @hoTen NVARCHAR(30), 
-    @gioiTinh BIT, 
-    @ngaySinh DATETIME, 
-    @diaChi NVARCHAR(50), 
-    @maDanToc VARCHAR(6), 
-    @maTonGiao VARCHAR(6), 
-    @hoTenCha NVARCHAR(30), 
-    @maNgheCha VARCHAR(6), 
-    @hoTenMe NVARCHAR(30), 
-    @maNgheMe VARCHAR(6), 
-    @email NVARCHAR(50)
+	@hoTen NVARCHAR(30), 
+	@gioiTinh BIT, 
+	@ngaySinh DATETIME, 
+	@diaChi NVARCHAR(50), 
+	@maDanToc VARCHAR(6), 
+	@maTonGiao VARCHAR(6), 
+	@hoTenCha NVARCHAR(30), 
+	@maNgheCha VARCHAR(6), 
+	@hoTenMe NVARCHAR(30), 
+	@maNgheMe VARCHAR(6), 
+	@email NVARCHAR(50)
 AS
 BEGIN
 	INSERT INTO HOCSINH (MaHocSinh, HoTen, GioiTinh, NgaySinh, DiaChi, MaDanToc, MaTonGiao, HoTenCha, MaNNghiepCha, HoTenMe, MaNNghiepMe, Email) 
@@ -235,11 +235,11 @@ BEGIN
 	SELECT * FROM HOCSINH HS 
 	INNER JOIN KQ_HOCSINH_CANAM KQ ON KQ.MaHocSinh = HS.MaHocSinh 
 	INNER JOIN LOP ON KQ.MaLop = LOP.MaLop 
-    INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
+	INNER JOIN NAMHOC NH ON KQ.MaNamHoc = NH.MaNamHoc 
 	INNER JOIN HOCLUC HL ON KQ.MaHocLuc = HL.MaHocLuc
 	INNER JOIN HANHKIEM HK ON KQ.MaHanhKiem = HK.MaHanhKiem 
 	INNER JOIN KETQUA KQUA ON KQ.MaKetQua = KQUA.MaKetQua
-    WHERE KQ.MaLop = @maLop AND KQ.MaNamHoc = @maNamHoc
+	WHERE KQ.MaLop = @maLop AND KQ.MaNamHoc = @maNamHoc
 END 
 GO
 
