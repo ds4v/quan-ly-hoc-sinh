@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiem));
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
@@ -169,14 +169,14 @@
             this.colDiem45Phut,
             this.colDiemThi});
             this.ctxMenu.SetContextMenuEx(this.dgvDiem, this.btnMenu);
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiem.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiem.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvDiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDiem.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDiem.Location = new System.Drawing.Point(3, 51);
@@ -205,8 +205,8 @@
             // 
             // colDiemMieng
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colDiemMieng.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDiemMieng.DefaultCellStyle = dataGridViewCellStyle10;
             this.colDiemMieng.HeaderText = "Điểm miệng";
             this.colDiemMieng.MaxInputLength = 30;
             this.colDiemMieng.Name = "colDiemMieng";
@@ -214,8 +214,8 @@
             // 
             // colDiem15Phut
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.colDiem15Phut.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.colDiem15Phut.DefaultCellStyle = dataGridViewCellStyle15;
             this.colDiem15Phut.HeaderText = "Điểm 15 phút";
             this.colDiem15Phut.MaxInputLength = 30;
             this.colDiem15Phut.Name = "colDiem15Phut";
@@ -223,8 +223,8 @@
             // 
             // colDiem45Phut
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.colDiem45Phut.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.colDiem45Phut.DefaultCellStyle = dataGridViewCellStyle16;
             this.colDiem45Phut.HeaderText = "Điểm 45 phút";
             this.colDiem45Phut.MaxInputLength = 30;
             this.colDiem45Phut.Name = "colDiem45Phut";
@@ -232,8 +232,8 @@
             // 
             // colDiemThi
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colDiemThi.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDiemThi.DefaultCellStyle = dataGridViewCellStyle17;
             this.colDiemThi.HeaderText = "Điểm thi";
             this.colDiemThi.MaxInputLength = 8;
             this.colDiemThi.Name = "colDiemThi";
@@ -380,10 +380,14 @@
             // btnHelp
             // 
             this.btnHelp.AutoToolTip = false;
+            this.btnHelp.Image = global::QuanLyHocSinh.Properties.Resources.help;
             this.btnHelp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.RightToLeftAutoMirrorImage = true;
             this.btnHelp.Size = new System.Drawing.Size(23, 32);
+            this.superTooltip.SetSuperTooltip(this.btnHelp, new DevComponents.DotNetBar.SuperTooltipInfo("Hướng dẫn", "Cách nhập điểm cho môn học", "- Nếu loại điểm có nhiều cột điểm thì mỗi điểm nhập cách nhau một dấu chấm phẩy n" +
+            "hư hình bên.<br />\r\n- Giả sử: Có 3 cột điểm miệng là 5.5, 7 và 9 điểm thì nhập <" +
+            "b>5.5;7;9</b>", global::QuanLyHocSinh.Properties.Resources.cach_nhap_diem, global::QuanLyHocSinh.Properties.Resources.help, DevComponents.DotNetBar.eTooltipColor.Office2003, true, true, new System.Drawing.Size(400, 125)));
             // 
             // navPaneLeft
             // 
