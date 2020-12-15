@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevComponents.DotNetBar.SuperTooltipInfo superTooltipInfo1 = new DevComponents.DotNetBar.SuperTooltipInfo();
-            DevComponents.DotNetBar.RoundRectangleShapeDescriptor roundRectangleShapeDescriptor1 = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanelQuanLy = new DevComponents.DotNetBar.RibbonPanel();
@@ -114,8 +112,8 @@
             this.ribbonControl.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl.CaptionVisible = true;
             this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
-            this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
             this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
+            this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
             this.ribbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ribbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -338,13 +336,8 @@
             this.ribbonBarMonHoc.Name = "ribbonBarMonHoc";
             this.ribbonBarMonHoc.Size = new System.Drawing.Size(108, 86);
             this.ribbonBarMonHoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            superTooltipInfo1.BodyText = "Chức năng này được mở rộng giúp cho người dùng có thể nhập điểm riêng cho từng họ" +
-    "c sinh trong lớp học.";
-            superTooltipInfo1.Color = DevComponents.DotNetBar.eTooltipColor.Office2003;
-            superTooltipInfo1.FooterImage = global::QuanLyHocSinh.Properties.Resources.help;
-            superTooltipInfo1.FooterText = "Nhấn F1 để biết thêm thông tin về quy trình nhập điểm.";
-            superTooltipInfo1.HeaderText = "Nhập điểm riêng cho từng học sinh";
-            this.superTooltip.SetSuperTooltip(this.ribbonBarMonHoc, superTooltipInfo1);
+            this.superTooltip.SetSuperTooltip(this.ribbonBarMonHoc, new DevComponents.DotNetBar.SuperTooltipInfo("Nhập điểm riêng cho từng học sinh", "Nhấn F1 để biết thêm thông tin về quy trình nhập điểm.", "Chức năng này được mở rộng giúp cho người dùng có thể nhập điểm riêng cho từng họ" +
+            "c sinh trong lớp học.", null, global::QuanLyHocSinh.Properties.Resources.help, DevComponents.DotNetBar.eTooltipColor.Office2003));
             this.ribbonBarMonHoc.TabIndex = 3;
             this.ribbonBarMonHoc.Text = "Môn Học";
             // 
@@ -929,11 +922,7 @@
             this.btnMenuMain.AutoExpandOnClick = true;
             this.btnMenuMain.ImagePaddingHorizontal = 8;
             this.btnMenuMain.Name = "btnMenuMain";
-            roundRectangleShapeDescriptor1.BottomLeft = 2;
-            roundRectangleShapeDescriptor1.BottomRight = 2;
-            roundRectangleShapeDescriptor1.TopLeft = 2;
-            roundRectangleShapeDescriptor1.TopRight = 2;
-            this.btnMenuMain.Shape = roundRectangleShapeDescriptor1;
+            this.btnMenuMain.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
             this.btnMenuMain.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnDangNhapContext,
             this.btnDangXuatContext,
