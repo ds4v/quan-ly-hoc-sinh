@@ -25,7 +25,7 @@ namespace QuanLyHocSinh
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            Text += $" v.{ versionInfo.FileVersion }";
+            Text += $" v.{ versionInfo.FileVersion } test";
         }
 
         private static async Task CapNhatPhanMem()
