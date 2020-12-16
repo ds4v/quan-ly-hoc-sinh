@@ -31,12 +31,11 @@ namespace QuanLyHocSinh
         private static async Task CapNhatPhanMem()
         {
             string url = @"https://github.com/18520339/quan-ly-hoc-sinh";
-            using (var manager = UpdateManager.GitHubUpdateManager(url))
+            using (var manager = await UpdateManager.GitHubUpdateManager(url))
             {
-                UpdateInfo updateInfo = manager.Result.CheckForUpdate().Result;
-                if (updateInfo.ReleasesToApply.Count > 0)
+                ReleaseEntry releaseEntry = await manager.UpdateApp();
+                if (releaseEntry?.Version.ToString() != null)
                 {
-                    await manager.Result.UpdateApp();
                     MessageBox.Show(
                         "Đã có bản cập nhật mới. Vui lòng khởi động lại phần mềm !!!",
                         "Cập nhật phiên bản mới",
