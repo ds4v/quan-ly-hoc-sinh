@@ -1,4 +1,4 @@
-﻿namespace QuanLyHocSinh.Reports
+﻿namespace QuanLyHocSinh
 {
     partial class frmKQHSCaNam
     {

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace QuanLyHocSinh.Reports
+namespace QuanLyHocSinh
 {
     public partial class frmHoSoLopHoc : Office2007Form
     {

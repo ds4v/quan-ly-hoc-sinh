@@ -316,6 +316,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -474,7 +475,8 @@
             // btnLuuVaoDS
             // 
             this.btnLuuVaoDS.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnLuuVaoDS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnLuuVaoDS.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnLuuVaoDS.Location = new System.Drawing.Point(11, 235);
             this.btnLuuVaoDS.Name = "btnLuuVaoDS";
             this.btnLuuVaoDS.Size = new System.Drawing.Size(233, 23);
@@ -649,7 +651,7 @@
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 396);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 310);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;

@@ -4,7 +4,7 @@ using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 
-namespace QuanLyHocSinh.Reports
+namespace QuanLyHocSinh
 {
     public partial class frmKQLHHocKy : Office2007Form
     {

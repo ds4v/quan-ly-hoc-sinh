@@ -3,9 +3,8 @@ using DevComponents.DotNetBar;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
-namespace QuanLyHocSinh.Reports
+namespace QuanLyHocSinh
 {
     public partial class frmKQHSMonHoc : Office2007Form
     {
