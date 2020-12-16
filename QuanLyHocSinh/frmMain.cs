@@ -1,6 +1,10 @@
 ﻿using BUS;
 using DevComponents.DotNetBar;
+using Squirrel;
 using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyHocSinh
@@ -13,6 +17,34 @@ namespace QuanLyHocSinh
         public frmMain()
         {
             InitializeComponent();
+            HienThiVersion();
+            _ = CapNhatPhanMem();
+        }
+
+        private void HienThiVersion()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+            Text += $" v.{ versionInfo.FileVersion }";
+        }
+
+        private static async Task CapNhatPhanMem()
+        {
+            string url = @"https://github.com/18520339/quan-ly-hoc-sinh";
+            using (var manager = UpdateManager.GitHubUpdateManager(url))
+            {
+                UpdateInfo updateInfo = manager.Result.CheckForUpdate().Result;
+                if (updateInfo.ReleasesToApply.Count > 0)
+                {
+                    await manager.Result.UpdateApp();
+                    MessageBox.Show(
+                        "Đã có bản cập nhật mới. Vui lòng khởi động lại phần mềm !!!",
+                        "Cập nhật phiên bản mới",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
