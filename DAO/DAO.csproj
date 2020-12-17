@@ -53,6 +53,7 @@
     <Compile Include="KetQuaDAO.cs" />
     <Compile Include="KhoiLopDAO.cs" />
     <Compile Include="LoaiNguoiDungDAO.cs" />
+    <Compile Include="PhanLopDAO.cs" />
     <Compile Include="Reports\KQHSCaNamDAO.cs" />
     <Compile Include="Reports\KQHSMonHocDAO.cs" />
     <Compile Include="LopDAO.cs" />

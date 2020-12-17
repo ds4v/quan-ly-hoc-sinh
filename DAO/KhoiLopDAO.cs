@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace DAO
 {
@@ -21,6 +22,14 @@ namespace DAO
         public DataTable LayDanhSachKhoiLop()
         {
             string query = "SELECT * FROM KHOILOP";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable LayDanhSachKhoiLop(string khoiLop)
+        {
+            string query = $"SELECT * FROM KHOILOP WHERE MaKhoiLop = '{khoiLop}'";
+            if (khoiLop == "KHOI10") query += "OR MaKhoiLop = 'KHOI11'";
+            else if (khoiLop == "KHOI11") query += "OR MaKhoiLop = 'KHOI12'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

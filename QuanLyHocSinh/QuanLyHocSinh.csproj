@@ -170,6 +170,12 @@
     <Compile Include="frmPhanCong.Designer.cs">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanLop.Designer.cs">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanCong.resx">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanLop.resx">
+      <DependentUpon>frmPhanLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuyDinh.resx">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
@@ -530,6 +539,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\xoa chuyen lop.png" />
+    <None Include="Resources\luu chuyen lop.png" />
+    <None Include="Resources\thoat phan lop.png" />
+    <None Include="Resources\chuyen lop.png" />
+    <None Include="Resources\phan lop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

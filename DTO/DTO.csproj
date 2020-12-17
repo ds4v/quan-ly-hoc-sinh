@@ -48,6 +48,7 @@
     <Compile Include="HocLucDTO.cs" />
     <Compile Include="HocSinhDTO.cs" />
     <Compile Include="KetQuaDTO.cs" />
+    <Compile Include="PhanLopDTO.cs" />
     <Compile Include="Reports\KQHSCaNamDTO.cs" />
     <Compile Include="Reports\KQHSMonHocDTO.cs" />
     <Compile Include="LopDTO.cs" />

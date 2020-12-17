@@ -23,8 +23,8 @@ namespace QuanLyHocSinh
 
             DanTocBUS.Instance.HienThiDgvCmbCol(colMaDanToc);
             TonGiaoBUS.Instance.HienThiDgvCmbCol(colMaTonGiao);
-            NgheNghiepBUS.Instance.HienThiDgvCmbColCha(colMaNNghiepCha);
-            NgheNghiepBUS.Instance.HienThiDgvCmbColMe(colMaNNghiepMe);
+            NgheNghiepBUS.Instance.HienThiDgvCmbColCha(colMaNgheCha);
+            NgheNghiepBUS.Instance.HienThiDgvCmbColMe(colMaNgheMe);
 
             bindingNavigatorRefreshItem_Click(sender, e);
         }
@@ -137,16 +137,16 @@ namespace QuanLyHocSinh
             TonGiaoBUS.Instance.HienThiDgvCmbCol(colMaTonGiao);
         }
 
-        private void btnThemNNCha_Click(object sender, EventArgs e)
+        private void btnThemNgheCha_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmNgheNghiep");
-            NgheNghiepBUS.Instance.HienThiDgvCmbColCha(colMaNNghiepCha);
+            NgheNghiepBUS.Instance.HienThiDgvCmbColCha(colMaNgheCha);
         }
 
-        private void btnThemNNMe_Click(object sender, EventArgs e)
+        private void btnThemNgheMe_Click(object sender, EventArgs e)
         {
             Utilities.ShowForm("frmNgheNghiep");
-            NgheNghiepBUS.Instance.HienThiDgvCmbColMe(colMaNNghiepMe);
+            NgheNghiepBUS.Instance.HienThiDgvCmbColMe(colMaNgheMe);
         }
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)

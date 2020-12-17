@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -50,9 +50,9 @@
             this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaNgheCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaNgheMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -79,8 +79,8 @@
             this.lblBuffer = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnLuuVaoDS = new DevComponents.DotNetBar.ButtonX();
-            this.btnThemNNMe = new DevComponents.DotNetBar.ButtonX();
-            this.btnThemNNCha = new DevComponents.DotNetBar.ButtonX();
+            this.btnThemNgheMe = new DevComponents.DotNetBar.ButtonX();
+            this.btnThemNgheCha = new DevComponents.DotNetBar.ButtonX();
             this.btnThemDanToc = new DevComponents.DotNetBar.ButtonX();
             this.btnThemTonGiao = new DevComponents.DotNetBar.ButtonX();
             this.label02 = new System.Windows.Forms.Label();
@@ -232,19 +232,19 @@
             this.colMaDanToc,
             this.colMaTonGiao,
             this.colHoTenCha,
-            this.colMaNNghiepCha,
+            this.colMaNgheCha,
             this.colHoTenMe,
-            this.colMaNNghiepMe,
+            this.colMaNgheMe,
             this.colEmail});
             this.ctxMenu.SetContextMenuEx(this.dgvHocSinh, this.btnMenu);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHocSinh.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHocSinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvHocSinh.Location = new System.Drawing.Point(3, 51);
@@ -278,8 +278,8 @@
             // colNgaySinh
             // 
             this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle4;
             this.colNgaySinh.HeaderText = "Ngày sinh";
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.Width = 85;
@@ -312,11 +312,11 @@
             this.colHoTenCha.Name = "colHoTenCha";
             this.colHoTenCha.Width = 150;
             // 
-            // colMaNNghiepCha
+            // colMaNgheCha
             // 
-            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
-            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
-            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
+            this.colMaNgheCha.DataPropertyName = "MaNgheCha";
+            this.colMaNgheCha.HeaderText = "Nghề nghiệp cha";
+            this.colMaNgheCha.Name = "colMaNgheCha";
             // 
             // colHoTenMe
             // 
@@ -326,11 +326,11 @@
             this.colHoTenMe.Name = "colHoTenMe";
             this.colHoTenMe.Width = 150;
             // 
-            // colMaNNghiepMe
+            // colMaNgheMe
             // 
-            this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
-            this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
-            this.colMaNNghiepMe.Name = "colMaNNghiepMe";
+            this.colMaNgheMe.DataPropertyName = "MaNgheMe";
+            this.colMaNgheMe.HeaderText = "Nghề nghiệp mẹ";
+            this.colMaNgheMe.Name = "colMaNgheMe";
             // 
             // colEmail
             // 
@@ -407,6 +407,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -541,8 +542,8 @@
             this.navPanelNhapDuLieu.Controls.Add(this.lblBuffer);
             this.navPanelNhapDuLieu.Controls.Add(this.dtpNgaySinh);
             this.navPanelNhapDuLieu.Controls.Add(this.btnLuuVaoDS);
-            this.navPanelNhapDuLieu.Controls.Add(this.btnThemNNMe);
-            this.navPanelNhapDuLieu.Controls.Add(this.btnThemNNCha);
+            this.navPanelNhapDuLieu.Controls.Add(this.btnThemNgheMe);
+            this.navPanelNhapDuLieu.Controls.Add(this.btnThemNgheCha);
             this.navPanelNhapDuLieu.Controls.Add(this.btnThemDanToc);
             this.navPanelNhapDuLieu.Controls.Add(this.btnThemTonGiao);
             this.navPanelNhapDuLieu.Controls.Add(this.label02);
@@ -713,27 +714,27 @@
             this.btnLuuVaoDS.Text = "Lưu vào danh sách";
             this.btnLuuVaoDS.Click += new System.EventHandler(this.btnLuuVaoDS_Click);
             // 
-            // btnThemNNMe
+            // btnThemNgheMe
             // 
-            this.btnThemNNMe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThemNNMe.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNNMe.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNNMe.Image")));
-            this.btnThemNNMe.Location = new System.Drawing.Point(218, 477);
-            this.btnThemNNMe.Name = "btnThemNNMe";
-            this.btnThemNNMe.Size = new System.Drawing.Size(20, 20);
-            this.btnThemNNMe.TabIndex = 16;
-            this.btnThemNNMe.Click += new System.EventHandler(this.btnThemNNMe_Click);
+            this.btnThemNgheMe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemNgheMe.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemNgheMe.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNgheMe.Image")));
+            this.btnThemNgheMe.Location = new System.Drawing.Point(218, 477);
+            this.btnThemNgheMe.Name = "btnThemNgheMe";
+            this.btnThemNgheMe.Size = new System.Drawing.Size(20, 20);
+            this.btnThemNgheMe.TabIndex = 16;
+            this.btnThemNgheMe.Click += new System.EventHandler(this.btnThemNgheMe_Click);
             // 
-            // btnThemNNCha
+            // btnThemNgheCha
             // 
-            this.btnThemNNCha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThemNNCha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemNNCha.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNNCha.Image")));
-            this.btnThemNNCha.Location = new System.Drawing.Point(218, 387);
-            this.btnThemNNCha.Name = "btnThemNNCha";
-            this.btnThemNNCha.Size = new System.Drawing.Size(20, 20);
-            this.btnThemNNCha.TabIndex = 13;
-            this.btnThemNNCha.Click += new System.EventHandler(this.btnThemNNCha_Click);
+            this.btnThemNgheCha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemNgheCha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemNgheCha.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNgheCha.Image")));
+            this.btnThemNgheCha.Location = new System.Drawing.Point(218, 387);
+            this.btnThemNgheCha.Name = "btnThemNgheCha";
+            this.btnThemNgheCha.Size = new System.Drawing.Size(20, 20);
+            this.btnThemNgheCha.TabIndex = 13;
+            this.btnThemNgheCha.Click += new System.EventHandler(this.btnThemNgheCha_Click);
             // 
             // btnThemDanToc
             // 
@@ -995,7 +996,7 @@
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 534);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(265, 448);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -1086,8 +1087,8 @@
             // calendarColumn1
             // 
             this.calendarColumn1.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.calendarColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.calendarColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.calendarColumn1.HeaderText = "Ngày sinh";
             this.calendarColumn1.Name = "calendarColumn1";
             this.calendarColumn1.Width = 85;
@@ -1172,9 +1173,9 @@
         private DevComponents.DotNetBar.ButtonItem buttonItemTimKiem;
         private DevComponents.DotNetBar.ButtonX btnTimKiem;
         private DevComponents.DotNetBar.ButtonItem btnRefesh;
-        private DevComponents.DotNetBar.ButtonX btnThemNNCha;
+        private DevComponents.DotNetBar.ButtonX btnThemNgheCha;
         private DevComponents.DotNetBar.ButtonX btnThemTonGiao;
-        private DevComponents.DotNetBar.ButtonX btnThemNNMe;
+        private DevComponents.DotNetBar.ButtonX btnThemNgheMe;
         private DevComponents.DotNetBar.ButtonX btnThemDanToc;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvHocSinh;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMaHocSinh;
@@ -1241,9 +1242,9 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaDanToc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaTonGiao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTenCha;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNNghiepCha;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNgheCha;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTenMe;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNNghiepMe;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNgheMe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
     }
 }
