@@ -37,7 +37,7 @@ namespace QuanLyHocSinh
                 if (releaseEntry?.Version.ToString() != null)
                 {
                     MessageBox.Show(
-                        "Đã có bản cập nhật mới. Vui lòng khởi động lại phần mềm !!!",
+                        "Đã có bản cập nhật mới. Vui lòng khởi động lại phần mềm !",
                         "Cập nhật phiên bản mới",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
@@ -269,6 +269,7 @@ namespace QuanLyHocSinh
             btnHocLuc.Enabled = false;
             btnHanhKiem.Enabled = false;
             btnHocSinh.Enabled = false;
+            btnPhanLop.Enabled = false;
             btnTonGiao.Enabled = false;
             btnDanToc.Enabled = false;
             btnNgheNghiep.Enabled = false;
@@ -317,6 +318,7 @@ namespace QuanLyHocSinh
             btnHocLuc.Enabled = true;
             btnHanhKiem.Enabled = true;
             btnHocSinh.Enabled = true;
+            btnPhanLop.Enabled = true;
             btnTonGiao.Enabled = true;
             btnDanToc.Enabled = true;
             btnNgheNghiep.Enabled = true;
@@ -373,6 +375,7 @@ namespace QuanLyHocSinh
             btnHocLuc.Enabled = false;
             btnHanhKiem.Enabled = false;
             btnHocSinh.Enabled = false;
+            btnPhanLop.Enabled = false;
             btnTonGiao.Enabled = false;
             btnDanToc.Enabled = false;
             btnNgheNghiep.Enabled = false;
@@ -407,6 +410,7 @@ namespace QuanLyHocSinh
             btnMonHoc.Enabled = true;
             btnDiem.Enabled = true;
             btnHocSinh.Enabled = true;
+            btnPhanLop.Enabled = true;
             btnTonGiao.Enabled = true;
             btnDanToc.Enabled = true;
             btnNgheNghiep.Enabled = true;
