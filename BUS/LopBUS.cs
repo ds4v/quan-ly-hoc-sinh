@@ -72,6 +72,13 @@ namespace BUS
             comboBox.ValueMember = "MaLop";
         }
 
+        public void HienThiComboBox(string khoiLop, string namHoc, ComboBoxEx comboBox)
+        {
+            comboBox.DataSource = LopDAO.Instance.LayDanhSachLop(khoiLop, namHoc);
+            comboBox.DisplayMember = "TenLop";
+            comboBox.ValueMember = "MaLop";
+        }
+
         public void HienThiDgvCmbCol(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = LopDAO.Instance.LayDanhSachLop();

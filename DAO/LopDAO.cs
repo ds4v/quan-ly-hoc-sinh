@@ -32,6 +32,12 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public DataTable LayDanhSachLop(string khoiLop, string namHoc)
+        {
+            string query = $"SELECT * FROM LOP WHERE MaKhoiLop = '{khoiLop}' AND MaNamHoc = '{namHoc}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
         public int LaySiSo(string maLop)
         {
             string query = $"SELECT SiSo FROM LOP WHERE MaLop = '{maLop}'";

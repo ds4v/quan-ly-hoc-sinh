@@ -83,6 +83,16 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chuyen_lop {
+            get {
+                object obj = ResourceManager.GetObject("chuyen lop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dan_toc {
             get {
                 object obj = ResourceManager.GetObject("dan toc", resourceCulture);
@@ -393,6 +403,16 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap luu_chuyen_lop {
+            get {
+                object obj = ResourceManager.GetObject("luu chuyen lop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mon_hoc {
             get {
                 object obj = ResourceManager.GetObject("mon hoc", resourceCulture);
@@ -426,6 +446,16 @@ namespace QuanLyHocSinh.Properties {
         internal static System.Drawing.Bitmap phan_cong {
             get {
                 object obj = ResourceManager.GetObject("phan cong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phan_lop {
+            get {
+                object obj = ResourceManager.GetObject("phan lop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,6 +553,16 @@ namespace QuanLyHocSinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thoat_phan_lop {
+            get {
+                object obj = ResourceManager.GetObject("thoat phan lop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thoat_phan_mem {
             get {
                 object obj = ResourceManager.GetObject("thoat phan mem", resourceCulture);
@@ -576,6 +616,16 @@ namespace QuanLyHocSinh.Properties {
         internal static System.Drawing.Bitmap xoa {
             get {
                 object obj = ResourceManager.GetObject("xoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xoa_chuyen_lop {
+            get {
+                object obj = ResourceManager.GetObject("xoa chuyen lop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

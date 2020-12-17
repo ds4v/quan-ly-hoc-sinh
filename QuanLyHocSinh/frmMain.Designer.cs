@@ -36,6 +36,7 @@
             this.btnPhanCong = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBarHocSinh = new DevComponents.DotNetBar.RibbonBar();
             this.btnHocSinh = new DevComponents.DotNetBar.ButtonItem();
+            this.btnPhanLop = new DevComponents.DotNetBar.ButtonItem();
             this.itemContainerDanTocTonGiao = new DevComponents.DotNetBar.ItemContainer();
             this.btnDanToc = new DevComponents.DotNetBar.ButtonItem();
             this.btnTonGiao = new DevComponents.DotNetBar.ButtonItem();
@@ -174,7 +175,7 @@
             this.ribbonBarGiaoVien.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnGiaoVien,
             this.btnPhanCong});
-            this.ribbonBarGiaoVien.Location = new System.Drawing.Point(635, 0);
+            this.ribbonBarGiaoVien.Location = new System.Drawing.Point(689, 0);
             this.ribbonBarGiaoVien.Name = "ribbonBarGiaoVien";
             this.ribbonBarGiaoVien.Size = new System.Drawing.Size(122, 86);
             this.ribbonBarGiaoVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -211,10 +212,11 @@
             this.ribbonBarHocSinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBarHocSinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnHocSinh,
+            this.btnPhanLop,
             this.itemContainerDanTocTonGiao});
             this.ribbonBarHocSinh.Location = new System.Drawing.Point(488, 0);
             this.ribbonBarHocSinh.Name = "ribbonBarHocSinh";
-            this.ribbonBarHocSinh.Size = new System.Drawing.Size(147, 86);
+            this.ribbonBarHocSinh.Size = new System.Drawing.Size(201, 86);
             this.ribbonBarHocSinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.ribbonBarHocSinh.TabIndex = 5;
             this.ribbonBarHocSinh.Text = "Học Sinh";
@@ -230,6 +232,18 @@
             this.btnHocSinh.Text = "Học sinh";
             this.btnHocSinh.Tooltip = "Học sinh";
             this.btnHocSinh.Click += new System.EventHandler(this.btnHocSinh_Click);
+            // 
+            // btnPhanLop
+            // 
+            this.btnPhanLop.Image = global::QuanLyHocSinh.Properties.Resources.phan_lop;
+            this.btnPhanLop.ImagePaddingHorizontal = 8;
+            this.btnPhanLop.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnPhanLop.Name = "btnPhanLop";
+            this.btnPhanLop.RibbonWordWrap = false;
+            this.btnPhanLop.SplitButton = true;
+            this.btnPhanLop.Text = "Phân lớp";
+            this.btnPhanLop.Tooltip = "Phân lớp";
+            this.btnPhanLop.Click += new System.EventHandler(this.btnPhanLop_Click);
             // 
             // itemContainerDanTocTonGiao
             // 
@@ -1070,5 +1084,6 @@
         private DevComponents.DotNetBar.ButtonItem btnDangXuatContext;
         private DevComponents.DotNetBar.ButtonItem btnDoiMatKhauContext;
         private DevComponents.DotNetBar.ButtonItem btnThoatContext;
+        private DevComponents.DotNetBar.ButtonItem btnPhanLop;
     }
 }

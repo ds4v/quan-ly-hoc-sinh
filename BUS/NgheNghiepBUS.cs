@@ -42,7 +42,7 @@ namespace BUS
             cmbColumn.DataSource = NgheNghiepDAO.Instance.LayDanhSachNgheNghiep();
             cmbColumn.DisplayMember = "TenNghe";
             cmbColumn.ValueMember = "MaNghe";
-            cmbColumn.DataPropertyName = "MaNNghiepCha";
+            cmbColumn.DataPropertyName = "MaNgheCha";
             cmbColumn.HeaderText = "Nghề nghiệp cha";
         }
 
@@ -51,7 +51,7 @@ namespace BUS
             cmbColumn.DataSource = NgheNghiepDAO.Instance.LayDanhSachNgheNghiep();
             cmbColumn.DisplayMember = "TenNghe";
             cmbColumn.ValueMember = "MaNghe";
-            cmbColumn.DataPropertyName = "MaNNghiepMe";
+            cmbColumn.DataPropertyName = "MaNgheMe";
             cmbColumn.HeaderText = "Nghề nghiệp mẹ";
         }
 

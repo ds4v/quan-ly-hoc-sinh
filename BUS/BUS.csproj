@@ -55,6 +55,7 @@
     <Compile Include="KetQuaBUS.cs" />
     <Compile Include="KhoiLopBUS.cs" />
     <Compile Include="LoaiNguoiDungBUS.cs" />
+    <Compile Include="PhanLopBUS.cs" />
     <Compile Include="Reports\KQHSCaNamBUS.cs" />
     <Compile Include="Reports\KQHSMonHocBUS.cs" />
     <Compile Include="LopBUS.cs" />

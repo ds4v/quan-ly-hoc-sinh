@@ -76,13 +76,13 @@ namespace BUS
             txtHoTenCha.DataBindings.Add("Text", bindingSource, "HoTenCha");
 
             cmbNgheNghiepCha.DataBindings.Clear();
-            cmbNgheNghiepCha.DataBindings.Add("SelectedValue", bindingSource, "MaNNghiepCha");
+            cmbNgheNghiepCha.DataBindings.Add("SelectedValue", bindingSource, "MaNgheCha");
 
             txtHoTenMe.DataBindings.Clear();
             txtHoTenMe.DataBindings.Add("Text", bindingSource, "HoTenMe");
 
             cmbNgheNghiepMe.DataBindings.Clear();
-            cmbNgheNghiepMe.DataBindings.Add("SelectedValue", bindingSource, "MaNNghiepMe");
+            cmbNgheNghiepMe.DataBindings.Add("SelectedValue", bindingSource, "MaNgheMe");
 
             txtEmail.DataBindings.Clear();
             txtEmail.DataBindings.Add("Text", bindingSource, "Email");
@@ -103,11 +103,30 @@ namespace BUS
             dataGridViewX.DataSource = bs;
         }
 
+        public void HienThiHocSinhTheoLop(string namHoc, string khoiLop, string lop, ListViewEx listViewEx)
+        {
+            DataTable dataTable = HocSinhDAO.Instance.LayDanhSachHocSinhTheoLop(namHoc, khoiLop, lop);
+            listViewEx.Items.Clear();
+
+            foreach (DataRow Row in dataTable.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = Row["MaHocSinh"].ToString();
+                item.SubItems.Add(Row["HoTen"].ToString());
+                listViewEx.Items.Add(item);
+            }
+        }
+
         public void HienThiComboBox(string namHoc, string lop, ComboBoxEx comboBox)
         {
             comboBox.DataSource = HocSinhDAO.Instance.LayDanhSachHocSinh(namHoc, lop);
             comboBox.DisplayMember = "HoTen";
             comboBox.ValueMember = "MaHocSinh";
+        }
+
+        public DataTable LayDanhSachHocSinhTheoNamHoc(string namHoc)
+        {
+            return HocSinhDAO.Instance.LayDanhSachHocSinhTheoNamHoc(namHoc);
         }
 
         public IList<HocSinhDTO> Report()

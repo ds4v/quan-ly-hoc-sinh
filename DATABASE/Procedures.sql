@@ -35,6 +35,30 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE LayDanhSachHocSinhTheoNamHoc @maNamHoc VARCHAR(6)
+AS
+BEGIN
+	SELECT PL.MaHocSinh, HS.HoTen, LOP.TenLop FROM HOCSINH HS 
+	INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
+	INNER JOIN LOP ON LOP.MaLop = PL.MaLop 
+	WHERE PL.MaNamHoc = @maNamHoc
+END
+GO
+
+CREATE PROCEDURE LayDanhSachHocSinhTheoLop
+	@maNamHoc VARCHAR(6),
+	@maKhoiLop VARCHAR(10),
+	@maLop VARCHAR(10)
+AS
+BEGIN
+	SELECT PL.MaHocSinh, HS.HoTen, LOP.TenLop FROM HOCSINH HS 
+	INNER JOIN PHANLOP PL ON HS.MaHocSinh = PL.MaHocSinh 
+	INNER JOIN KHOILOP KL ON KL.MaKhoiLop = PL.MaKhoiLop 
+	INNER JOIN LOP ON LOP.MaLop = PL.MaLop 
+	WHERE PL.MaNamHoc = @maNamHoc AND PL.MaKhoiLop = @maKhoiLop AND PL.MaLop = @maLop 
+END
+GO
+
 CREATE PROCEDURE ThemHocSinh
 	@maHocSinh VARCHAR(6), 
 	@hoTen NVARCHAR(30), 
@@ -52,6 +76,34 @@ AS
 BEGIN
 	INSERT INTO HOCSINH (MaHocSinh, HoTen, GioiTinh, NgaySinh, DiaChi, MaDanToc, MaTonGiao, HoTenCha, MaNNghiepCha, HoTenMe, MaNNghiepMe, Email) 
 	VALUES (@maHocSinh, @hoTen, @gioiTinh, @ngaySinh, @diaChi, @maDanToc, @maTonGiao, @hoTenCha, @maNgheCha, @hoTenMe, @maNgheMe, @email)
+END
+GO
+
+--===================================================================================================================================================
+
+CREATE PROCEDURE LuuHocSinhVaoBangPhanLop
+	 @maNamHoc VARCHAR(6),
+	 @maKhoiLop VARCHAR(6), 
+	 @maLop VARCHAR(10), 
+	 @maHocSinh VARCHAR(6)
+AS
+BEGIN
+	INSERT INTO PHANLOP VALUES(@maNamHoc, @maKhoiLop, @maLop, @maHocSinh)
+END
+GO
+
+CREATE PROCEDURE XoaHocSinhKhoiBangPhanLop
+	 @maNamHoc VARCHAR(6),
+	 @maKhoiLop VARCHAR(6), 
+	 @maLop VARCHAR(10), 
+	 @maHocSinh VARCHAR(6)
+AS
+BEGIN
+	DELETE FROM PHANLOP 
+	WHERE MaNamHoc = @maNamHoc 
+	  AND MaKhoiLop = @maKhoiLop 
+	  AND MaLop = @maLop 
+	  AND MaHocSinh = @maHocSinh
 END
 GO
 
