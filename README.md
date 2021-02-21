@@ -13,10 +13,10 @@ Phần mềm được xây dựng lại từ sản phẩm [Phần mềm quản l
 -   Cơ sở dữ liệu:
     -   Xây dựng CSDL trên Cloud với [Azure SQL Database](https://docs.microsoft.com/vi-vn/azure/azure-sql/database/sql-database-paas-overview)
     -   Sử dụng **Procedure** cho các tác vụ phức tạp lên CSDL, đồng thời hạn chế lỗi **SQL Injection**
--   Chức năng:
+-   Thêm các chức năng:
     -   Mã hóa mật khẩu người dùng
     -   Đóng gói và cập nhật phần mềm tự động với [Squirrel.Windows](https://github.com/Squirrel/Squirrel.Windows)
--   Sửa lỗi:
+-   Sửa các lỗi:
     -   Vẫn có thể sử dụng tab đang bật dù đã đăng xuất
     -   **ReportViewer** không hiển thị giá trị
 
