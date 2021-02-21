@@ -1,6 +1,6 @@
 # Phần mềm Quản lý học sinh THPT
 
-![](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/demo.png)
+![](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/demo.png)
 
 ## Giới thiệu
 
@@ -25,8 +25,16 @@ Phần mềm được xây dựng lại từ sản phẩm [Phần mềm quản l
 1.  Tạo tài khoản [Microsoft Azure](https://azure.microsoft.com/en-us/)
 2.  Tiến hành tạo **Azure SQL Database** theo [hướng dẫn](https://docs.microsoft.com/vi-vn/azure/azure-sql/database/single-database-create-quickstart)
 3.  Tạo các Table và Procedure tương ứng cho **Azure SQL Database**:
-    -   Copy nội dụng file [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) vào **Query editor (preview)** và bấm **Run**.
-    -   Ngoài ra, có thể thực hiện trên [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) với tên và tài khoản Server đã tạo
+
+    -   Copy nội dụng file [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) vào **Query editor (preview)** và bấm **Run**:
+    -   Ngoài ra, có thể thực hiện trên [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (**SSMS**) với tên và tài khoản Server đã tạo:
+
+    ![](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/ssms.png)
+
+    -   Lưu ý:
+        -   [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) được tạo nên bằng chức năng **Generates Scripts** của **SSMS** và được tổng hợp từ 3 files: [Procedures.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Procedures.sql), [Tables.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Tables.sql), [Users.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Users.sql)
+        -   Nếu sử dụng file [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) trên **SSMS** sẽ không chạy hết được do **Azure SQL Database** không cho phép ghi với quyền của database **master**, phải tạo database **QuanLyHocSinh** trước rồi truy cập vào đó và chạy scripts để tạo các thành phần tương ứng
+
 4.  Copy **Connection Strings** của `ADO.NET (SQL authentication)` tại mục **Settings** của **Azure SQL Database** và gán giá trị này cho biến **connectionString** trong file [DataProvider.cs](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DAO/DataProvider.cs)
 
 5.  Download [bản cập nhật mới nhất](https://github.com/18520339/quan-ly-hoc-sinh/releases/latest) và chạy file **Setup.exe** để tiến hành cài đặt
