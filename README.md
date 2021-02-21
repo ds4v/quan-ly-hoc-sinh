@@ -1,6 +1,6 @@
 # Phần mềm Quản lý học sinh THPT
 
-![](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/demo.png)
+<p align="center"><img src='https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/demo.png?raw=true' /></p>
 
 ## Giới thiệu
 
@@ -29,7 +29,7 @@ Phần mềm được xây dựng lại từ sản phẩm [Phần mềm quản l
     -   Copy nội dụng file [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) vào **Query editor (preview)** và bấm **Run**:
     -   Ngoài ra, có thể thực hiện trên [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (**SSMS**) với tên và tài khoản Server đã tạo:
 
-    ![](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/ssms.png)
+    <p align="center"><img src='https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/ssms.png?raw=true' /></p>
 
     -   Lưu ý:
         -   [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) được tạo nên bằng chức năng **Generates Scripts** của **SSMS** và được tổng hợp từ 3 files: [Procedures.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Procedures.sql), [Tables.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Tables.sql), [Users.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Users.sql)
