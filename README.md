@@ -12,7 +12,7 @@ Phần mềm được xây dựng lại từ sản phẩm [Phần mềm quản l
     -   Thiết kế các đối tượng trong **BUS** và **DAO** theo Design Pattern `Singleton`
 -   Cơ sở dữ liệu:
     -   Xây dựng CSDL trên Cloud với [Azure SQL Database](https://docs.microsoft.com/vi-vn/azure/azure-sql/database/sql-database-paas-overview)
-    -   Sử dụng **Procedure** cho các tác vụ phức tạp lên CSDL, đồng thời hạn chế lỗi **SQL injection**
+    -   Sử dụng **Procedure** cho các tác vụ phức tạp lên CSDL, đồng thời hạn chế lỗi **SQL Injection**
 -   Chức năng:
     -   Mã hóa mật khẩu người dùng
     -   Đóng gói và cập nhật phần mềm tự động với [Squirrel.Windows](https://github.com/Squirrel/Squirrel.Windows)
@@ -32,7 +32,7 @@ Phần mềm được xây dựng lại từ sản phẩm [Phần mềm quản l
     <p align="center"><img src='https://github.com/18520339/quan-ly-hoc-sinh/blob/main/image/ssms.png?raw=true' /></p>
 
     -   Lưu ý:
-        -   [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) được tạo nên bằng chức năng **Generates Scripts** của **SSMS** và được tổng hợp từ 3 files: [Procedures.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Procedures.sql), [Tables.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Tables.sql), [Users.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Users.sql)
+        -   [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) được tổng hợp từ 3 files: [Procedures.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Procedures.sql), [Tables.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Tables.sql), [Users.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Users.sql) và được tạo nên bằng chức năng **Generates Scripts** của **SSMS**
         -   Nếu sử dụng file [Scripts.sql](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DATABASE/Scripts.sql) trên **SSMS** sẽ không chạy hết được do **Azure SQL Database** không cho phép ghi với quyền của database **master**, phải tạo database **QuanLyHocSinh** trước rồi truy cập vào đó và chạy scripts để tạo các thành phần tương ứng
 
 4.  Copy **Connection Strings** của `ADO.NET (SQL authentication)` tại mục **Settings** của **Azure SQL Database** và gán giá trị này cho biến **connectionString** trong file [DataProvider.cs](https://github.com/18520339/quan-ly-hoc-sinh/blob/main/DAO/DataProvider.cs)
