@@ -16,7 +16,7 @@ namespace DAO
             Initial Catalog=QuanLyHocSinh;
             Persist Security Info=False;
             User ID=quankun;
-            Password=***REMOVED***;
+            Password=;
             MultipleActiveResultSets=False;
             Encrypt=True;
             TrustServerCertificate=False;
